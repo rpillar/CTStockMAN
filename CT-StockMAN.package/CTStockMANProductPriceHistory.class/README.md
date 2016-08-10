@@ -1,0 +1,1 @@
+I represent the changes in a product's price over time.

@@ -1,0 +1,1 @@
+My Shopify channel details.

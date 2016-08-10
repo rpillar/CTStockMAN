@@ -1,0 +1,14 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "FirstnameLastname 7/19/2016 13:52",
+	"instvars" : [
+		"myShop" ],
+	"name" : "CTStockMANShopifyManage",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANChannel",
+	"type" : "normal" }

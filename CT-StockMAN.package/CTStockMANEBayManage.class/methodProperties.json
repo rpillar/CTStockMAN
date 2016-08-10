@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addItem:" : "FirstnameLastname 7/20/2016 11:50",
+		"addItemVerify:" : "FirstnameLastname 7/19/2016 13:59",
+		"getEBayCategories" : "FirstnameLastname 7/26/2016 09:31",
+		"getEBayDetails" : "FirstnameLastname 7/26/2016 09:14",
+		"getEBayOfficialTime" : "FirstnameLastname 7/25/2016 17:09",
+		"getEBayTransactionsAll" : "FirstnameLastname 8/2/2016 17:37",
+		"getEBayTransactionsForDay" : "FirstnameLastname 8/2/2016 17:38",
+		"initialize" : "FirstnameLastname 7/26/2016 09:13",
+		"myEbay" : "FirstnameLastname 7/20/2016 16:35",
+		"myEbay:" : "FirstnameLastname 7/20/2016 16:35",
+		"request" : "FirstnameLastname 7/25/2016 16:53",
+		"request:" : "FirstnameLastname 7/25/2016 16:53" } }

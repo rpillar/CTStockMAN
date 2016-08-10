@@ -1,0 +1,17 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "FirstnameLastname 7/19/2016 13:44",
+	"instvars" : [
+		"appId",
+		"devId",
+		"certId",
+		"token" ],
+	"name" : "CTStockMANEBay",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANChannel",
+	"type" : "normal" }

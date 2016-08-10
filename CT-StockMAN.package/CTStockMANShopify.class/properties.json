@@ -1,0 +1,18 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 6/13/2016 10:53",
+	"instvars" : [
+		"apiKey",
+		"apiSecret",
+		"appUrl",
+		"password",
+		"tokens" ],
+	"name" : "CTStockMANShopify",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANChannel",
+	"type" : "normal" }

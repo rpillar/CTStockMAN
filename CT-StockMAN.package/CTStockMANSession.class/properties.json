@@ -1,0 +1,14 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "FirstnameLastname 7/4/2016 16:20",
+	"instvars" : [
+		 ],
+	"name" : "CTStockMANSession",
+	"pools" : [
+		 ],
+	"super" : "WASession",
+	"type" : "normal" }

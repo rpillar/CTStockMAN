@@ -4,12 +4,13 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "FirstnameLastname 7/19/2016 13:44",
+	"commentStamp" : "FirstnameLastname 9/27/2016 08:55",
 	"instvars" : [
 		"appId",
 		"devId",
 		"certId",
-		"token" ],
+		"token",
+		"url" ],
 	"name" : "CTStockMANEBay",
 	"pools" : [
 		 ],

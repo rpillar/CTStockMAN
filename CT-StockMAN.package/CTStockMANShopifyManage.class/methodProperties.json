@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"getOrder:" : "FirstnameLastname 10/5/2016 13:39",
+		"getOrders" : "FirstnameLastname 10/5/2016 13:34",
 		"getProduct:" : "FirstnameLastname 7/25/2016 17:09",
 		"getProducts" : "FirstnameLastname 7/25/2016 17:09",
 		"initialize" : "FirstnameLastname 7/25/2016 16:50",

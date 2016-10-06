@@ -21,7 +21,7 @@ getEBayCategories
 	"ebay function ..."
 	request headerAt: 'X-EBAY-API-CALL-NAME' add: 'GetCategories'.
 	response := self request
-		url: 'https://api.sandbox.ebay.com/ws/api.dll'; 
+		url: self myEbay url;
 		entity: (
 			ZnEntity 
 				with: writer asString

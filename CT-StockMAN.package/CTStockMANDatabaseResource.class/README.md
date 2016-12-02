@@ -1,0 +1,1 @@
+A class to enable the general retrieval of data and the storing of that data in appropriate data objects.

@@ -1,7 +1,7 @@
 tests
 testCreateProduct
 	| product |
-	product := CTStockMANProduct new.
+	product := CTStockMANModelProduct new.
 	
 	product category: 'Accessories'.
 	product productName: 'buttons'.

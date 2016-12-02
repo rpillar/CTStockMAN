@@ -2,14 +2,14 @@
 	"class" : {
 		 },
 	"instance" : {
-		"appId" : "FirstnameLastname 7/6/2016 17:44",
-		"appId:" : "FirstnameLastname 7/6/2016 17:44",
-		"certId" : "FirstnameLastname 7/6/2016 17:44",
-		"certId:" : "FirstnameLastname 7/6/2016 17:44",
-		"devId" : "FirstnameLastname 7/6/2016 17:44",
-		"devId:" : "FirstnameLastname 7/6/2016 17:44",
-		"initialize" : "FirstnameLastname 10/4/2016 14:27",
-		"token" : "FirstnameLastname 7/20/2016 17:17",
-		"token:" : "FirstnameLastname 7/20/2016 17:17",
-		"url" : "FirstnameLastname 10/4/2016 14:27",
-		"url:" : "FirstnameLastname 10/4/2016 14:27" } }
+		"credentials" : "RichardPillar 10/18/2016 08:11",
+		"getCredentials" : "RichardPillar 10/31/2016 07:57",
+		"initialize" : "RichardPillar 10/17/2016 08:17",
+		"request" : "RichardPillar 10/16/2016 19:38",
+		"request:" : "RichardPillar 10/16/2016 19:38",
+		"shop" : "RichardPillar 10/18/2016 08:08",
+		"shop:" : "RichardPillar 10/18/2016 08:08",
+		"token" : "RichardPillar 10/18/2016 08:14",
+		"token:" : "RichardPillar 10/18/2016 08:14",
+		"url" : "RichardPillar 10/18/2016 08:14",
+		"url:" : "RichardPillar 10/18/2016 08:14" } }

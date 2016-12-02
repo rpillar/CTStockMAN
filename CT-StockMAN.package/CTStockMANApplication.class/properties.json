@@ -1,0 +1,14 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "CTStockMANApplication",
+	"pools" : [
+		 ],
+	"super" : "WAApplication",
+	"type" : "normal" }

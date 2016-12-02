@@ -6,7 +6,9 @@
 		 ],
 	"commentStamp" : "FirstnameLastname 7/4/2016 16:20",
 	"instvars" : [
-		 ],
+		"database",
+		"dbResource",
+		"user" ],
 	"name" : "CTStockMANSession",
 	"pools" : [
 		 ],

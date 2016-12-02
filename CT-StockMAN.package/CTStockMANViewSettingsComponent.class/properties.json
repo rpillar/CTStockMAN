@@ -1,0 +1,16 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 11/16/2016 07:58",
+	"instvars" : [
+		"addShopComponent",
+		"ebayCredentials",
+		"shops" ],
+	"name" : "CTStockMANViewSettingsComponent",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANView",
+	"type" : "normal" }

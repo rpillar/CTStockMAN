@@ -1,0 +1,16 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 11/17/2016 08:04",
+	"instvars" : [
+		"messageString",
+		"messageType",
+		"wasShown" ],
+	"name" : "CTStockMANViewMessageComponent",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANView",
+	"type" : "normal" }

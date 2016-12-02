@@ -6,9 +6,9 @@
 		 ],
 	"commentStamp" : "FirstnameLastname 9/27/2016 08:55",
 	"instvars" : [
-		"appId",
-		"devId",
-		"certId",
+		"credentials",
+		"request",
+		"shop",
 		"token",
 		"url" ],
 	"name" : "CTStockMANEBay",

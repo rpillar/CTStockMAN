@@ -1,0 +1,14 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 10/19/2016 19:19",
+	"instvars" : [
+		 ],
+	"name" : "CTStockMANViewMenuComponent",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANView",
+	"type" : "normal" }

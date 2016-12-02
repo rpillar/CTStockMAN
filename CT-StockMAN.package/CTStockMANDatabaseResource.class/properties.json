@@ -1,0 +1,14 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"DefaultLogin" ],
+	"commentStamp" : "RichardPillar 11/28/2016 22:37",
+	"instvars" : [
+		"database" ],
+	"name" : "CTStockMANDatabaseResource",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

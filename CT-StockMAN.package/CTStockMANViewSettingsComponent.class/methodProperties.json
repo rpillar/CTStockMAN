@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addShopComponent" : "RichardPillar 11/17/2016 13:18",
+		"addShopComponent:" : "RichardPillar 11/17/2016 13:18",
+		"ebayCredentials" : "RichardPillar 11/30/2016 21:55",
+		"ebayCredentials:" : "RichardPillar 11/30/2016 21:55",
+		"getChannelCredentials:" : "RichardPillar 12/2/2016 16:31",
+		"getShops" : "RichardPillar 12/2/2016 16:25",
+		"initialize" : "RichardPillar 12/2/2016 15:31",
+		"renderContentOn:" : "RichardPillar 11/25/2016 20:38",
+		"renderCredentialsOn:" : "RichardPillar 12/2/2016 15:29",
+		"renderShopsOn:" : "RichardPillar 11/27/2016 20:15",
+		"shops" : "RichardPillar 11/20/2016 19:49",
+		"shops:" : "RichardPillar 11/20/2016 19:49" } }

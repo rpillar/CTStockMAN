@@ -2,4 +2,12 @@
 	"class" : {
 		 },
 	"instance" : {
-		 } }
+		"database" : "RichardPillar 11/20/2016 19:41",
+		"database:" : "RichardPillar 11/20/2016 19:41",
+		"dbResource" : "RichardPillar 11/28/2016 20:37",
+		"dbResource:" : "RichardPillar 11/28/2016 20:37",
+		"doLogout" : "RichardPillar 10/19/2016 19:24",
+		"initialize" : "RichardPillar 11/28/2016 23:28",
+		"isLoggedIn" : "RichardPillar 10/19/2016 19:25",
+		"user" : "RichardPillar 10/19/2016 19:26",
+		"user:" : "RichardPillar 10/19/2016 19:26" } }

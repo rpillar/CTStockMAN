@@ -1,0 +1,15 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 6/8/2016 16:05",
+	"instvars" : [
+		"productId",
+		"price" ],
+	"name" : "CTStockMANModelProductPrice",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANModel",
+	"type" : "normal" }

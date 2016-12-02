@@ -1,0 +1,1 @@
+The application 'Home' page - in this case a dashboard view giving channel data and category data.

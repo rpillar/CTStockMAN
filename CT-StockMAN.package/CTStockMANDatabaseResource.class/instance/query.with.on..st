@@ -7,7 +7,7 @@ query: aQuery with: argsArray on: aModel
 	myInstVars := myClass instVarNames.
 	myData := OrderedCollection new.
 	myDb := self database.
-self halt.	
+	
 	( myDb execute: aQuery with: argsArray ) rows do: [ :r | 		
 			myObj := myClass new.				
 			myInstVars do: [ :i |

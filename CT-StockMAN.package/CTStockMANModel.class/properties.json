@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "RichardPillar 6/8/2016 14:46",
+	"commentStamp" : "RichardPillar 1/3/2017 21:09",
 	"instvars" : [
 		 ],
 	"name" : "CTStockMANModel",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "WAComponent",
 	"type" : "normal" }

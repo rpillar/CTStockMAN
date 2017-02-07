@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"channel" : "RichardPillar 12/30/2016 09:11",
+		"channel:" : "RichardPillar 12/30/2016 09:11",
+		"credentials" : "RichardPillar 12/30/2016 09:11",
+		"credentials:" : "RichardPillar 12/30/2016 09:11",
+		"inactiveShopNames" : "RichardPillar 12/30/2016 10:04",
+		"inactiveShopNames:" : "RichardPillar 12/30/2016 10:04",
+		"initialize" : "RichardPillar 12/30/2016 09:12",
+		"messageComponent" : "RichardPillar 12/30/2016 09:11",
+		"messageComponent:" : "RichardPillar 12/30/2016 09:11",
+		"renderAddCredentialsButtonsOn:" : "RichardPillar 12/30/2016 09:23",
+		"renderAddCredentialsChannelOn:" : "RichardPillar 12/30/2016 10:01",
+		"renderAddCredentialsShopSelectOn:" : "RichardPillar 12/30/2016 10:04",
+		"renderContentOn:" : "RichardPillar 12/30/2016 10:01",
+		"shopName" : "RichardPillar 12/30/2016 09:11",
+		"shopName:" : "RichardPillar 12/30/2016 09:11",
+		"updateCredentials" : "RichardPillar 12/30/2016 09:23",
+		"validateUpdateCredentials" : "RichardPillar 12/30/2016 09:22" } }

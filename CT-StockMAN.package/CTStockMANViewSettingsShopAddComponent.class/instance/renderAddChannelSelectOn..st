@@ -6,6 +6,7 @@ renderAddChannelSelectOn: html
 		with: [ 
 			html div
 				class: 'input-field col s5';
+				style: 'margin-left:45px;';
 				with: [
 					html select
 						id: 'channel';

@@ -1,6 +1,6 @@
 {
 	"class" : {
-		 },
+		"credentials" : "RichardPillar 12/29/2016 20:33" },
 	"instance" : {
 		"apiKey" : "RichardPillar 6/15/2016 16:43",
 		"apiKey:" : "RichardPillar 6/15/2016 16:43",
@@ -8,7 +8,6 @@
 		"apiSecret:" : "RichardPillar 6/15/2016 16:43",
 		"appUrl" : "RichardPillar 6/15/2016 16:43",
 		"appUrl:" : "RichardPillar 6/15/2016 16:43",
-		"credentials" : "RichardPillar 10/19/2016 08:11",
 		"initialize" : "RichardPillar 6/22/2016 16:20",
 		"password" : "RichardPillar 6/22/2016 15:14",
 		"password:" : "RichardPillar 6/22/2016 15:14",

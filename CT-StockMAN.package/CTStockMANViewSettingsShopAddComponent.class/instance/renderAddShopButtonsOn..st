@@ -30,15 +30,19 @@ renderAddShopButtonsOn: html
 										s << ( ( s jQuery class: 'no-shop-data' ) remove ).
 										s << ( ( s jQuery class: 'shop-entry-block' ) remove ).
 										s << ( ( s jQuery class: 'shop-data' ) append: [ :r | r render: shopComponent ] ).
+										s << ( ( s jQuery class: 'shop-data' ) show ).
 										s << ( ( s jQuery class: 'add-shop' ) show: 0.2 seconds ).
 										( myShop channel = 'EBay' )
 											ifTrue: [ 
 												s << ( ( s jQuery class: 'ebay-no-credential-data' ) remove ).
 												s << ( ( s jQuery class: 'ebay-credential-data' ) append: [ :r | r render: credentialsComponent ] ).
+												s << ( ( s jQuery class: 'ebay-credential-data' ) show ).
 											].
 										( myShop channel = 'Shopify' )
 											ifTrue: [ 
-												s << ( ( s jQuery class: 'shopify-no-credential-data' ) remove )
+												s << ( ( s jQuery class: 'shopify-no-credential-data' ) remove ).
+												s << ( ( s jQuery class: 'shopify-credential-data' ) append: [ :r | r render: credentialsComponent ] ).
+												s << ( ( s jQuery class: 'shopify-credential-data' ) show ).
 											].
 									]
 									ifFalse: [  

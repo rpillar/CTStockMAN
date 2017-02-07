@@ -11,6 +11,8 @@ updateRoot: anHtmlRoot
 		url: 'https://fonts.googleapis.com/css?family=Exo+2'.
 	anHtmlRoot stylesheet			
 		url: 'https://fonts.googleapis.com/css?family=Lobster'.	
+	anHtmlRoot stylesheet			
+		url: 'https://fonts.googleapis.com/css?family=Kranky'.		
 	anHtmlRoot stylesheet 
 		url: (CTToDoFileLibrary urlOf: #styleCss).						
 	anHtmlRoot javascript

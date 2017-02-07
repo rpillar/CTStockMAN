@@ -13,6 +13,10 @@ renderContentOn: html
 	self renderShopsOn: html.	
 	
 	"display shop credentials ..."		
-	self renderCredentialsOn: html.	
+	self renderCredentialsOn: html.
+	
+	"display product categories ..."		
+	self renderCategoriesOn: html.	
 		
-	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ) .		
+	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ).	
+	html document addLoadScript: ( ( JSStream on: '$(window).scrollTop(0)' ) ).		

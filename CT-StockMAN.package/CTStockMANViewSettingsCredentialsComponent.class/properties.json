@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "",
+	"commentStamp" : "RichardPillar 12/5/2016 13:02",
 	"instvars" : [
 		"credentials" ],
 	"name" : "CTStockMANViewSettingsCredentialsComponent",

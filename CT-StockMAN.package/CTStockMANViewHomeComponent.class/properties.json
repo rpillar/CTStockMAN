@@ -4,9 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "RichardPillar 11/14/2016 17:21",
+	"commentStamp" : "RichardPillar 1/16/2017 08:10",
 	"instvars" : [
-		 ],
+		"channels",
+		"shops",
+		"shopsActive" ],
 	"name" : "CTStockMANViewHomeComponent",
 	"pools" : [
 		 ],

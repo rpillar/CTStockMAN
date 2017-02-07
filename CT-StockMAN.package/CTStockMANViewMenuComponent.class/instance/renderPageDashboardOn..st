@@ -2,5 +2,5 @@ as yet unclassified
 renderPageDashboardOn: html
 
 	| dashboardPage |
-	dashboardPage  := CTStockMANViewSettingsComponent new.
+	dashboardPage  := CTStockMANViewHomeComponent new.
 	html render: dashboardPage.

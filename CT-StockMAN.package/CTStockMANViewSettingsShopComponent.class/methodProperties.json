@@ -2,7 +2,9 @@
 	"class" : {
 		 },
 	"instance" : {
+		"channel" : "RichardPillar 12/2/2016 21:09",
+		"channel:" : "RichardPillar 12/2/2016 21:09",
 		"initialize" : "RichardPillar 11/22/2016 08:15",
-		"renderContentOn:" : "RichardPillar 12/2/2016 08:17",
+		"renderContentOn:" : "RichardPillar 12/28/2016 21:49",
 		"shop" : "RichardPillar 11/22/2016 08:15",
 		"shop:" : "RichardPillar 11/22/2016 08:15" } }

@@ -6,6 +6,10 @@
 		 ],
 	"commentStamp" : "RichardPillar 11/21/2016 22:16",
 	"instvars" : [
+		"messageComponent",
+		"channel",
+		"shopName",
+		"shopDescription",
 		"shop" ],
 	"name" : "CTStockMANViewSettingsShopComponent",
 	"pools" : [

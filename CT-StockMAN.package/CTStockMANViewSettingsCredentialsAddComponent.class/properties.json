@@ -1,0 +1,18 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"messageComponent",
+		"channel",
+		"inactiveShopNames",
+		"shopName",
+		"credentials" ],
+	"name" : "CTStockMANViewSettingsCredentialsAddComponent",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANView",
+	"type" : "normal" }

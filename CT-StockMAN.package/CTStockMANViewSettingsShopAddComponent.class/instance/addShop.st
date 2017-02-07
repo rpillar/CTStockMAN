@@ -1,7 +1,7 @@
 accessing
 addShop
 
-	| "myCredentials" myData "myDb" myShop "query" |
+	| myData myShop |
 	
 	"add shop details"
 	myData := Array new: 4.

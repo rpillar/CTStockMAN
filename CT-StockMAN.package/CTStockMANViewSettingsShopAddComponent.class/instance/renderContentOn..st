@@ -13,7 +13,7 @@ renderContentOn: html
 				with: [ 
 					html div 
 						class: 'col s12';
-						style: 'border: 3px solid lightgray;border-radius:5px;background-color:#eceff1;';
+						style: 'border: 3px solid lightgray;border-radius:5px;';
 						with: [ 
 							html div 
 								class: 'login-form';

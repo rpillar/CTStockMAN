@@ -17,30 +17,41 @@ renderShopsOn: html
 				with: 'Shops'.
 			]
 		].
-	
-	html div 
-		class: 'row';
-		with: [
-			html unorderedList
-			class: 'collapsible popout shop-data'; 
-			with: [			
-				self shops isEmpty
-					ifTrue: [
-						html div
-							class: 'no-shop-data'; 
-							style: 'margin-left: 20px;font-size:1.5rem;font-weight:300;'; 
-							with: 'There are no shops defined at the moment.'
-					]
-					ifFalse: [ 
-						self shops do: [ :each |
-							myShop := CTStockMANViewSettingsShopComponent new.
-							myShop shop: each.
-							html render: myShop.
-						]
-					]	
-			]	
-		]. 				
 
+	( self shops isEmpty )
+		ifTrue: [
+			html div 
+				class: 'row';
+				with: [
+					html div
+						class: 'no-shop-data'; 
+						style: 'margin-left: 20px;font-size:1.5rem;font-weight:300;'; 
+						with: 'There are no shops defined at the moment.'
+				].		
+			html div 
+				class: 'row';
+				with: [
+					html unorderedList
+						class: 'collapsible shop-data';
+						style: 'display: none;'
+				].
+		]
+		ifFalse: [ 			
+			html div 
+				class: 'row';
+				with: [
+					html unorderedList
+						class: 'collapsible shop-data'; 
+						with: [			
+							self shops do: [ :each |
+								myShop := CTStockMANViewSettingsShopComponent new.
+								myShop shop: each.
+								html render: myShop.
+							]
+						]	
+				] 				
+		].
+	
 	html div 
 		class: 'row add-shop';
 		style: 'margin-top:25px;';
@@ -66,7 +77,7 @@ renderShopsOn: html
 		style: 'margin-bottom:5px;';
 		with: [
 			html div 
-				class: 'col s10'; 
+				class: 'col s12'; 
 				style: 'display:none;'; 
 				id: 'shop-entry'
 		].	

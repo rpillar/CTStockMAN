@@ -34,9 +34,52 @@ renderContentOn: html
 				].
 			html div 
 				class: 'collapsible-body';
+				style: 'display:block;';
 				with: [ 
-					html paragraph 
-						with: 'No details can be found.'
+					html div 
+						class: 'full-shop-data';
+						with: [
+							html div 	
+								class: 'row';
+								style: 'margin-top:20px;';
+								with: [  
+									html div 
+										class: 'col s2 right-align';
+										style: 'font-weight:400;font-size:20px;';
+										with: 'Shop Name : '.
+									html div 
+										class: 'col s9 left-align';
+										style: 'font-weight:300;font-size:20px;';
+										with: self shop shopName.		
+								].
+							html div 	
+								class: 'row';
+								style: 'margin-top:20px;';
+								with: [  
+									html div 
+										class: 'col s2 right-align';
+										style: 'font-weight:400;font-size:20px;';
+										with: 'Shop Description : '.
+									html div 
+										class: 'col s9 left-align';
+										style: 'font-weight:300;font-size:20px;';
+										with: self shop shopDescription.	
+								].
+							html div 	
+								class: 'row';
+								style: 'margin-top:20px;';
+								with: [  
+									html div 
+										class: 'col s2 right-align';
+										style: 'font-weight:400;font-size:20px;';
+										with: 'Status : '.
+									html div 
+										class: 'col s9 left-align';
+										style: 'font-weight:300;font-size:20px;';
+										with: self shop status.	
+								]
+						].
 				].
 		].
 	 	
+	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ) .

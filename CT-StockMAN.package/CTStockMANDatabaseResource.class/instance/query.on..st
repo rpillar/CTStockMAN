@@ -7,7 +7,7 @@ query: aQuery on: aModel
 	myInstVars := myClass instVarNames.
 	myData := OrderedCollection new.
 	myDb := self database.
-	
+
 	( myDb execute: aQuery ) rows do: [ :r | 		
 			myObj := myClass new.				
 			myInstVars do: [ :i |

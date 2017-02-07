@@ -8,6 +8,7 @@
 	"instvars" : [
 		"addShopComponent",
 		"ebayCredentials",
+		"shopifyCredentials",
 		"shops" ],
 	"name" : "CTStockMANViewSettingsComponent",
 	"pools" : [

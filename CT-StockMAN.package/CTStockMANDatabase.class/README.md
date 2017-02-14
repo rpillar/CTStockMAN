@@ -1,1 +1,0 @@
-The 'base' database class - subclass in order to implement the specific DB related methods. 

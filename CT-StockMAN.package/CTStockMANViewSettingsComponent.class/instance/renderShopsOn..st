@@ -18,34 +18,29 @@ renderShopsOn: html
 			]
 		].
 
-	( self shops isEmpty )
-		ifTrue: [
-			html div 
-				class: 'row';
-				with: [
-					html div
-						class: 'no-shop-data'; 
-						style: 'margin-left: 20px;font-size:1.5rem;font-weight:300;'; 
-						with: 'There are no shops defined at the moment.'
-				].		
-			html div 
-				class: 'row';
-				with: [
-					html unorderedList
-						class: 'collapsible shop-data';
-						style: 'display: none;'
-				].
-		]
-		ifFalse: [ 			
-			html div 
-				class: 'row';
-				with: [
+	html div 
+		class: 'row shop-data-block';
+		with: [
+			( self shops isEmpty )
+				ifTrue: [
+					html render: CTStockMANViewSettingsShopEmptyComponent new.
+					html div 
+						with: [
+							html unorderedList
+								class: 'collapsible shop-data';
+								style: 'display: none;'
+						].
+				]
+				ifFalse: [ 			
 					html unorderedList
 						class: 'collapsible shop-data'; 
 						with: [			
 							self shops do: [ :each |
 								myShop := CTStockMANViewSettingsShopComponent new.
 								myShop shop: each.
+								myShop shopName: each shopName.
+								myShop shopDescription: each shopDescription.
+								myShop shopStatus: each status.
 								html render: myShop.
 							]
 						]	
@@ -60,26 +55,18 @@ renderShopsOn: html
 				class: 'col s3';
 				with: [ 
 					html anchor 
-						class: 'btn-large waves-effect waves-light'; 
-						onClick: ( ( html jQuery ajax )
-							script: [ :s |
-								s << ( ( s jQuery id: 'shop-entry' ) append: [ :r | r render: self addShopComponent ] ).
-								s << ( ( s jQuery class: 'add-shop' ) hide ). 
-								s << ( ( s jQuery id: 'shop-entry' ) slideDown: 0.4 seconds ).  	
-							]
-						);								
+						class: 'btn-large waves-effect waves-light hoverable'; 
+						url: '#add-shop-modal';	
+						script: (
+    						( html jQuery this )
+      						on: 'click'
+      						do: ( (
+        						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
+								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' )			
+      						) asFunction: #(event) )
+  						);					
 						with: 'Add New Shop'.			
 				]
-		].	
-		
-	html div 
-		class: 'row';
-		style: 'margin-bottom:5px;';
-		with: [
-			html div 
-				class: 'col s12'; 
-				style: 'display:none;'; 
-				id: 'shop-entry'
 		].	
 
 	html div 

@@ -8,7 +8,8 @@
 	"instvars" : [
 		"channelName",
 		"status",
-		"userName" ],
+		"userName",
+		"update_date" ],
 	"name" : "CTStockMANModelChannel",
 	"pools" : [
 		 ],

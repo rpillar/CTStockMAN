@@ -10,6 +10,6 @@ renderCategoriesOn: html
 			with: [ 
 				html span 
 				style: 'border-bottom: 3px solid lightblue;'; 
-				with: 'Categories'.
+				with: 'Product Categories'.
 			]
 		].

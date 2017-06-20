@@ -1,4 +1,4 @@
-accessing
+table
 initialize
 
 	super initialize.

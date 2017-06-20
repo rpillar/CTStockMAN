@@ -1,7 +1,7 @@
 accessing
 addShop
 
-	| myData myShop |
+	| myArgsArray myData myShop |
 	
 	"add shop details"
 	myData := Array new: 4.
@@ -9,14 +9,12 @@ addShop
 	myData at: 2 put: self shopDescription.
 	myData at: 3 put: self channel.
 	myData at: 4 put: 'Not Active'.	
-	myShop := self session dbResource insert: 'shops' fields: #(shopName shopDescription channel status) with: myData. 
-	
+	self session dbResource insert: 'shops' fields: #(shopName shopDescription channel status) with: myData. 
+
 	"return a shop model"
-	myShop := CTStockMANModelShop new.
-	myShop channel: self channel.
-	myShop shopName: self shopName.
-	myShop shopDescription: self shopDescription.
-	myShop status: 'Not Active'.
+	myArgsArray := Array new: 1.
+	myArgsArray at: 1 put: self shopName.
+	myShop := self session dbResource query: 'select * from shops where shopName = ?' with: myArgsArray  on: 'CTStockMANModelShop'. 
 	
-	^ myShop.
+	^ myShop at: 1.
 	

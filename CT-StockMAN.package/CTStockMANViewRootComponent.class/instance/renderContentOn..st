@@ -2,7 +2,7 @@ accessing
 renderContentOn: html
 
 	html div 
-		class: 'side-nav';
+		class: 'page-side-nav';
 		style: 'z-index:10;';
 		with: self menuComponent.	
 		

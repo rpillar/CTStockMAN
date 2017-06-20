@@ -1,1 +1,0 @@
-Display 'credentials' details by 'shop' and enable the editing / deleting of these details. Also provides the ability to switch between test / live versions and to perform a 'test' against the currently active 'set'.

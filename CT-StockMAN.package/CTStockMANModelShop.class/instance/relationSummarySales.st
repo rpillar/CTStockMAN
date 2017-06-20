@@ -1,4 +1,4 @@
-accessing
+relation
 relationSummarySales
 
 | myArgsArray mySalesSummary |

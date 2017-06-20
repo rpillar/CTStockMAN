@@ -8,4 +8,7 @@ style
 .messageSpan { 
 	font-size: 20px; 
 }
+.errorMessage { 
+	color: red; 
+}
 '

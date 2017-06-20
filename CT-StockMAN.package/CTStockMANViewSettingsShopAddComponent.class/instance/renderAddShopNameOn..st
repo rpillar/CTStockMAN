@@ -12,7 +12,7 @@ renderAddShopNameOn: html
 						style: 'color:#000;';
 						with: 'store'.
 					html textInput 
-						class: 'validate';
+						class: 'validate add-shop-name';
 						id: 'icon-prefix';
 						autofocus;
 						attributeAt: 'autocomplete' put: 'off';

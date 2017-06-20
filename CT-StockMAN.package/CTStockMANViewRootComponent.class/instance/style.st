@@ -5,7 +5,7 @@ body {
 	padding: 0;
  	margin: 0;
 }
-.side-nav {
+.page-side-nav {
 	z-index: 10;
 	width: 90px;
 	/*border-right: 1px solid lightgray;*/

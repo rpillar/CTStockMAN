@@ -10,7 +10,8 @@
 		"shopId",
 		"shopName",
 		"shopDescription",
-		"status" ],
+		"status",
+		"update_date" ],
 	"name" : "CTStockMANModelShop",
 	"pools" : [
 		 ],

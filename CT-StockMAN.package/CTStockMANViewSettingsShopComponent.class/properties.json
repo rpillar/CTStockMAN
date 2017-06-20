@@ -10,6 +10,7 @@
 		"channel",
 		"shopName",
 		"shopDescription",
+		"shopStatus",
 		"shop" ],
 	"name" : "CTStockMANViewSettingsShopComponent",
 	"pools" : [

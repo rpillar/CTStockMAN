@@ -6,7 +6,7 @@ renderContentOn: html
 		with: [  
 			html div 
 				class: 'page-title';
-				with: 'DashBoard'.
+				with: 'DashBoard'.	
 		].
 
 	self shopsActive: true.

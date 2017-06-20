@@ -1,0 +1,18 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 4/26/2017 08:45",
+	"instvars" : [
+		"messageComponent",
+		"formCredentials",
+		"formCredentialsList",
+		"shop",
+		"shopCredentials" ],
+	"name" : "CTStockMANViewCredentialsComponent",
+	"pools" : [
+		 ],
+	"super" : "CTStockMANView",
+	"type" : "normal" }

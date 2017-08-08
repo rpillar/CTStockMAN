@@ -104,6 +104,7 @@ renderEbayCredentialsFormOn: html
 																id: 'tab3';
 																class: 'col s12';
 																with: [ 
+																	self renderEbayCredentialsTestOn: html.
 																]
 														]
 												]

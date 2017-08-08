@@ -4,7 +4,7 @@ renderContentOn: html
 	html div 
 		id: 'add-shop-modal';
 		class: 'modal bottom-sheet';
-		style: 'z-index:1003;display:none;opacity:0;bottom:-100%;max-height:75%;border-top:8px solid #000;';
+		style: 'z-index:1003;display:none;opacity:0;bottom:-100%;max-height:80%;border-top:8px solid #000;';
 		with: [ 
 			html div 
 				class: 'modal-content';

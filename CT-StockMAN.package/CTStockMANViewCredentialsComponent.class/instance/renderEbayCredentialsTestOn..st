@@ -15,11 +15,21 @@ renderEbayCredentialsTestOn: html
 						id: 'test-credentials';
 						script: ( html jQuery this 
 							on: 'click'
-							do: (  ( html jQuery ajax
-								 html jQuery expression: ( ( JSStream on: '$(''#test-credentials'').attr(''disabled'',''disabled'')' ) );
-								callback: [ :val | channel := CTStockMANEBayManage new. response := channel getEBayOfficialTime.  ] value: [ 'Ebay' ];
+							do: (
+								( ( html jQuery id: 'test-credentials' ) attributeAt: 'disabled' put: 'disabled' ),
+								( ( html jQuery class: 'progress' ) show )
+							)
+						);
+						script: ( html jQuery this 
+							on: 'click'
+							do: ( 	( ( html jQuery ajax )
+								callback: [ :val | 
+									channel := CTStockMANEBayManage new. 
+									response := channel getEBayOfficialTime. 
+								] value: [ 'Ebay' ];
 								onComplete: ( 
-									( ( html jQuery expression: '#test-credentials' ) removeAttribute: 'disabled' )
+									( ( html jQuery expression: '#test-credentials' ) removeAttribute: 'disabled' ),
+									( ( html jQuery class: 'progress' ) hide )
 								)
 							) asFunction: #(event) )
 						);

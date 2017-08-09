@@ -59,6 +59,7 @@ renderEbayCredentialsFormOn: html
 																				class: 'tab col s3';
 																				with: [ 
 																					html anchor 
+																						class: 'active';
 																						url: '#tab1';
 																						style: 'color:#000;';
 																						with: 'appid / devid / certid' 

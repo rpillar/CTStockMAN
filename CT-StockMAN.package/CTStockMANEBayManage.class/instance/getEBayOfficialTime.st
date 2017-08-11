@@ -27,15 +27,12 @@ getEBayOfficialTime
 		);
 		post;
 		response.
-
-	formattedResponse := Dictionary new.
+		
 	( response statusLine code = 200 ) 
 		ifTrue: [  
-			formattedResponse at: 'status' put: response statusLine code.
-			formattedResponse at: 'content' put: response entity asString.
+			formattedResponse := 'Status: ', ( response statusLine code asString ), ' / Message: ', ( response entity asString ).
 		]
 		ifFalse: [  
-			formattedResponse at: 'status' put: response statusLine code.
-			formattedResponse at: 'content' put: 'There has been a problem. Please check the format of your request and the system logs for details.'.
+			formattedResponse := 'Status: ', '500', ' / Message: ', 'There has been a problem. Please check the format of your request and the system logs for details.'.
 		].
 	^ formattedResponse.

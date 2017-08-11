@@ -23,14 +23,13 @@ renderEbayCredentialsTestOn: html
 						script: ( html jQuery this 
 							on: 'click'
 							do: ( 	( ( html jQuery ajax )
-								callback: [ :val | 
+								script: [ :s |
 									channel := CTStockMANEBayManage new. 
 									response := channel getEBayOfficialTime. 
-								] value: [ 'Ebay' ];
-								onComplete: ( 
-									( ( html jQuery expression: '#test-credentials' ) removeAttribute: 'disabled' ),
-									( ( html jQuery class: 'progress' ) hide )
-								)
+									s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
+									s << ( ( s jQuery class: 'progress' ) hide ).
+									s << ( ( s jQuery id: 'credentials-shop-test' ) append: response )
+								]
 							) asFunction: #(event) )
 						);
 						with: 'Test'.

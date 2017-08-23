@@ -1,4 +1,4 @@
-accessing
+relation
 relationShops
 
 | myArgsArray myShops |

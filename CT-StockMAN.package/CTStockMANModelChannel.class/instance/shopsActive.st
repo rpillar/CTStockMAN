@@ -1,3 +1,3 @@
-accessing
+relation
 shopsActive
 	^ self relationShopsActive.

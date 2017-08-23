@@ -1,3 +1,4 @@
 accessing
 token
-	^ token
+
+	^ self credentials at: #token.

@@ -25,6 +25,7 @@ renderEbayCredentialsTestOn: html
 							do: ( 	( ( html jQuery ajax )
 								script: [ :s |
 									channel := CTStockMANEBayManage new. 
+									channel myEbay credentials: formCredentials.
 									response := channel getEBayOfficialTime. 
 									s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
 									s << ( ( s jQuery class: 'progress' ) hide ).

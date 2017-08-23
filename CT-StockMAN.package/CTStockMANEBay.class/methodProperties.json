@@ -2,13 +2,9 @@
 	"class" : {
 		"credentials" : "RichardPillar 12/29/2016 20:01" },
 	"instance" : {
-		"getCredentials" : "RichardPillar 10/31/2016 07:57",
-		"initialize" : "RichardPillar 8/7/2017 08:29",
-		"request" : "RichardPillar 10/16/2016 19:38",
-		"request:" : "RichardPillar 10/16/2016 19:38",
-		"shop" : "RichardPillar 10/18/2016 08:08",
-		"shop:" : "RichardPillar 10/18/2016 08:08",
-		"token" : "RichardPillar 10/18/2016 08:14",
-		"token:" : "RichardPillar 10/18/2016 08:14",
-		"url" : "RichardPillar 10/18/2016 08:14",
-		"url:" : "RichardPillar 10/18/2016 08:14" } }
+		"credentials" : "RichardPillar 8/11/2017 18:45",
+		"credentials:" : "RichardPillar 8/11/2017 18:45",
+		"initialize" : "RichardPillar 8/23/2017 22:16",
+		"setHeaders" : "RichardPillar 8/23/2017 22:16",
+		"token" : "RichardPillar 8/11/2017 19:15",
+		"url" : "RichardPillar 8/11/2017 19:27" } }

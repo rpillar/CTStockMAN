@@ -1,3 +1,3 @@
-accessing
+relation
 shop
 	^ self relationShop.

@@ -6,11 +6,7 @@
 		 ],
 	"commentStamp" : "FirstnameLastname 9/27/2016 08:55",
 	"instvars" : [
-		"credentials",
-		"request",
-		"shop",
-		"token",
-		"url" ],
+		"credentials" ],
 	"name" : "CTStockMANEBay",
 	"pools" : [
 		 ],

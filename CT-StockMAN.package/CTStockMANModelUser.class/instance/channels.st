@@ -1,3 +1,3 @@
-accessing
+relation
 channels
 	^ self relationChannels.

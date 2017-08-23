@@ -15,10 +15,14 @@ getEBayOfficialTime
 					writer tag: 'eBayAuthToken' with: self myEbay token. 
 				]
 		]. 
-
+		
+	"set standard headers - credentials etc."
+	self myEbay setHeaders.
+		
 	"ebay function ..."
-	self myEbay request headerAt: 'X-EBAY-API-CALL-NAME' add: 'GeteBayOfficialTime'.
-	response := self myEbay request
+	self myEbay znClient headerAt: 'X-EBAY-API-CALL-NAME' add: 'GeteBayOfficialTime'.
+
+	response := self myEbay znClient 
 		url: self myEbay url; 
 		entity: (
 			ZnEntity

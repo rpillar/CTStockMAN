@@ -16,6 +16,7 @@ renderEbayCredentialsTestOn: html
 						script: ( html jQuery this 
 							on: 'click'
 							do: (
+								( ( html jQuery id: 'credentials-shop-test' ) html: ' ' ),
 								( ( html jQuery id: 'test-credentials' ) attributeAt: 'disabled' put: 'disabled' ),
 								( ( html jQuery class: 'progress' ) show )
 							)

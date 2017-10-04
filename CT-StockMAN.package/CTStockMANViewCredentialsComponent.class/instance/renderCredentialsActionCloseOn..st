@@ -9,9 +9,8 @@ renderCredentialsActionCloseOn: html
 				style: 'text-decoration:none;cursor:pointer;';
 				onClick: ( ( html jQuery ajax )
 					script: [ :s | 
-						"self shopName: ''. self shopDescription: ''. self channel: nil."
 						s << ( JSStream on: '$(''#edit-credential-modal'').modal(''close'')'  ).
-                   s << ( ( s jQuery class: 'credentials-modal-content' ) remove ).						
+						s << ( ( s jQuery class: 'credentials-modal-content' ) remove ).						
 					]
 				);	
 				with: [ 

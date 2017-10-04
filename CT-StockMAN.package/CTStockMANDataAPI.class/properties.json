@@ -1,0 +1,16 @@
+{
+	"category" : "CT-StockMAN-DataAPI",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 9/14/2017 18:50",
+	"instvars" : [
+		"database",
+		"dbResource",
+		"server" ],
+	"name" : "CTStockMANDataAPI",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

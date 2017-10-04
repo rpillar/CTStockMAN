@@ -31,7 +31,8 @@ getEBayOfficialTime
 		);
 		post;
 		response.
-		
+	
+	"formatted response as this is the <test> response string."	
 	( response statusLine code = 200 ) 
 		ifTrue: [  
 			formattedResponse := 'Status: ', ( response statusLine code asString ), ' / Message: ', ( response entity asString ).

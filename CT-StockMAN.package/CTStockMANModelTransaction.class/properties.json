@@ -6,6 +6,7 @@
 		 ],
 	"commentStamp" : "FirstnameLastname 7/4/2016 16:08",
 	"instvars" : [
+		"id",
 		"productId",
 		"category",
 		"date",

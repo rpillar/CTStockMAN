@@ -1,11 +1,13 @@
 as yet unclassified
 getEBayCategories
 
-	"use with caution - will return details for all categories - lots of data"
+	"gets top level category data only"
 	| response writer |
 
 	writer := XMLWriter new.
-	writer enablePrettyPrinting; xml; comment: 'ebay - get ebay site categories'.
+	writer enablePrettyPrinting.
+	writer xml encoding: 'UTF-8'.
+	writer comment: 'ebay - get ebay categories - top level only'.
 	writer tag name: 'GetCategoriesRequest'; xmlns: 'urn:ebay:apis:eBLBaseComponents'; 
 		with: [  
 			writer 
@@ -14,19 +16,25 @@ getEBayCategories
 				].
 			writer 
 				tag: 'CategorySiteID' with: '3'.
+			writer 
+				tag: 'DetailLevel' with: 'ReturnAll'.
 			writer 	
-				tag: 'DetailLevel' with: 'ReturnAll'.	
+				tag: 'LevelLimit' with: '1'.
 		]. 
 
+	"set standard headers - credentials etc."
+	self myEbay setHeaders.
+
 	"ebay function ..."
-	request headerAt: 'X-EBAY-API-CALL-NAME' add: 'GetCategories'.
-	response := self request
-		url: self myEbay url;
+	self myEbay znClient headerAt: 'X-EBAY-API-CALL-NAME' add: 'GetCategories'.
+	
+	response := self myEbay znClient 
+		url: self myEbay url; 
 		entity: (
-			ZnEntity 
-				with: writer asString
+			ZnEntity
+				with: writer asString asUTF8Bytes
 				type: ZnMimeType applicationXml
-			);
+		);
 		post;
 		response.
 		

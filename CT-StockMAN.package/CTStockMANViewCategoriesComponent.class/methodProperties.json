@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"categoryName" : "RichardPillar 10/23/2017 21:22",
+		"categoryName:" : "RichardPillar 10/23/2017 21:22",
+		"channelCategory" : "RichardPillar 10/23/2017 21:16",
+		"channelCategory:" : "RichardPillar 10/23/2017 21:16",
+		"channelCategoryNames" : "RichardPillar 10/23/2017 22:54",
+		"channelNames" : "RichardPillar 10/23/2017 18:15",
+		"initialize" : "RichardPillar 10/22/2017 20:01",
+		"messageComponent" : "RichardPillar 10/22/2017 20:13",
+		"messageComponent:" : "RichardPillar 10/22/2017 20:13",
+		"renderAddChannelSelectOn:" : "RichardPillar 10/23/2017 21:24",
+		"renderCategoriesActionCloseOn:" : "RichardPillar 10/23/2017 18:04",
+		"renderCategoriesFormOn:" : "RichardPillar 10/23/2017 21:17",
+		"renderCategoryButtonsOn:" : "RichardPillar 10/23/2017 22:57",
+		"renderChannelCategorySelectOn:" : "RichardPillar 10/23/2017 23:07",
+		"renderContentOn:" : "RichardPillar 10/23/2017 22:56",
+		"validateCategory" : "RichardPillar 10/23/2017 22:57" } }

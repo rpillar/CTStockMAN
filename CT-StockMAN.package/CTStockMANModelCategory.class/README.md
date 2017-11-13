@@ -1,1 +1,1 @@
-the category names
+A place where it is possible to set common category names across chanels so that products sold on different platforms / channels can be seen as a 'whole'. Allows proper analytics.

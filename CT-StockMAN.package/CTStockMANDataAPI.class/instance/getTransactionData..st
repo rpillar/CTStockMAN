@@ -1,9 +1,10 @@
 retrieve
 getTransactionData: req
-
-	| myData myKeyCount queryString selectString stonData transactions |
-	stonData := ( STON reader on: req entity contents readStream ) next.
 	
+	"assumes a JSON string - <where> will describe the key / values being requested and <fields> the data that you want returned."
+	| myKeyCount queryString selectString stonData transactions |
+	stonData := ( STON reader on: req entity contents readStream ) next.
+
 	"process 'where' clause"
 	myKeyCount := 1.
 	queryString := ' where '.
@@ -17,6 +18,7 @@ getTransactionData: req
 	selectString := 'select '.
 	( stonData at: #fields ) do: [ :field | selectString := selectString, field asString ] separatedBy: [ selectString := selectString , ',' ].
 	transactions := self dbResource query: ( selectString, ' from transactions ', queryString ) with: ( stonData at: #where ) values.
+	( transactions isNil ) ifTrue: [ ^ '{}' ].
 	
 	"remove additional keys returned as part of the query."
 	( transactions data ) keysDo: [ :key | 
@@ -29,6 +31,4 @@ getTransactionData: req
       		mapInstVarsFor: CTStockMANModelTransaction;
       		nextPut: transactions ]."
 	
-	myData := String streamContents: [ :stream | (NeoJSONWriter on: stream) nextPut: ( transactions data ) ].	
-
-	^ myData.
+	^ String streamContents: [ :stream | (NeoJSONWriter on: stream) nextPut: ( transactions data ) ].

@@ -4,8 +4,10 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "RichardPillar 12/27/2016 21:48",
+	"commentStamp" : "RichardPillar 11/6/2017 19:51",
 	"instvars" : [
+		"channel",
+		"categoryKey",
 		"categoryName" ],
 	"name" : "CTStockMANModelCategory",
 	"pools" : [

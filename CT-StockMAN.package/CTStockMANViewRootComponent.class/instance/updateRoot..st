@@ -22,4 +22,4 @@ updateRoot: anHtmlRoot
 	anHtmlRoot javascript 
 		url: '	https://use.fontawesome.com/e42a505129.js'.		
 	"anHtmlRoot javascript 
-		url: (CTToDoFileLibrary urlOf: #mainJs)	"
+		url: (CTStockMANFileLibrary urlOf: #stockMANQueryJs)."

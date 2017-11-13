@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"channelNames" : "RichardPillar 11/13/2017 21:52",
+		"initialize" : "RichardPillar 11/13/2017 21:41",
+		"messageComponent" : "RichardPillar 11/13/2017 21:42",
+		"messageComponent:" : "RichardPillar 11/13/2017 21:42",
+		"renderAddChannelSelectOn:" : "RichardPillar 11/13/2017 21:51",
+		"renderContentOn:" : "RichardPillar 11/13/2017 21:58",
+		"renderGetCategoriesActionCloseOn:" : "RichardPillar 11/13/2017 21:45",
+		"renderGetCategoriesFormOn:" : "RichardPillar 11/13/2017 21:57",
+		"renderGetCategoryButtonsOn:" : "RichardPillar 11/13/2017 21:56" } }

@@ -13,3 +13,62 @@ renderCategoriesOn: html
 				with: 'Product Categories'.
 			]
 		].
+	
+	html div 
+		class: 'row';
+		with: [ 
+			html paragraph 
+				style: 'font-size: 18px;font-weight:300;';
+				with: 'Retrieve product categories for the selected channel and if appropriate create a custom StockMAN category for cases where the category names do not match across the different channels.' 
+		].
+	
+	"self renderCategoryDataOn: html."
+	
+	html div 
+		class: 'row add-category';
+		style: 'margin-top:25px;';
+		with: [ 
+			html div
+				class: 'col s3';
+				style: 'width:240px;';
+				with: [ 
+					html anchor 
+						class: 'btn-large waves-effect waves-light hoverable'; 
+						url: '#get-categories-modal';	
+						script: (
+    						( html jQuery this )
+      						on: 'click'
+      						do: ( (
+        						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
+								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' )			
+      						) asFunction: #(event) )
+  						);					
+						with: 'Get Categories'.			
+				].
+			html div
+				class: 'col s3';
+				with: [ 
+					html anchor 
+						class: 'btn-large waves-effect waves-light hoverable'; 
+						url: '#add-category-modal';	
+						script: (
+    						( html jQuery this )
+      						on: 'click'
+      						do: ( (
+        						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
+								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' )			
+      						) asFunction: #(event) )
+  						);					
+						with: 'Add New Category'.			
+				]
+		].	
+
+	html div 
+		class: 'row';
+		with: [ 
+			html div 
+			style: 'width:30%;margin:0 auto;'; 
+			with: [
+				html horizontalRule  
+			]. 
+		].	

@@ -6,10 +6,14 @@
 		 ],
 	"commentStamp" : "RichardPillar 11/16/2016 07:58",
 	"instvars" : [
+		"addCategoryComponent",
 		"addShopComponent",
+		"channelCategories",
 		"ebayCredentials",
 		"shopifyCredentials",
-		"shops" ],
+		"shops",
+		"shopCategories",
+		"getCategoriesComponent" ],
 	"name" : "CTStockMANViewSettingsComponent",
 	"pools" : [
 		 ],

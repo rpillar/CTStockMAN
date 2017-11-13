@@ -2,6 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"categoryKey" : "RichardPillar 10/25/2017 07:57",
+		"categoryKey:" : "RichardPillar 10/25/2017 07:57",
 		"categoryName" : "RichardPillar 12/27/2016 21:31",
 		"categoryName:" : "RichardPillar 12/27/2016 21:31",
-		"initialize" : "RichardPillar 12/27/2016 21:32" } }
+		"channel" : "RichardPillar 10/25/2017 07:57",
+		"channel:" : "RichardPillar 10/25/2017 07:57",
+		"initialize" : "RichardPillar 12/27/2016 21:32",
+		"tablePrimaryKey" : "RichardPillar 10/27/2017 21:32" } }

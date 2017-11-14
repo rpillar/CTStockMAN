@@ -33,7 +33,7 @@ renderGetCategoriesFormOn: html
 														class: 'col s12 messageComponent';
 														style: 'margin-top:10px;';
 														with: [ 
-															self messageComponent infoMessage: 'Please select a channel and then GET to retrieve category details. Please note that all existing details for the selected channel will be over-written.'.
+															self messageComponent infoMessage: 'Please select a shop and then GET to retrieve category details for its channel. Please note that all existing details will be over-written.'.
 															html render: self messageComponent.
 														].	
 	 		 										html form
@@ -41,7 +41,7 @@ renderGetCategoriesFormOn: html
 														with: [ 
 															html div 
 																class: 'col s12';
-																with: [ self renderAddChannelSelectOn: html ].	
+																with: [ self renderGetCategoriesShopSelectOn: html ].	
 															html div 
 																class: 'col s12';
 																with: [ self renderGetCategoryButtonsOn: html ].

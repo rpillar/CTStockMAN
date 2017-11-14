@@ -7,6 +7,7 @@
 	"commentStamp" : "RichardPillar 11/13/2017 22:07",
 	"instvars" : [
 		"categoryName",
+		"channel",
 		"channelCategory",
 		"messageComponent" ],
 	"name" : "CTStockMANViewCategoriesComponent",

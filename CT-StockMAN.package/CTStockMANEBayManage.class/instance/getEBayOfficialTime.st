@@ -31,7 +31,13 @@ getEBayOfficialTime
 		);
 		post;
 		response.
-	
+
+	"no response - 500"
+	( response isNil )
+		ifTrue: [  
+			^ 'Status: ', '500', ' / Message: ', 'There has been a problem. Please check the format of your request and the system logs for details.'.
+	].
+
 	"formatted response as this is the <test> response string."	
 	( response statusLine code = 200 ) 
 		ifTrue: [  

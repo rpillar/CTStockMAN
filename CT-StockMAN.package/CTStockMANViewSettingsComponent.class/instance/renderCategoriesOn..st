@@ -19,7 +19,7 @@ renderCategoriesOn: html
 		with: [ 
 			html paragraph 
 				style: 'font-size: 18px;font-weight:300;';
-				with: 'Retrieve product categories for the selected channel and if appropriate create a custom StockMAN category for cases where the category names do not match across the different channels.' 
+				with: 'Retrieve product categories for the selected channel (Shop - they hold the credentials) and if appropriate create a custom StockMAN category for cases where the category names do not match across the different channels.' 
 		].
 	
 	"self renderCategoryDataOn: html."

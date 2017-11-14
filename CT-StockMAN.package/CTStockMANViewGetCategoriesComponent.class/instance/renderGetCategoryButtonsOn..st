@@ -1,7 +1,8 @@
 as yet unclassified
 renderGetCategoryButtonsOn: html
 
-	| categoryComponent myCategory validCategoryInput |
+	| response |
+	
 	html div 
 		with: [ 
 			html div
@@ -12,8 +13,10 @@ renderGetCategoryButtonsOn: html
 						bePush;
 						class: 'btn-large waves-effect waves-light hoverable'; 
 						onClick: ( ( html jQuery ajax )
-							serializeForm;
 							script: [ :s | 
+								"channel := CTStockMANEBayManage new. 
+								channel myEbay credentials: formCredentials.
+								response := channel getEBayOfficialTime."
 								s << ( JSStream on: 'console.log(''get_categories'');'  )	
 							] );
 						with: 'Get Categories'.

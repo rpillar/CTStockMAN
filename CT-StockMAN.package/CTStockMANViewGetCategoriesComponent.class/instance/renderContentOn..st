@@ -1,7 +1,9 @@
 as yet unclassified
 renderContentOn: html
 
-	"Get Categories page ..."	
+	"Get Categories page ..."		
+	"self formCredentials: ( STON reader on: shopCredentials credentials readStream ) next."
+	
 	html div 
 		id: 'get-categories-modal';
 		class: 'modal bottom-sheet';

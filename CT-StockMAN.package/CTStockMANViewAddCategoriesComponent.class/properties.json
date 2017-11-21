@@ -10,7 +10,7 @@
 		"channel",
 		"channelCategory",
 		"messageComponent" ],
-	"name" : "CTStockMANViewCategoriesComponent",
+	"name" : "CTStockMANViewAddCategoriesComponent",
 	"pools" : [
 		 ],
 	"super" : "CTStockMANView",

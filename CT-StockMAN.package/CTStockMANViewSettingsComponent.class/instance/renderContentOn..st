@@ -22,10 +22,10 @@ renderContentOn: html
 	self renderCredentialsModalOn: html.
 	
 	"get Categories modal"
-	html render: getCategoriesComponent.	
+	self renderGetCategoriesModalOn: html.	
 		
 	"add add-category modal"		
-	html render: self addCategoryComponent.
+	self renderAddCategoryModalOn: html.
 				
 	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ).	
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).	

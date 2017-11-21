@@ -9,7 +9,8 @@
 		"channel",
 		"credentials",
 		"shopId",
-		"shopName" ],
+		"shopName",
+		"active" ],
 	"name" : "CTStockMANModelCredentials",
 	"pools" : [
 		 ],

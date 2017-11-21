@@ -18,16 +18,17 @@ renderCategoryButtonsOn: html
 								( validCategoryInput = '' )
 									ifTrue: [ 
 										"add shop / credentials data"
-										myCategory := self addCategory.
+										"myCategory := self addCategory."
 										"create category component and insert into the DOM"
-										categoryComponent := CTStockMANViewSettingsShopComponent new.
+										"categoryComponent := CTStockMANViewSettingsShopComponent new."
 										"categoryComponent shop: myShop.
 										shopComponent shopName: myShop shopName; shopDescription: myShop shopDescription; shopStatus: myShop status.
 										self shopName: ''. self shopDescription: ''. self channel: nil."
-										s << ( ( s jQuery class: 'no-category-data' ) remove ).
+										"s << ( ( s jQuery class: 'no-category-data' ) remove )."
 										"s << ( ( s jQuery class: 'category-data' ) append: [ :r | r render: shopComponent ] )."
-										s << ( ( s jQuery class: 'category-data' ) show ).
-										s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')'  ).
+										"s << ( ( s jQuery class: 'category-data' ) show )."
+										s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')' ).
+										s << ( ( s jQuery class: 'add-category-modal-content' ) remove ).
 										s << ( JSStream on: '$(''.tooltipped'').tooltip()' ).
 									]
 									ifFalse: [  
@@ -42,7 +43,8 @@ renderCategoryButtonsOn: html
 						style: 'margin-left: 12px;background-color:#ef9a9a';
 						onClick: ( ( html jQuery ajax )
 							script: [ :s | 
-								s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')'  ).
+								s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')' ).
+								s << ( ( s jQuery class: 'add-category-modal-content' ) remove ).
 							]
 						);
 						with: 'Cancel'.				

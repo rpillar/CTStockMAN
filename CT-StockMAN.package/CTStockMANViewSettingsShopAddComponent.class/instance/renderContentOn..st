@@ -35,7 +35,6 @@ renderContentOn: html
 																class: 'col s12 messageComponent';
 																style: 'margin-top:10px;';
 																with: [ 
-																	self messageComponent infoMessage: 'Please enter shop details - then Save (or Cancel).'.
 																	html render: self messageComponent.
 																].	
 	 		 												html form

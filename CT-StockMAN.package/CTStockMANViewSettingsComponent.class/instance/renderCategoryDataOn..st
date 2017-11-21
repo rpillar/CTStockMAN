@@ -1,6 +1,7 @@
 as yet unclassified
 renderCategoryDataOn: html
 
+	"not used currently - left because it may be added in / used somehow."
 	html div 
 		class: 'row categories-data-block';
 		with: [

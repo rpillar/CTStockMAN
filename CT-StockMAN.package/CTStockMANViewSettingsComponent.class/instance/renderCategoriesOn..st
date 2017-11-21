@@ -1,6 +1,11 @@
 as yet unclassified
 renderCategoriesOn: html
+
+	| myAddCategoryComponent myGetCategoriesComponent |
 	
+	myAddCategoryComponent := CTStockMANViewAddCategoriesComponent new.
+	myGetCategoriesComponent := CTStockMANViewGetCategoriesComponent new.
+		
 	html div 
 		class: 'row';
 		with: [  
@@ -37,12 +42,13 @@ renderCategoriesOn: html
 						url: '#get-categories-modal';	
 						script: (
     						( html jQuery this )
-      						on: 'click'
-      						do: ( (
-        						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
-								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' )			
-      						) asFunction: #(event) )
-  						);					
+    							on: 'click'
+      							do: ( (
+									( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
+									( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
+        							( ( html jQuery id: 'get-categories-modal' ) load html: [ :r | r render: myGetCategoriesComponent ] )			
+      							) asFunction: #(event) )
+  						);			
 						with: 'Get Categories'.			
 				].
 			html div
@@ -56,7 +62,8 @@ renderCategoriesOn: html
       						on: 'click'
       						do: ( (
         						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
-								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' )			
+								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
+								( ( html jQuery id: 'add-category-modal' ) load html: [ :r | r render: myAddCategoryComponent ] )			
       						) asFunction: #(event) )
   						);					
 						with: 'Add New Category'.			

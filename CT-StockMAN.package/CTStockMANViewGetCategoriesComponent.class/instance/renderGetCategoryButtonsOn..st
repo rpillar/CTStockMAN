@@ -1,8 +1,8 @@
 as yet unclassified
 renderGetCategoryButtonsOn: html
 
-	| response |
-	
+	| myChannelAPI response validShopCredentials |
+
 	html div 
 		with: [ 
 			html div
@@ -13,11 +13,20 @@ renderGetCategoryButtonsOn: html
 						bePush;
 						class: 'btn-large waves-effect waves-light hoverable'; 
 						onClick: ( ( html jQuery ajax )
+							serializeForm;
 							script: [ :s | 
-								"channel := CTStockMANEBayManage new. 
-								channel myEbay credentials: formCredentials.
-								response := channel getEBayOfficialTime."
-								s << ( JSStream on: 'console.log(''get_categories'');'  )	
+								validShopCredentials := self checkShopCredentials: self shopName.
+								( validShopCredentials = '' )
+									ifTrue: [ 
+										"myChannelAPI := CTStockMANEBayManage new. 
+										myChannelAPI myEbay credentials: formCredentials.
+										response := myChannelAPI getEBayCategories."
+										s << ( JSStream on: 'console.log(''get_categories'');'  )	
+									]
+								   ifFalse: [
+										self messageComponent errorMessage: validShopCredentials. 
+										s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ).  
+									]
 							] );
 						with: 'Get Categories'.
 					html button 
@@ -27,6 +36,7 @@ renderGetCategoryButtonsOn: html
 						onClick: ( ( html jQuery ajax )
 							script: [ :s | 
 								s << ( JSStream on: '$(''#get-categories-modal'').modal(''close'')'  ).
+								s << ( ( s jQuery class: 'get-categories-modal-content' ) remove ).	
 							]
 						);
 						with: 'Cancel'.				

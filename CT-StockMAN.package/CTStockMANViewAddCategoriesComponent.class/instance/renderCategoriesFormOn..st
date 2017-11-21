@@ -2,7 +2,7 @@ as yet unclassified
 renderCategoriesFormOn: html
 
 	html div
-		class: 'modal-content credentials-modal-content';
+		class: 'modal-content add-category-modal-content';
 		with: [ 
 			html div 
 				with: [
@@ -13,7 +13,7 @@ renderCategoriesFormOn: html
 						with: 'Add / Edit Shop Categories'.
 				].
 			html div 
-				class: 'row shop-entry-block';
+				class: 'row add-category-block';
 				with: [
 					html div 
 						class: 'col s12';

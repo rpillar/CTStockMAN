@@ -2,7 +2,7 @@ as yet unclassified
 renderGetCategoriesFormOn: html
 
 	html div
-		class: 'modal-content credentials-modal-content';
+		class: 'modal-content get-categories-modal-content';
 		with: [ 
 			html div 
 				with: [
@@ -33,7 +33,7 @@ renderGetCategoriesFormOn: html
 														class: 'col s12 messageComponent';
 														style: 'margin-top:10px;';
 														with: [ 
-															self messageComponent infoMessage: 'Please select a shop and then GET to retrieve category details for its channel. Please note that all existing details will be over-written.'.
+															self messageComponent infoMessage: 'Please select a shop and then GET CATEGORIES in order to retrieve the category details for its channel. Please note that all existing details will be over-written.'.
 															html render: self messageComponent.
 														].	
 	 		 										html form

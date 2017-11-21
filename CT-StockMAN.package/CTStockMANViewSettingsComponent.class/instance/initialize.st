@@ -2,8 +2,6 @@ as yet unclassified
 initialize
 	
 	super initialize.
-	self addCategoryComponent: CTStockMANViewCategoriesComponent new.
-	self getCategoriesComponent: CTStockMANViewGetCategoriesComponent new.
 	self addShopComponent: CTStockMANViewSettingsShopAddComponent new.			
 		
 	"get settings data - shops / credentials etc."	

@@ -1,8 +1,8 @@
-accessing
-renderShopCredentialsBodyMessageOn: html
+as yet unclassified
+renderGetCategoriesMessageOn: html
 
 	html div 	
-		class: 'row credentialsMessage';
+		class: 'row getCategoriesMessage';
 		style: 'margin-bottom:0px;';
 		with: [ 
 			html div 

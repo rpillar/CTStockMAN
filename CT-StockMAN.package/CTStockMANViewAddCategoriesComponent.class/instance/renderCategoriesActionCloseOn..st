@@ -10,7 +10,7 @@ renderCategoriesActionCloseOn: html
 				onClick: ( ( html jQuery ajax )
 					script: [ :s | 
 						s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')'  ).
-						s << ( ( s jQuery class: 'categories-modal-content' ) remove ).						
+						s << ( ( s jQuery class: 'add-category-modal-content' ) remove ).						
 					]
 				);	
 				with: [ 

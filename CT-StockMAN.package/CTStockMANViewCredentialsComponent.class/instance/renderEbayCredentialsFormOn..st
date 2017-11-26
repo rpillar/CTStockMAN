@@ -65,12 +65,12 @@ renderEbayCredentialsFormOn: html
 																						with: 'appid / devid / certid' 
 																				].
 																			html listItem 
-																				class: 'tab col s2';
+																				class: 'tab col s3';
 																				with: [ 
 																					html anchor 
 																						style: 'color:#000;';
 																						url: '#tab2';
-																						with: 'Token / url  (save)' 
+																						with: 'Token / url / active  (save)' 
 																				].	
 																			html listItem 
 																				class: 'tab col s2';

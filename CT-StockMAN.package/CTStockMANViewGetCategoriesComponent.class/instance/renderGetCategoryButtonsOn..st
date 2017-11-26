@@ -18,9 +18,7 @@ renderGetCategoryButtonsOn: html
 								validShopCredentials := self checkShopCredentials: self shopName.
 								( validShopCredentials = '' )
 									ifTrue: [ 
-										"myChannelAPI := CTStockMANEBayManage new. 
-										myChannelAPI myEbay credentials: formCredentials.
-										response := myChannelAPI getEBayCategories."
+										response := self getChannelCategories
 										s << ( JSStream on: 'console.log(''get_categories'');'  )	
 									]
 								   ifFalse: [

@@ -6,6 +6,7 @@
 		 ],
 	"commentStamp" : "RichardPillar 4/26/2017 08:45",
 	"instvars" : [
+		"credentialsActive",
 		"messageComponent",
 		"formCredentials",
 		"formCredentialsList",

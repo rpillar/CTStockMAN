@@ -16,7 +16,8 @@ renderContentOn: html
 	self renderCategoriesOn: html.	
 
 	"add add-shop modal"		
-	html render: self addShopComponent.	
+	"html render: self addShopComponent."	
+	self renderAddShopModalOn: html.	
 
 	"credentials modal"
 	self renderCredentialsModalOn: html.

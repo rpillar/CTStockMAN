@@ -49,6 +49,7 @@ renderAddShopButtonsOn: html
 							script: [ :s | 
 								self shopName: ''. self shopDescription: ''. self channel: nil.
 								s << ( JSStream on: '$(''#add-shop-modal'').modal(''close'')'  ).
+								s << ( ( s jQuery class: 'add-shop-modal-content' ) remove ).	
 							]
 						);
 						with: 'Cancel'.				

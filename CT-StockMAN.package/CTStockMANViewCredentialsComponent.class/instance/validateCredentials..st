@@ -6,5 +6,5 @@ validateCredentials: myCredentials
 	self formCredentialsList do: [ :each |
 		( myCredentials at: each asSymbol ) = '' ifTrue: [ ^ 'The field ' , each asUppercase , ' has been left blank - please enter.' ]
 	].
-	
+
 	^ ''.

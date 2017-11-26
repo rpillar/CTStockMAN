@@ -1,7 +1,8 @@
 as yet unclassified
 renderShopsOn: html
 
-	| myShop |
+	| myAddShopComponent myShop |
+	myAddShopComponent := CTStockMANViewSettingsShopAddComponent new.
 	
 	"display shop details ..."
 	html div 
@@ -62,7 +63,8 @@ renderShopsOn: html
       						on: 'click'
       						do: ( (
         						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
-								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' )			
+								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
+								( ( html jQuery id: 'add-shop-modal' ) load html: [ :r | r render: myAddShopComponent ] )				
       						) asFunction: #(event) )
   						);					
 						with: 'Add New Shop'.			

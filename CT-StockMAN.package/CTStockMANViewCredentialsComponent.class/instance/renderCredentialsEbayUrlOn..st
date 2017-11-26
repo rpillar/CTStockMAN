@@ -5,7 +5,7 @@ renderCredentialsEbayUrlOn: html
 		class: 'row';
 		with: [ 
 			html div 
-				class: 'input-field col s8';
+				class: 'input-field col s6';
 				with: [
 					html italic
 						class: 'material-icons prefix';
@@ -16,12 +16,43 @@ renderCredentialsEbayUrlOn: html
 						id: 'credentials-shop-url';
 						autofocus;
 						attributeAt: 'autocomplete' put: 'off';
-						attributeAt: 'length' put: 65;
-						callback: [ :value | self formCredentials at: 'url' put: value ];
-						value: ( self formCredentials at: 'url' ).				
+						attributeAt: 'length' put: 55;
+						value: ( self formCredentials at: 'url' );
+						callback: [ :value | self formCredentials at: 'url' put: value ].		
 					html label 
 						class: 'active';
 						attributeAt: 'for' put: 'credentials-shop-url';
 						with: 'URL'.	
-				]	
+				].
+			html div
+				class: 'input-field col s2';
+				with: [ 
+				html paragraph
+					class: 'input-field col s2';
+					style: 'padding-left:20px;padding-top:25px;';
+					with: [	
+						html checkbox
+							id: 'active-credentials';
+							attributeAt: 'checked' put: ( ( shopCredentials active = 'Y' ) ifTrue: [ 'checked' ] ifFalse: [ false ] );
+							onClick: ( html jQuery ajax 
+									script: [ :s | 
+										( shopCredentials active = 'N' ) 
+											ifTrue: [  
+												shopCredentials active: 'Y'.
+												s << ( ( s jQuery id: 'active-credentials' ) attributeAt: 'checked' put: 'checked' ).
+											] 
+											ifFalse: [  
+												shopCredentials active: 'N'.
+												s << ( ( s jQuery id: 'active-credentials' ) removeAttribute: 'checked' ).
+											]. 
+									] 
+								).
+							"value: self credentialsActive."
+							"callback: [ :value | self credentialsActive: value ]."
+						html label
+							class: 'active';
+							attributeAt: 'for' put: 'active-credentials';
+							with: 'Active'.	
+					].
+				].
 		].

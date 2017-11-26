@@ -2,6 +2,8 @@
 	"class" : {
 		 },
 	"instance" : {
+		"credentialsActive" : "RichardPillar 11/25/2017 20:58",
+		"credentialsActive:" : "RichardPillar 11/25/2017 20:57",
 		"formCredentials" : "RichardPillar 6/1/2017 08:02",
 		"formCredentials:" : "RichardPillar 6/1/2017 08:02",
 		"formCredentialsList" : "RichardPillar 6/2/2017 20:31",
@@ -11,14 +13,14 @@
 		"messageComponent:" : "RichardPillar 4/26/2017 08:08",
 		"renderContentOn:" : "RichardPillar 11/21/2017 08:19",
 		"renderCredentialsActionCloseOn:" : "RichardPillar 8/30/2017 19:43",
-		"renderCredentialsChannelOn:" : "RichardPillar 5/11/2017 21:46",
+		"renderCredentialsChannelOn:" : "RichardPillar 11/25/2017 21:11",
 		"renderCredentialsEbayAppIdOn:" : "RichardPillar 6/1/2017 08:02",
 		"renderCredentialsEbayCertIdOn:" : "RichardPillar 6/1/2017 08:02",
 		"renderCredentialsEbayDevIdOn:" : "RichardPillar 6/1/2017 08:02",
 		"renderCredentialsEbayTokenOn:" : "RichardPillar 6/1/2017 08:03",
-		"renderCredentialsEbayUrlOn:" : "RichardPillar 6/1/2017 08:03",
-		"renderCredentialsShopNameOn:" : "RichardPillar 5/11/2017 21:48",
-		"renderEbayCredentialsFormOn:" : "RichardPillar 8/9/2017 20:46",
+		"renderCredentialsEbayUrlOn:" : "RichardPillar 11/26/2017 20:03",
+		"renderCredentialsShopNameOn:" : "RichardPillar 11/25/2017 21:10",
+		"renderEbayCredentialsFormOn:" : "RichardPillar 11/22/2017 08:45",
 		"renderEbayCredentialsTestOn:" : "RichardPillar 8/24/2017 08:02",
 		"renderEditCredentialsButtonsOn:" : "RichardPillar 8/24/2017 07:48",
 		"shop" : "RichardPillar 4/26/2017 08:08",
@@ -26,4 +28,4 @@
 		"shopCredentials" : "RichardPillar 6/16/2017 08:17",
 		"shopCredentials:" : "RichardPillar 6/16/2017 08:17",
 		"updateCredentials" : "RichardPillar 6/20/2017 08:12",
-		"validateCredentials:" : "RichardPillar 6/2/2017 21:45" } }
+		"validateCredentials:" : "RichardPillar 11/26/2017 20:05" } }

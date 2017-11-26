@@ -20,5 +20,3 @@ renderAddChannelSelectOn: html
 						with: 'Channel'.			
 				].	
 		].
-	
-	html document addLoadScript: ( ( JSStream on: '$(''select'').material_select({ minimumResultsForSearch: Infinity })' ) ) .

@@ -38,4 +38,4 @@ getEBayCategories
 		post;
 		response.
 		
-	^ response.
+	^ self formatResponse: response.

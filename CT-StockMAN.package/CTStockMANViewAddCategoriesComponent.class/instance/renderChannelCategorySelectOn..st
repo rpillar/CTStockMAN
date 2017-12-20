@@ -25,10 +25,10 @@ renderChannelCategorySelectOn: html
 					style: 'margin-left:20px;';
 					with: [
 					html textInput 
-						class: 'active validate category-name';
+						class: 'validate category-name';
 						attributeAt: 'autocomplete' put: 'off';
 						attributeAt: 'length' put: 65;
-						autofocus;
+						"autofocus;"
 						on: #categoryName of: self.				
 					html label 
 						attributeAt: 'for' put: 'icon-prefix';

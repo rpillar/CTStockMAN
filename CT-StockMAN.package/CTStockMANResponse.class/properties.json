@@ -1,0 +1,15 @@
+{
+	"category" : "CT-StockMAN",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"code",
+		"content" ],
+	"name" : "CTStockMANResponse",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

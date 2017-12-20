@@ -30,7 +30,7 @@ renderEbayCredentialsTestOn: html
 									response := channel getEBayOfficialTime. 
 									s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
 									s << ( ( s jQuery class: 'progress' ) hide ).
-									s << ( ( s jQuery id: 'credentials-shop-test' ) append: response )
+									s << ( ( s jQuery id: 'credentials-shop-test' ) append: response content asString )
 								]
 							) asFunction: #(event) )
 						);

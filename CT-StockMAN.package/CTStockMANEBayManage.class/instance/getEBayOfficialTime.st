@@ -1,9 +1,9 @@
 as yet unclassified
 getEBayOfficialTime
 
-	| formattedResponse response writer |
+	| response writer |
 
-	"note that - encoding set by default to <UTF-8> as required by Ebay. This is currently set explicitly in the <encoding> method - XMLXMLDeclarationWriter class"
+	"note that - encoding set by default to <UTF-8> as required by Ebay. Set explicitly in the <encoding> method - XMLXMLDeclarationWriter class"
 	writer := XMLWriter new.
 	writer enablePrettyPrinting.
 	writer xml encoding: 'UTF-8'.
@@ -32,18 +32,4 @@ getEBayOfficialTime
 		post;
 		response.
 
-	"no response - 500"
-	( response isNil )
-		ifTrue: [  
-			^ 'Status: ', '500', ' / Message: ', 'There has been a problem. Please check the format of your request and the system logs for details.'.
-	].
-
-	"formatted response as this is the <test> response string."	
-	( response statusLine code = 200 ) 
-		ifTrue: [  
-			formattedResponse := 'Status: ', ( response statusLine code asString ), ' / Message: ', ( response entity asString ).
-		]
-		ifFalse: [  
-			formattedResponse := 'Status: ', '500', ' / Message: ', 'There has been a problem. Please check the format of your request and the system logs for details.'.
-		].
-	^ formattedResponse.
+	^ self formatResponse: response.

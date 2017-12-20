@@ -6,7 +6,8 @@
 		 ],
 	"commentStamp" : "FirstnameLastname 9/27/2016 08:55",
 	"instvars" : [
-		"credentials" ],
+		"credentials",
+		"response" ],
 	"name" : "CTStockMANEBay",
 	"pools" : [
 		 ],

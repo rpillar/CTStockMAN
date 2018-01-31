@@ -7,7 +7,7 @@ renderContentOn: html
 	( self shop channel = 'EBay' ) 
 		ifTrue: [
 			self formCredentialsList: self credentialFieldsEbay.
-			self renderEbayCredentialsFormOn: html.
+			self renderEbayCredentialsContentOn: html.
 		].
 	
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).	

@@ -7,7 +7,7 @@ getEBaySellerList
 	endDate := ( ( ( Date today - 1 ) yyyymmdd ) asDateAndTime ) asUTC.
 
 	writer := XMLWriter new.
-	writer enablePrettyPrinting; xml; comment: 'ebay - get ebay site categories'.
+	writer enablePrettyPrinting; xml; comment: 'ebay - get ebay seller list'.
 	writer tag name: 'GetSellerListRequest'; xmlns: 'urn:ebay:apis:eBLBaseComponents'; 
 		with: [  
 			writer 

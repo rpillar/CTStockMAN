@@ -10,12 +10,12 @@ renderShopCredentialsEditOn: html
 		style: 'position:absolute;top:252px;left:30px;';
 		with: [ 
 			html anchor 
-				class: 'tooltipped';
+				class: 'tooltipped modal-trigger';
+				url: '#edit-credential-modal';	
 				style: 'text-decoration: none;cursor:pointer;';
 				attributeAt: 'data-position' put: 'right';
 				attributeAt: 'data-delay' put: '50';
 				attributeAt: 'data-tooltip' put: 'Edit Credentials';
-				url: '#edit-credential-modal';	
 				script: (
     				( html jQuery this )
     					on: 'click'

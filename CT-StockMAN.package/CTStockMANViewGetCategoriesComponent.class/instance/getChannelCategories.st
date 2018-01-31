@@ -8,12 +8,18 @@ getChannelCategories
 		channelAPI myEbay credentials: self shopCredentials.
 		response := channelAPI getEBayCategories.
 
-		"parse the getCategories response - XML"
-		data := self parseGetEBayCategoriesResponse: response.
+		( response code = 500 ) 
+			ifFalse: [
+				"parse the getCategories response - XML"
+				data := self parseGetEBayCategoriesResponse: response.
+		
+				"remove existing categories for this channel"
+				self session dbResource query: 'delete from channel_categories where channel = ? ' with: (Array with: self channel).
+			]
+			ifTrue: [ 
+				data := Array new. 
+			].
 	].
-
-	"remove existing categories for this channel"
-	self session dbResource query: 'delete from channel_categories where channel = ? ' with: (Array with: self channel).
 	
 	data do: [ :e |
 		myData := Array new: 3.

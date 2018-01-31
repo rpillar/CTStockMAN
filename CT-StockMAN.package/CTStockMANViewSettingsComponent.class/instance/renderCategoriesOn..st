@@ -27,8 +27,6 @@ renderCategoriesOn: html
 				with: 'Retrieve product categories for the selected channel (Shop - they hold the credentials) and if appropriate create a custom StockMAN category for cases where the category names do not match across the different channels.' 
 		].
 	
-	"self renderCategoryDataOn: html."
-	
 	html div 
 		class: 'row add-category';
 		style: 'margin-top:25px;';
@@ -38,7 +36,7 @@ renderCategoriesOn: html
 				style: 'width:240px;';
 				with: [ 
 					html anchor 
-						class: 'btn-large waves-effect waves-light hoverable'; 
+						class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
 						url: '#get-categories-modal';	
 						script: (
     						( html jQuery this )
@@ -55,7 +53,7 @@ renderCategoriesOn: html
 				class: 'col s3';
 				with: [ 
 					html anchor 
-						class: 'btn-large waves-effect waves-light hoverable'; 
+						class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
 						url: '#add-category-modal';	
 						script: (
     						( html jQuery this )

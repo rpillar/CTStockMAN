@@ -13,7 +13,7 @@ renderAddChannelSelectOn: html
 						style: 'margin-left:20px;';
 						size: 2;	
 						list: self channelNames;
-						selected: ( self channelNames at: 1);
+						selected: ( self channelNames at: 1 );
 						callback: [ :value | self channel: value asString ].		
 					html label 
 						attributeAt: 'for' put: 'channel';

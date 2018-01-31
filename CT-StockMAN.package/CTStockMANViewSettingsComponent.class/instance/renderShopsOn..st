@@ -56,7 +56,7 @@ renderShopsOn: html
 				class: 'col s3';
 				with: [ 
 					html anchor 
-						class: 'btn-large waves-effect waves-light hoverable'; 
+						class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
 						url: '#add-shop-modal';	
 						script: (
     						( html jQuery this )

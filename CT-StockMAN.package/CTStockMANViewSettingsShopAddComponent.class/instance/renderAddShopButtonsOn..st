@@ -40,18 +40,6 @@ renderAddShopButtonsOn: html
 										s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ). 
 								]	
 							] );
-						with: 'Save'.
-					html button 
-						bePush;
-						class: 'btn-large waves-effect waves-light hoverable'; 
-						style: 'margin-left: 12px;background-color:#ef9a9a';
-						onClick: ( ( html jQuery ajax )
-							script: [ :s | 
-								self shopName: ''. self shopDescription: ''. self channel: nil.
-								s << ( JSStream on: '$(''#add-shop-modal'').modal(''close'')'  ).
-								s << ( ( s jQuery class: 'add-shop-modal-content' ) remove ).	
-							]
-						);
-						with: 'Cancel'.				
+						with: 'Save'.			
 				]	
 			].	

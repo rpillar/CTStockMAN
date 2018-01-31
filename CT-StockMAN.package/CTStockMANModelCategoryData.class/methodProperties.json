@@ -2,10 +2,11 @@
 	"class" : {
 		 },
 	"instance" : {
+		"categoryName" : "RichardPillar 12/27/2017 20:27",
+		"categoryName:" : "RichardPillar 12/27/2017 20:27",
+		"channel" : "RichardPillar 12/27/2017 20:27",
+		"channel:" : "RichardPillar 12/27/2017 20:27",
+		"customCategoryName" : "RichardPillar 12/27/2017 20:31",
+		"customCategoryName:" : "RichardPillar 12/27/2017 20:31",
 		"initialize" : "RichardPillar 12/27/2016 21:18",
-		"margin" : "RichardPillar 12/27/2016 21:16",
-		"margin:" : "RichardPillar 12/27/2016 21:16",
-		"sales" : "RichardPillar 12/27/2016 21:17",
-		"sales:" : "RichardPillar 12/27/2016 21:17",
-		"volume" : "RichardPillar 12/27/2016 21:17",
-		"volume:" : "RichardPillar 12/27/2016 21:17" } }
+		"tablePrimaryKey" : "RichardPillar 12/27/2017 20:29" } }

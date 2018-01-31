@@ -1,7 +1,6 @@
 as yet unclassified
 renderContentOn: html
 
-	self wasShown ifTrue: [^ self].
 	html div
 		class: 'message';
 		class: self messageType, 'Message';
@@ -12,4 +11,3 @@ renderContentOn: html
 				style: 'font-size:18px;font-weight:400;';
 				with: self messageString.
 		].	
-	self wasShown: true.

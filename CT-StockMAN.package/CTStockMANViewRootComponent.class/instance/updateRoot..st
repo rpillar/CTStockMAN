@@ -2,7 +2,8 @@ accessing
 updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot stylesheet
-		url: 'http://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css'.
+		"url: 'http://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css'."
+		url: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css'.
 	anHtmlRoot stylesheet
 		url: 'https://fonts.googleapis.com/icon?family=Material+Icons'.	
 	anHtmlRoot stylesheet
@@ -16,7 +17,8 @@ updateRoot: anHtmlRoot
 	"anHtmlRoot stylesheet 
 		url: (CTToDoFileLibrary urlOf: #styleCss)."						
 	anHtmlRoot javascript
-		url: 'http://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'.
+		"url: 'http://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'."
+		url: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js'.
 	anHtmlRoot javascript
 		url: 'http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js'.	
 	anHtmlRoot javascript 

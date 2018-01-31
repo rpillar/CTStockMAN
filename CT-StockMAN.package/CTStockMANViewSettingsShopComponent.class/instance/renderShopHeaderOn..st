@@ -18,10 +18,6 @@ renderShopHeaderOn: html
 								ifFalse: [  
 									s << ( ( s jQuery id: 'shop-status-inactive', self shop shopId asString ) propertyAt: 'checked' put:'checked' ).
 								].
-							"s << ( ( s jQuery id: 'shop-status-active', self shop shopId asString ) propertyAt: 'checked' put: 
-								( ( self shop status = 'Active' ) ifFalse: [ nil ] ifTrue: [ 'checked' ] ) ).
-							s << ( ( s jQuery id: 'shop-status-inactive', self shop shopId asString ) propertyAt: 'checked' put: 
-								( ( self shop status = 'Not Active' ) ifFalse: [ nil ] ifTrue: [ 'checked' ] ) )."
 							s << ( ( s jQuery class: 'shop-edit' ) cssAt: 'display' put: 'inline' ).
 							s << ( ( s jQuery class: 'shop-delete' ) cssAt: 'display' put: 'inline' ).
 							s << ( ( s jQuery class: 'shop-edit-save' ) cssAt: 'display' put: 'none' ).
@@ -41,7 +37,7 @@ renderShopHeaderOn: html
 					].
 					html div 
 						class: 'col s1';
-						style: 'display:inline;font-weight:500;';
+						style: 'display:inline;font-weight:500;margin-left:30px;';
 						with: 'Channel : '.
 					html div 
 						class: 'col s1 left-align';

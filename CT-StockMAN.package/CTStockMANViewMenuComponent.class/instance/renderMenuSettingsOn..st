@@ -6,7 +6,7 @@ renderMenuSettingsOn: html
 		style: 'text-decoration: none;cursor:pointer;margin-left:20px;height:20px;';
 		attributeAt: 'data-position' put: 'right';
 		attributeAt: 'data-delay' put: '50';
-		attributeAt: 'data-tooltip' put: 'Settings';
+		attributeAt: 'data-tooltip' put: 'Admin';
 		onClick: ( ( html jQuery ajax )
 			script: [ :s | 
 				s << ( ( s jQuery id: 'main' ) load html: [ :r | self renderPageSettingsOn: r ] ).

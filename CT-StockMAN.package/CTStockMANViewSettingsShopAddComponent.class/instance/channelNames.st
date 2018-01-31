@@ -1,4 +1,4 @@
 accessing
 channelNames
 	
-	^ #( EBay Shopify ).
+	^ #( EBay ).

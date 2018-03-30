@@ -1,0 +1,16 @@
+{
+	"category" : "CT-DBx",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"dbResultset",
+		"dbTableName",
+		"database" ],
+	"name" : "CTDBx",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -23,16 +23,12 @@ renderGetCategoryButtonGetCategoryOn: html
 					validShopCredentials := ( self checkShopCredentials: self shopName ).
 					( validShopCredentials = '' )
 						ifTrue: [ 
-							response := self getChannelCategories.
-							( response > 0 ) 
-								ifTrue: [  
-									self messageComponent errorMessage: 'The category data for channel - ', self channel, ' - has been retrieved and updated.'.
-									s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ).
-									s << ( ( s jQuery id: 'get-categories-button' ) text: 'GET CATEGORIES' ).
-									s << ( ( s jQuery id: 'get-categories-button' ) removeClass: 'disabled' ).
-								]
-								ifFalse: [  
-								]. 
+							"response is a dictionary - status / count / message."
+							response := self getChannelCategories. 
+							self messageComponent errorMessage: ( response at: #message ).
+							s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ).
+							s << ( ( s jQuery id: 'get-categories-button' ) text: 'GET CATEGORIES' ).
+							s << ( ( s jQuery id: 'get-categories-button' ) removeClass: 'disabled' ).
 						]
 						ifFalse: [
 							self messageComponent errorMessage: validShopCredentials.

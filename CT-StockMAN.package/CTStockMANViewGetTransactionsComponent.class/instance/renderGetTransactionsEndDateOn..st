@@ -13,7 +13,7 @@ renderGetTransactionsEndDateOn: html
 				id: 'enddate';
 				class: 'datepicker';
 				attributeAt: 'readonly' put: 'readonly';
-				callback: [ :value | self startDate: value asString ].		
+				callback: [ :value | self endDate: value asString ].		
 			html label 
 				attributeAt: 'for' put: 'enddate';
 				with: 'End Date'.			

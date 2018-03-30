@@ -1,0 +1,1 @@
+An example class for CTDBx - an instance of a DB table class.

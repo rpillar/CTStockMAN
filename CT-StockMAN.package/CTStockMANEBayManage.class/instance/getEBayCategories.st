@@ -27,7 +27,7 @@ getEBayCategories
 
 	"ebay function ..."
 	self myEbay znClient headerAt: 'X-EBAY-API-CALL-NAME' add: 'GetCategories'.
-	
+
 	response := self myEbay znClient 
 		url: self myEbay url; 
 		entity: (
@@ -37,5 +37,5 @@ getEBayCategories
 		);
 		post;
 		response.
-		
+	
 	^ self formatResponse: response.

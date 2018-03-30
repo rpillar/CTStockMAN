@@ -28,17 +28,6 @@ renderEditCredentialsButtonsOn: html
 									]
 							]
 						);
-						with: 'Save'.
-					html button 
-						bePush;
-						class: 'btn-large waves-effect waves-light hoverable'; 
-						style: 'margin-left: 12px;background-color:#ef9a9a';
-						onClick: ( ( html jQuery ajax )
-							script: [ :s |  
-								s << ( JSStream on: '$(''#edit-credential-modal'').modal(''close'')'  ).
-								s << ( ( s jQuery class: 'credentials-modal-content' ) remove ).
-							]
-						);
-						with: 'Cancel'.				
+						with: 'Save'.			
 				]	
 			].

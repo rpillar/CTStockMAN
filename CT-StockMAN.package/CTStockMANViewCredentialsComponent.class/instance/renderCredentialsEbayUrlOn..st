@@ -24,15 +24,16 @@ renderCredentialsEbayUrlOn: html
 						attributeAt: 'for' put: 'credentials-shop-url';
 						with: 'URL'.	
 				].
+			"NOTE - current release of materialize - checkboxes cannot be inside a class of 'input-field' - will be fixed in the next release !!"
 			html div
-				class: 'input-field col s2';
+				class: 'col s2';
 				with: [ 
 				html paragraph
-					class: 'input-field col s2';
 					style: 'padding-left:20px;padding-top:25px;';
 					with: [	
 						html checkbox
 							id: 'active-credentials';
+							class: 'filled-in';
 							attributeAt: 'checked' put: ( ( shopCredentials active = 'Y' ) ifTrue: [ 'checked' ] ifFalse: [ false ] );
 							onClick: ( html jQuery ajax 
 									script: [ :s | 
@@ -45,14 +46,12 @@ renderCredentialsEbayUrlOn: html
 												shopCredentials active: 'N'.
 												s << ( ( s jQuery id: 'active-credentials' ) removeAttribute: 'checked' ).
 											]. 
-									] 
+									]
 								).
-							"value: self credentialsActive."
-							"callback: [ :value | self credentialsActive: value ]."
 						html label
 							class: 'active';
 							attributeAt: 'for' put: 'active-credentials';
-							with: 'Active'.	
+							with: 'Active'.
 					].
 				].
 		].

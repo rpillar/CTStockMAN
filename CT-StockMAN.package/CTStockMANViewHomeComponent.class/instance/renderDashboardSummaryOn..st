@@ -3,130 +3,209 @@ renderDashboardSummaryOn: html
 
 	html div 
 		class: 'row dashboard-header';
+		style: 'margin-bottom:5px;';
 			with: [  
 				html div 
 					class: 'col s12';
 					with: [
 						
 						html div 
-							class: 'col s3';
-							style: 'border-right: 1px solid lightgray;';
+							class: 'col s4';
+							style: 'border-right: 1px solid lightgray;height:200px;';
 							with: [  
 								html definitionList 
 									with: [ 
-										html definitionTerm 
-											class: 'dashboard-income-title center-align';
+										html div 
+											class: 'col s12 dashboard-income-title center-align';
 											with: [ 
 												html span 
 													class: 'border-under';
-													with: 'Sales (YTD)'. 
+													with: 'Sales / Listings'. 
 											].
-										html definitionData 
-											class: 'dashboard-income-figure center-align';
-											with: '185,152'.
-										html definitionData 
-											class: 'dashboard-income-percent center-align';
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:15px;';
 											with: [
-												html span
-													with: '12%'.
-												html italic	
-													class: 'material-icons';
-													style: 'margin-left:20px;font-size:4rem;color:#009688;';
-													with: 'trending_up'.  
-											].			
+												html div 
+													class: 'col s7';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'YTD : '.
+													].
+												html div 
+													class: 'col s5';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '¬£185,152'
+													].
+											].
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:5px;';
+											with: [
+												html div 
+													class: 'col s7';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Last Month : '.
+													].
+												html div 
+													class: 'col s5';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '¬£16,278'
+													].
+											].
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:5px;';
+											with: [
+												html div 
+													class: 'col s7';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Active Listings : '.
+													].
+												html div 
+													class: 'col s5';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '24'
+													].
+											].
+												
 								]
 							].
 						html div 
 							class: 'col s3';	
-							style: 'border-right: 1px solid lightgray;';	
+							style: 'border-right: 1px solid lightgray;height:200px;';	
 							with: [  
 								html definitionList 
 									with: [ 
-										html definitionTerm 
+										html div
 											class: 'dashboard-income-title center-align';
 											with: [ 
 												html span 
 													class: 'border-under';
-													with: 'Gross Margin'.
+													with: 'Orders'.
 											].	
-										html definitionData 
-											class: 'dashboard-income-figure center-align';
-											with: '34,762'.	
-										html definitionData 
-											class: 'dashboard-income-percent center-align';
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:15px;';
 											with: [
-												html span
-													with: '5%'.
-												html italic	
-													class: 'material-icons';
-													style: 'margin-left:20px;font-size:4rem;color:#009688;';
-													with: 'trending_up'.  
+												html div 
+													class: 'col s8';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Outstanding : '.
+													].
+												html div 
+													class: 'col s4';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '14'
+													].
+											].	
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:5px;';
+											with: [
+												html div 
+													class: 'col s8';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Processed : '.
+													].
+												html div 
+													class: 'col s4';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '75'
+													].
+											].	
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:5px;';
+											with: [
+												html div 
+													class: 'col s8';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Returns : '.
+													].
+												html div 
+													class: 'col s4';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '7'
+													].
+											].	
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:5px;';
+											with: [
+												html div 
+													class: 'col s8';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Cancellations : '.
+													].
+												html div 
+													class: 'col s4';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '1'
+													].
 											].	
 									]			
 							].	
 						html div 
-							class: 'col s6';
+							class: 'col s5';
 							with: [  
 								html definitionList 
 									class: 'col s12';
+									style: 'margin-bottom:0px;';
 									with: [ 
 										html definitionTerm 
 											class: 'dashboard-income-title center-align';
 											with: [ 
 												html span 
 													class: 'border-under';
-													with: 'Customers'.
+													with: 'Feedback'.
 											].	
-										html definitionData 
+										html div 
 											class: 'dashboard-cust-title center-align';
-											with: [  
-												html span 
-													class: 'col s4 right-align';
-													with: 'Number :'.
-												html span 
-													class: 'col s2 dashboard-cust-figure left-align';
-													with: ' 4,231'.
-												html span
-													class: 'col s2 dashboard-cust-figure left-align';
-													with: '5%'.
-												html italic	
-													class: ' col s4 material-icons left-align';
-													style: 'font-size:2rem;color:#009688;';
-													with: 'trending_up'.  	
-											].
-										html definitionData 
-											class: 'dashboard-cust-subtitle center-align';
-											with: [  
-												html span 
-													class: 'col s4 right-align';
-													with: 'Avg. Spend :'.
-												html span 
-													class: 'col s2 dashboard-cust-figure left-align';
-													with: ' 12.34'.
-												html span
-													class: 'col s2 dashboard-cust-figure left-align';
-													with: '2%'.
-												html italic	
-													class: ' col s4 material-icons left-align';
-													style: 'font-size:2rem;color:#009688;';
-													with: 'trending_up'.
-											].
-										html definitionData 
-											class: 'dashboard-cust-subtitle center-align';
-											with: [  
-												html span 
-													class: 'col s4 right-align';
-													with: 'Avg. Items :'.
-												html span 
-													class: 'col s2 dashboard-cust-figure left-align';
-													with: ' 1'.
-												html span
-													class: 'col s2 dashboard-cust-figure left-align';
-													with: '2%'.
-												html italic	
-													class: ' col s4 material-icons left-align';
-													style: 'font-size:2rem;color:#ef5350;';
-													with: 'trending_down'.
+											style: 'padding-top:10px;';
+											with: [    	
+												self renderDashboardFeedbackChartOn: html
 											].
 									]
 							].	  				  

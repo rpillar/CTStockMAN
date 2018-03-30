@@ -18,6 +18,9 @@ renderContentOn: html
 	"display transaction data details ..."		
 	self renderTransactionDataOn: html.	
 		
+	"display log data details ..."		
+	self renderSystemLogDataOn: html.
+		
 	"add add-shop modal"		
 	"html render: self addShopComponent."	
 	self renderAddShopModalOn: html.	
@@ -30,9 +33,12 @@ renderContentOn: html
 		
 	"add add-category modal"		
 	self renderAddCategoryModalOn: html.
-				
+
 	"add get-transactions modal"		
 	self renderGetTransactionsModalOn: html.
+					
+	"add get-transactions modal"
+	self renderSetTransactionsScheduleModalOn: html.
 	
 	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ).	
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).	

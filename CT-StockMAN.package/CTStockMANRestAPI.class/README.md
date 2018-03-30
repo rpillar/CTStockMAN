@@ -1,1 +1,1 @@
-A 'REST' api into the StockMAN app - to be used for retrieving dynamic data for use in charts / analytics.
+A experimental  'REST' api into the StockMAN app - to be used for retrieving dynamic data for use in charts / analytics.

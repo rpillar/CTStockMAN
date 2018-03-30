@@ -20,7 +20,7 @@ renderTransactionDataOn: html
 		with: [ 
 			html paragraph 
 				style: 'font-size: 18px;font-weight:300;margin-bottom:10px;';
-				with: 'Control / Monitor retrieval of Transaction data from a channel.' 
+				with: 'Control / Monitor retrieval of Transaction data from a channel (latest 5 only displayed).' 
 		].
 
 	html div 

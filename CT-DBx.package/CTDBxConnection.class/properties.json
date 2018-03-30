@@ -1,0 +1,14 @@
+{
+	"category" : "CT-DBx",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "RichardPillar 3/22/2018 21:35",
+	"instvars" : [
+		"dbConnection" ],
+	"name" : "CTDBxConnection",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -8,6 +8,7 @@
 	"instvars" : [
 		"channel",
 		"channelNames",
+		"endDate",
 		"messageComponent",
 		"shopName",
 		"startDate",

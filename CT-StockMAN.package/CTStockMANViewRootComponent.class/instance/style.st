@@ -49,14 +49,14 @@ body {
 	padding-top: 20px;
 }
 .dashboard-income-title { 
-	font-size:28px;
+	font-size:22px;
 	font-weight:400;
 	text-transform:uppercase
 }
 .dashboard-income-figure { 
 	margin-left:0; 
-	padding:30px 0 10px 0;
-	font-size:60px;
+	padding:10px 0 10px 0;
+	font-size:24px;
 	letter-spacing:-1px;
 	line-height:1em;
 	color:#34495e;
@@ -64,10 +64,10 @@ body {
 }
 .dashboard-income-percent { 
 	margin-left:0; 
-	padding-bottom:20px 0;
-	font-size:50px;
+	padding-bottom:10px 0;
+	font-size:24px;
 	font-weight:300;
-	letter-spacing:-2px;
+	letter-spacing:-1px;
 	line-height:1em;
 	color:#34495e;
 }

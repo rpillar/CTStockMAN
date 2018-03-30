@@ -1,0 +1,1 @@
+A db 'schema' file - representing a table - its fields / relationships

@@ -1,1 +1,1 @@
-A 'data' API for the retrieval of dynamic data used for reporting / dashboards / analytics.
+A experimental 'data' API for the retrieval of dynamic data used for reporting / dashboards / analytics.

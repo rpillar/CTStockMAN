@@ -1,14 +1,11 @@
 accessing
-parseGetEBayCategoriesResponse: aResponse
+parseGetEBayCategoriesResponse: aResult
 
-	| count data dict doc oc result |
-	doc := XMLDOMParser parse: aResponse content.
-
-	"return a orderedcollection of dictionaries - with elements CategoryId / CategoryName"
-	result := doc nodes elementAt: 'GetCategoriesResponse'.
-	count := ( result nodes elementAt: 'CategoryCount' ) contentString.
-	data := ( result nodes elementAt: 'CategoryArray' ) nodes.
+	| data dict oc |
 	oc := OrderedCollection new.
+	
+	"return a orderedcollection of dictionaries - with elements CategoryId / CategoryName"
+	data := ( aResult nodes elementAt: 'CategoryArray' ) nodes.
 	data collection do: [ :e | 
 		dict := Dictionary new. 
 		dict at: #CategoryName put: ( ( e nodes elementAt: 'CategoryName' ) contentString ). 

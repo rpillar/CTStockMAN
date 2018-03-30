@@ -10,7 +10,9 @@ renderTransactionDetailsHeaderOn: html
 					html tableHeading 
 						with: 'Shop'.
 					html tableHeading 
-						with: 'Date'.
+						with: 'Start Date'.
+					html tableHeading 
+						with: 'End Date'.	
 					html tableHeading 
 						with: '#Data Records'.
 					].

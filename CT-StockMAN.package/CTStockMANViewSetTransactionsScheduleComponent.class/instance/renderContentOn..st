@@ -1,4 +1,4 @@
-accessing
+rendering
 renderContentOn: html
 	
 	self messageComponent messageString: 'Please select a Shop, Start Time and then SET SCHEDULE in order to retrieve the transaction data details for a shop at a regular  time (every 24 hours).'; messageType: 'info'.

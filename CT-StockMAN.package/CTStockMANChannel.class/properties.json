@@ -1,16 +1,15 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "FirstnameLastname 8/10/2016 16:43",
+	"super" : "Object",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"channelId",
 		"channelName",
-		"znClient" ],
+		"znClient"
+	],
 	"name" : "CTStockMANChannel",
-	"pools" : [
-		 ],
-	"super" : "Object",
-	"type" : "normal" }
+	"type" : "normal"
+}

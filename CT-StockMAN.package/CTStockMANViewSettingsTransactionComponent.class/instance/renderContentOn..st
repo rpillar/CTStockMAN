@@ -1,8 +1,8 @@
-as yet unclassified
+rendering
 renderContentOn: html
 
-	| myGetTransactionsComponent |
-	myGetTransactionsComponent := CTStockMANViewGetTransactionsComponent new.
+	"| myGetTransactionsComponent |
+	myGetTransactionsComponent := CTStockMANViewGetTransactionsComponent new."
 	
 	self renderTransactionDetailsOn: html.
 	self renderTransactionButtonsOn: html.

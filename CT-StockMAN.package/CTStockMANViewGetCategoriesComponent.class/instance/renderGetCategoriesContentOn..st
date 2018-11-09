@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderGetCategoriesContentOn: html
 
 	html div

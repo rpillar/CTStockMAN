@@ -1,10 +1,10 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "FirstnameLastname 7/4/2016 16:08",
+	"super" : "CTStockMANModel",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"id",
 		"productId",
@@ -15,9 +15,8 @@
 		"customer",
 		"channelId",
 		"transactionType",
-		"amount" ],
+		"amount"
+	],
 	"name" : "CTStockMANModelTransaction",
-	"pools" : [
-		 ],
-	"super" : "CTStockMANModel",
-	"type" : "normal" }
+	"type" : "normal"
+}

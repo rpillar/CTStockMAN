@@ -9,9 +9,6 @@ addCredentials: aShop
 			( self credentialFieldsEbay ) do: [ :each | mySTONDict at: each asSymbol put: '' ].
 			mySTONString := STON toString: mySTONDict.
 		].
-	( aShop channel = 'Shopify' ) 
-		ifTrue: [  
-		].
 
 	"add a skeleton set of credentials for the 'inserted' shop"
 	myData := Array new: 5.

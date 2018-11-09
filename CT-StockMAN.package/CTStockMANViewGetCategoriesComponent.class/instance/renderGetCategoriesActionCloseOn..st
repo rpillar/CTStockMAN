@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderGetCategoriesActionCloseOn: html
 
 	html div 

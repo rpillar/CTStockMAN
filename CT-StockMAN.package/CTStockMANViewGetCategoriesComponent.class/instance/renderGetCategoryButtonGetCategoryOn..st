@@ -26,16 +26,13 @@ renderGetCategoryButtonGetCategoryOn: html
 							"response is a dictionary - status / count / message."
 							response := self getChannelCategories. 
 							self messageComponent errorMessage: ( response at: #message ).
-							s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ).
-							s << ( ( s jQuery id: 'get-categories-button' ) text: 'GET CATEGORIES' ).
-							s << ( ( s jQuery id: 'get-categories-button' ) removeClass: 'disabled' ).
 						]
 						ifFalse: [
 							self messageComponent errorMessage: validShopCredentials.
-							s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ). 
-							s << ( ( s jQuery id: 'get-categories-button' ) text: 'GET CATEGORIES' ).
-							s << ( ( s jQuery id: 'get-categories-button' ) removeClass: 'disabled' ).
-						]
+						].
+						s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ). 
+						s << ( ( s jQuery id: 'get-categories-button' ) text: 'GET CATEGORIES' ).
+						s << ( ( s jQuery id: 'get-categories-button' ) removeClass: 'disabled' ).
 				]
 			) asFunction: #(event) )
 		);

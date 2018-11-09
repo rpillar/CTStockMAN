@@ -1,1 +1,0 @@
-A product's current price.

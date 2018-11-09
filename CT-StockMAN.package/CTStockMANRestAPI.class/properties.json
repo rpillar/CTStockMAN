@@ -1,14 +1,11 @@
 {
-	"category" : "CT-StockMAN-RestAPI",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "RichardPillar 3/22/2018 21:31",
-	"instvars" : [
-		 ],
-	"name" : "CTStockMANRestAPI",
-	"pools" : [
-		 ],
 	"super" : "WARestfulHandler",
-	"type" : "normal" }
+	"category" : "CT-StockMAN-RestAPI",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CTStockMANRestAPI",
+	"type" : "normal"
+}

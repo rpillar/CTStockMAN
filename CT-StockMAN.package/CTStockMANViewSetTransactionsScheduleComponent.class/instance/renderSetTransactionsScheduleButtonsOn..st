@@ -29,12 +29,11 @@ renderSetTransactionsScheduleButtonsOn: html
 													self insertTransactionScheduleData.
 												].
 											self messageComponent errorMessage: 'Success - The transaction schedule has been updated for this shop'.
-											s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ). 
 										]
 										ifFalse: [ 
 											self messageComponent errorMessage: validSetTransactionScheduleStatus.
-											s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ). 
 										].
+										s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ).
 								]
 						) asFunction: #(event) ) 
 					);

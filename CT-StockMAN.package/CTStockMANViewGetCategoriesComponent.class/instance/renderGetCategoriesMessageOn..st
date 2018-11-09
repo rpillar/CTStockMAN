@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderGetCategoriesMessageOn: html
 
 	html div 	

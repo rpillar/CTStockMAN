@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderDashboardSummaryChartOn: html
 
 	| chart myData1 myData2 stream yAxisArray yAxisLeft yAxisRight |
@@ -35,5 +35,5 @@ renderDashboardSummaryChartOn: html
 	chart javascriptContentOn: stream.
 		
 	html div
-		style: 'height:300px;';
+		style: 'height:320px;';
 	 	script: chart.

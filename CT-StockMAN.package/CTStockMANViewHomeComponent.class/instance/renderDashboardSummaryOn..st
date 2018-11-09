@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderDashboardSummaryOn: html
 
 	html div 
@@ -40,7 +40,7 @@ renderDashboardSummaryOn: html
 														html span
 															class: 'right';
 															style: 'font-size: 20px; font-weight:300;';
-															with: '¬£185,152'
+															with: '£185,152'
 													].
 											].
 										html div 
@@ -61,7 +61,7 @@ renderDashboardSummaryOn: html
 														html span
 															class: 'right';
 															style: 'font-size: 20px; font-weight:300;';
-															with: '¬£16,278'
+															with: '£16,278'
 													].
 											].
 										html div 
@@ -83,6 +83,27 @@ renderDashboardSummaryOn: html
 															class: 'right';
 															style: 'font-size: 20px; font-weight:300;';
 															with: '24'
+													].
+											].
+										html div 
+											class: 'col s12 left-align';
+											style: 'margin-top:5px;';
+											with: [
+												html div 
+													class: 'col s7';
+													with: [
+														html span 
+															class: 'right';
+															style: 'font-size: 20px; font-weight:400;';
+															with: 'Messages : '.
+													].
+												html div 
+													class: 'col s5';
+													with: [	
+														html span
+															class: 'right';
+															style: 'font-size: 20px; font-weight:300;';
+															with: '2'
 													].
 											].
 												

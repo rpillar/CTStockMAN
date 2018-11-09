@@ -1,4 +1,4 @@
-accessing
+deleting
 deleteCredentials
 
 	"delete from the db - pass in the shops object - keys are the same"

@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 channelCategoryNames: aChannel
 	
 	| counter myData categoryNames |

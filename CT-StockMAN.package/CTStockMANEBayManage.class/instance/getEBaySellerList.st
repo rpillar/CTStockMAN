@@ -1,4 +1,4 @@
-as yet unclassified
+getdata
 getEBaySellerList
 
 	| startDate endDate response writer |

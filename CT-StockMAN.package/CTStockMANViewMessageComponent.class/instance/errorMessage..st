@@ -1,4 +1,4 @@
-as yet unclassified
+error
 errorMessage: aString
 
 	self 	

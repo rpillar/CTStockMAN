@@ -1,4 +1,4 @@
-as yet unclassified
+checking
 checkShopCredentials: aShopName
 
 	| myCredentials |

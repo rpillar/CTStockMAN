@@ -1,4 +1,4 @@
-accessing
+deleting
 deleteShop
 
 	"delete from the db"

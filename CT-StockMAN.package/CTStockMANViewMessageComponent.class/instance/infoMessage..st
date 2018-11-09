@@ -1,4 +1,4 @@
-as yet unclassified
+message
 infoMessage: aString
 
 	self 	

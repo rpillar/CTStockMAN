@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderShopBodyShopNameOn: html
 
 	html div 	

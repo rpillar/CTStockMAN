@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderContentOn: html
 
 	"home - initial dashboard page"	

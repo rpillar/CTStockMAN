@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderMenuInventoryOn: html
 
 	html anchor 

@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderAddChannelSelectOn: html
 
 	html div 

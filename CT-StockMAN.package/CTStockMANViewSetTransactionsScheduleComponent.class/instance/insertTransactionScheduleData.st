@@ -1,4 +1,4 @@
-accessing
+inserting
 insertTransactionScheduleData
 
 	| myData |

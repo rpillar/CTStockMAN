@@ -1,20 +1,19 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"addItem:" : "FirstnameLastname 7/20/2016 11:50",
-		"addItemVerify:" : "FirstnameLastname 7/19/2016 13:59",
-		"formatResponse:" : "RichardPillar 3/2/2018 21:34",
-		"getEBayCategories" : "RichardPillar 3/2/2018 22:46",
-		"getEBayDetails" : "FirstnameLastname 10/4/2016 15:52",
-		"getEBayItem:" : "FirstnameLastname 10/4/2016 14:53",
-		"getEBayOfficialTime" : "RichardPillar 3/2/2018 13:18",
-		"getEBaySellerList" : "RichardPillar 1/24/2018 08:00",
-		"getEBayTransactionsAll" : "FirstnameLastname 10/4/2016 14:54",
-		"getEBayTransactionsForDay" : "FirstnameLastname 10/4/2016 14:55",
-		"getEBayTransactionsForDaysStarting:ending:" : "RichardPillar 2/7/2018 08:28",
-		"initialize" : "RichardPillar 8/11/2017 18:44",
-		"myEbay" : "FirstnameLastname 7/20/2016 16:35",
-		"myEbay:" : "FirstnameLastname 7/20/2016 16:35",
 		"request" : "FirstnameLastname 7/25/2016 16:53",
-		"request:" : "FirstnameLastname 7/25/2016 16:53" } }
+		"request:" : "FirstnameLastname 7/25/2016 16:53",
+		"getEBayOfficialTime" : "RichardPillar 3/2/2018 13:18",
+		"getEBayTransactionsAll" : "FirstnameLastname 10/4/2016 14:54",
+		"initialize" : "RichardPillar 10/18/2016 08:19",
+		"getEBayCategories" : "RichardPillar 4/5/2018 08:31",
+		"formatResponse:" : "RichardPillar 4/5/2018 08:34",
+		"getEBaySellerList" : "RichardPillar 1/24/2018 08:00",
+		"getEBayTransactionsForDay" : "FirstnameLastname 10/4/2016 14:55",
+		"myEbay:" : "FirstnameLastname 7/20/2016 16:35",
+		"getEBayItem:" : "FirstnameLastname 10/4/2016 14:53",
+		"getEBayTransactionsForDaysStarting:ending:" : "RichardPillar 2/7/2018 08:28",
+		"myEbay" : "FirstnameLastname 7/20/2016 16:35",
+		"getEBayDetails" : "FirstnameLastname 10/4/2016 15:52"
+	},
+	"class" : { }
+}

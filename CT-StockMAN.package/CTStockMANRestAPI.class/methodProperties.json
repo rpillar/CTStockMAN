@@ -1,5 +1,8 @@
 {
-	"class" : {
-		"initialize" : "RichardPillar 10/6/2017 08:16" },
 	"instance" : {
-		"transactions" : "RichardPillar 10/10/2017 08:25" } }
+		"transactions" : "RichardPillar 4/12/2018 21:51"
+	},
+	"class" : {
+		"initialize" : "RichardPillar 10/6/2017 08:16"
+	}
+}

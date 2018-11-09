@@ -1,4 +1,4 @@
-as yet unclassified
+getdata
 getEBayDetails
 
 	| response writer |

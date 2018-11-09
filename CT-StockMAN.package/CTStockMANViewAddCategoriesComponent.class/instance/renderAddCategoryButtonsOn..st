@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderAddCategoryButtonsOn: html
 
 	| validCategoryInput |
@@ -18,7 +18,7 @@ renderAddCategoryButtonsOn: html
 								( validCategoryInput = '' )
 									ifTrue: [ 
 										"add category data"
-										self addCategory.
+										self addOrUpdateCategory.
 										self categoryName: ''.
 										s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')' ).
 										s << ( ( s jQuery class: 'add-category-modal-content' ) remove ).

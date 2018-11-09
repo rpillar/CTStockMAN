@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderSampleDashboardOn: html
 
 	html div 	

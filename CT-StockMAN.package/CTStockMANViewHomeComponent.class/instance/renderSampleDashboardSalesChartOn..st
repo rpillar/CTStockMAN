@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderSampleDashboardSalesChartOn: html
 
 	| allSeries chart myData1 myData2 |

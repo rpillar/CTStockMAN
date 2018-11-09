@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderGetCategoryButtonsOn: html
 
 	html div 

@@ -1,4 +1,4 @@
-accessing
+rendering
 renderShopBodyOn: html
 
 	html div

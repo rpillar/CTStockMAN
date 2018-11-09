@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 getCustomCategory
 
 	| myArgs myData |
@@ -9,7 +9,7 @@ getCustomCategory
 	
 	myData := self session dbResource query: 'select * from channel_categories_data where channel = ? and categoryName = ?' with: myArgs  on: 'CTStockMANModelCategoryData'.
 	
-	(myData size = 0 )
+	(myData isEmpty )
 		ifTrue: [ ^ '' ].
 		
 	^ ( myData at: 1 ) customCategoryName. 

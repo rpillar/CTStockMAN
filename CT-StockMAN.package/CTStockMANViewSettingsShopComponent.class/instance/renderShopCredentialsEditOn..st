@@ -1,4 +1,4 @@
-accessing
+rendering
 renderShopCredentialsEditOn: html
 
 	| myCredentialsComponent |

@@ -1,4 +1,4 @@
 as yet unclassified
 tablePrimaryKey
 
-	^self subclassResponsibility
+	^ self subclassResponsibility

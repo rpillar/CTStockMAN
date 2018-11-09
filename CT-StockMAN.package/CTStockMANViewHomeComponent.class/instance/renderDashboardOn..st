@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderDashboardOn: html
 		
 	self renderDashboardSummaryOn: html.	
@@ -16,3 +16,4 @@ renderDashboardOn: html
 			]	
 		].	
 	self renderDashboardSummaryChartOn: html.	
+	self renderDashboardTrafficDataOn: html.

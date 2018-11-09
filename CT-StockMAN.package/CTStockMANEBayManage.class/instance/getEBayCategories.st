@@ -1,4 +1,4 @@
-as yet unclassified
+getdata
 getEBayCategories
 
 	"gets top level category data only"

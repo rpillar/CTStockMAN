@@ -1,16 +1,15 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "FirstnameLastname 7/19/2016 14:17",
+	"super" : "CTStockMANChannel",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"ebayAttribute",
 		"myEbay",
-		"request" ],
+		"request"
+	],
 	"name" : "CTStockMANEBayManage",
-	"pools" : [
-		 ],
-	"super" : "CTStockMANChannel",
-	"type" : "normal" }
+	"type" : "normal"
+}

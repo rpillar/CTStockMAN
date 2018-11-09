@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderAddCategoriesContentOn: html
 
 	html div

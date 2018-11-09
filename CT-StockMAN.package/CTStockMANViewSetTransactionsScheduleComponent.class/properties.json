@@ -1,10 +1,10 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CTStockMANView",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"channel",
 		"channelNames",
@@ -12,9 +12,8 @@
 		"shopCredentials",
 		"shopName",
 		"startTime",
-		"scheduleStatus" ],
+		"scheduleStatus"
+	],
 	"name" : "CTStockMANViewSetTransactionsScheduleComponent",
-	"pools" : [
-		 ],
-	"super" : "CTStockMANView",
-	"type" : "normal" }
+	"type" : "normal"
+}

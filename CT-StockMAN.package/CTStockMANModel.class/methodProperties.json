@@ -1,5 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"tablePrimaryKey" : "RichardPillar 3/14/2017 08:14" } }
+		"initialize" : "RichardPillar 4/8/2018 19:00",
+		"tablePrimaryKey" : "RichardPillar 4/8/2018 19:00"
+	},
+	"class" : { }
+}

@@ -1,4 +1,4 @@
-accessing
+rendering
 renderContentOn: html
 	
 	"Add Shop page ..."

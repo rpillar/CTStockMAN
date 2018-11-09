@@ -1,14 +1,11 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "RichardPillar 10/20/2016 08:07",
-	"instvars" : [
-		 ],
-	"name" : "CTStockMANRootTask",
-	"pools" : [
-		 ],
 	"super" : "WATask",
-	"type" : "normal" }
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CTStockMANRootTask",
+	"type" : "normal"
+}

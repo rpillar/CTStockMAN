@@ -1,4 +1,4 @@
-accessing
+rendering
 renderShopCredentialsBodyMessageOn: html
 
 	html div 	

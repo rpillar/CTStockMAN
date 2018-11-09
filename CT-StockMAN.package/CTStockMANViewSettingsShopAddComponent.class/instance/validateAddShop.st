@@ -1,4 +1,4 @@
-as yet unclassified
+validating
 validateAddShop
 
 	| myArgs myShop |

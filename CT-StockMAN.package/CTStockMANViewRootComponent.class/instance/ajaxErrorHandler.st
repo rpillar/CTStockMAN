@@ -1,4 +1,4 @@
-as yet unclassified
+ajax
 ajaxErrorHandler 
 	^ ' if (jqxhr.status == 403) { 
 		window.location.assign("/StockMAN?expired=true"); 

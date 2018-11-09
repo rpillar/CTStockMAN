@@ -1,6 +1,7 @@
 {
-	"class" : {
-		 },
 	"instance" : {
 		"initialize" : "RichardPillar 1/14/2017 19:34",
-		"renderContentOn:" : "RichardPillar 1/14/2017 19:35" } }
+		"renderContentOn:" : "RichardPillar 1/14/2017 19:35"
+	},
+	"class" : { }
+}

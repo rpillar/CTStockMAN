@@ -1,9 +1,9 @@
 accessing
 renderTransactionDetailsOn: html
 
-	| transactionData transactionDataObject |
+	| transactionData |
 	transactionData := self getTransactionData.
-	transactionDataObject := 'test'.
+	"transactionDataObject := 'test'."
 	
 	html div 
 		with: [ 

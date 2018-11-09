@@ -1,16 +1,15 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "RichardPillar 1/16/2017 08:10",
+	"super" : "CTStockMANView",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"channels",
 		"shops",
-		"shopsActive" ],
+		"shopsActive"
+	],
 	"name" : "CTStockMANViewHomeComponent",
-	"pools" : [
-		 ],
-	"super" : "CTStockMANView",
-	"type" : "normal" }
+	"type" : "normal"
+}

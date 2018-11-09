@@ -1,6 +1,9 @@
 {
-	"class" : {
-		"canBeRoot" : "RichardPillar 10/19/2016 19:54" },
 	"instance" : {
 		"go" : "RichardPillar 1/3/2017 14:36",
-		"initialRequest:" : "RichardPillar 10/19/2016 19:56" } }
+		"initialRequest:" : "RichardPillar 10/19/2016 19:56"
+	},
+	"class" : {
+		"canBeRoot" : "RichardPillar 10/19/2016 19:54"
+	}
+}

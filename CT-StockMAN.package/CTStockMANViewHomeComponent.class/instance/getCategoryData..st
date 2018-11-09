@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 getCategoryData: aCategory
 
 	| myCategory myCategoryData |

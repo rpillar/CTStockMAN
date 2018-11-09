@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderDashboardFeedbackChartOn: html
 
 	| chart myData1 stream |

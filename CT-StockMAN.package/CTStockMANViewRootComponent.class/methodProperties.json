@@ -1,13 +1,14 @@
 {
-	"class" : {
-		 },
 	"instance" : {
-		"ajaxErrorHandler" : "RichardPillar 10/19/2016 19:43",
 		"bodyComponent" : "RichardPillar 10/19/2016 19:42",
 		"bodyComponent:" : "RichardPillar 10/19/2016 19:42",
+		"ajaxErrorHandler" : "RichardPillar 10/19/2016 19:43",
 		"initialize" : "RichardPillar 11/14/2016 17:15",
 		"menuComponent" : "RichardPillar 10/19/2016 19:42",
 		"menuComponent:" : "RichardPillar 10/19/2016 19:42",
 		"renderContentOn:" : "RichardPillar 2/14/2017 21:37",
 		"style" : "RichardPillar 3/6/2018 08:24",
-		"updateRoot:" : "RichardPillar 1/15/2018 17:09" } }
+		"updateRoot:" : "RichardPillar 4/2/2018 12:59"
+	},
+	"class" : { }
+}

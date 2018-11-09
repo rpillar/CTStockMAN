@@ -1,4 +1,4 @@
-as yet unclassified
+accessing
 getChannelCredentials: aChannel
 
 	| credentials myArgsArray |

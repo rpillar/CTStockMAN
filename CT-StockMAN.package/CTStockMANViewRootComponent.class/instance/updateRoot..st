@@ -1,4 +1,4 @@
-accessing
+update
 updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
 	anHtmlRoot stylesheet
@@ -23,5 +23,5 @@ updateRoot: anHtmlRoot
 		url: 'http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js'.	
 	anHtmlRoot javascript 
 		url: '	https://use.fontawesome.com/e42a505129.js'.		
-	"anHtmlRoot javascript 
-		url: (CTStockMANFileLibrary urlOf: #stockMANQueryJs)."
+	anHtmlRoot javascript 
+		url: 'https://code.highcharts.com/highcharts.js'.

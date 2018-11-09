@@ -1,4 +1,4 @@
-as yet unclassified
+getdata
 getEBayTransactionsForDaysStarting: startDay ending: endDay
 
 	| response writer |

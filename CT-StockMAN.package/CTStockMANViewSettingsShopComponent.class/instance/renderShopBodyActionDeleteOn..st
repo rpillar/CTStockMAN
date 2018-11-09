@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderShopBodyActionDeleteOn: html
 
 	html div 

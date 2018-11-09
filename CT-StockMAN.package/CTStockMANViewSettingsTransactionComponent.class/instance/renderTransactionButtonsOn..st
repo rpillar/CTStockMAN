@@ -7,5 +7,5 @@ renderTransactionButtonsOn: html
 		with: [
 			self renderTransactionButtonsSetTransactionScheduleOn: html. 
 			self renderTransactionButtonsGetTransactionsOn: html.
-			self renderTransactionButtonsScheduleGetTransactionsOn: html.
+			"self renderTransactionButtonsScheduleGetTransactionsOn: html."
 		].

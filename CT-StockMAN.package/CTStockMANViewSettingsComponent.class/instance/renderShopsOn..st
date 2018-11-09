@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderShopsOn: html
 
 	| myAddShopComponent myShop |

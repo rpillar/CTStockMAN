@@ -1,4 +1,4 @@
-accessing
+rendering
 renderSetTransactionsScheduleActionCloseOn: html
 
 	html div 

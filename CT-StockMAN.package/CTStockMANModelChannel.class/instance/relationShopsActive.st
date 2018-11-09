@@ -8,6 +8,6 @@ relationShopsActive
 	myArgsArray at: 2 put: 'Active'.
 		
 	myShops := self session dbResource query: 'select * from shops where channel = ? and status = ?' with: myArgsArray  on: 'CTStockMANModelShop'.
-	( myShops size > 0 )
+	( myShops isNotEmpty )
 		ifTrue: [ ^ true ]
 		ifFalse: [ ^ false ].

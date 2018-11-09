@@ -1,14 +1,11 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
-	"commentStamp" : "",
-	"instvars" : [
-		 ],
-	"name" : "CTStockMANFileLibrary",
-	"pools" : [
-		 ],
+	"commentStamp" : "RichardPillar 4/5/2018 08:24",
 	"super" : "WAFileLibrary",
-	"type" : "normal" }
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "CTStockMANFileLibrary",
+	"type" : "normal"
+}

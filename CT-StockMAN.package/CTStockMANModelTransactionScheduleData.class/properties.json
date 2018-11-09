@@ -1,16 +1,15 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
+	"super" : "CTStockMANModel",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"channel",
 		"shopName",
-		"schedule_time" ],
+		"schedule_time"
+	],
 	"name" : "CTStockMANModelTransactionScheduleData",
-	"pools" : [
-		 ],
-	"super" : "CTStockMANModel",
-	"type" : "normal" }
+	"type" : "normal"
+}

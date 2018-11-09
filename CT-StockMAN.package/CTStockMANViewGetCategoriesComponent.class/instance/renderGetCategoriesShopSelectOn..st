@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderGetCategoriesShopSelectOn: html
 
 	html div 

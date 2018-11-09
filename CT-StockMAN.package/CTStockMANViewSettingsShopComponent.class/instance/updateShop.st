@@ -1,4 +1,4 @@
-accessing
+update
 updateShop
 
 	"update the 'object'"

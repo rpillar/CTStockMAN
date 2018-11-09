@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderSampleDashboardSalesOn: html
 
 	html div

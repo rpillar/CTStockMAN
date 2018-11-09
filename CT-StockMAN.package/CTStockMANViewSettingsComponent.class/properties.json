@@ -1,10 +1,10 @@
 {
-	"category" : "CT-StockMAN",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "RichardPillar 11/16/2016 07:58",
+	"super" : "CTStockMANView",
+	"category" : "CT-StockMAN",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
 	"instvars" : [
 		"addCategoryComponent",
 		"channelCategories",
@@ -12,9 +12,8 @@
 		"shopifyCredentials",
 		"shops",
 		"shopCategories",
-		"getCategoriesComponent" ],
+		"getCategoriesComponent"
+	],
 	"name" : "CTStockMANViewSettingsComponent",
-	"pools" : [
-		 ],
-	"super" : "CTStockMANView",
-	"type" : "normal" }
+	"type" : "normal"
+}

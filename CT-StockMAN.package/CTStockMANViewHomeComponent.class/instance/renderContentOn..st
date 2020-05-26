@@ -2,8 +2,8 @@ rendering
 renderContentOn: html
 
 	"home - initial dashboard page"	
-	html div 
-		with: [  
+	html div:
+		[  
 			html div 
 				class: 'page-title';
 				with: 'DashBoard'.	

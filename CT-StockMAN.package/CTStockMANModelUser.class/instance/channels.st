@@ -1,3 +1,3 @@
 relation
 channels
-	^ self relationChannels.
+	^ self rChannels.

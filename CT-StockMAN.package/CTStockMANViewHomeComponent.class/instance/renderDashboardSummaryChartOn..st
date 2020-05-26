@@ -24,9 +24,10 @@ renderDashboardSummaryChartOn: html
 	chart title text: 'Sales / Unit Volumes (by Month)'.
 	chart yAxis: yAxisArray.
 	chart xAxis categories: #('Jan' 'Feb' 'Mar' 'Apr' 'May' 'Jun' 'July' 'Aug' 'Sept' 'Oct' 'Nov' 'Dec').
-	chart xAxis crosshair: 'true'.
+	"chart xAxis crosshair: 'true'."
 	chart tooltip split: true.
 	chart credits enabled: false.
+	chart exporting enabled: false.
 	
 	chart plotOptions line marker lineColor: '#666666'; lineWidth: 1.
 	
@@ -35,5 +36,5 @@ renderDashboardSummaryChartOn: html
 	chart javascriptContentOn: stream.
 		
 	html div
-		style: 'height:320px;';
+		style: 'height:400px;';
 	 	script: chart.

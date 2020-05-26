@@ -1,3 +1,0 @@
-accessing
-dbTableName
-	self subclassResponsibility.

@@ -6,8 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"database",
-		"dbResource",
+		"dbConnection",
 		"user"
 	],
 	"name" : "CTStockMANSession",

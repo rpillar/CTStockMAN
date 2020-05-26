@@ -1,0 +1,14 @@
+relation
+rShops
+
+	| myShops |
+	
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelShop'; dbSearch: { { #channel -> self channelName } }.
+	
+	myShops := CTStockMANModelShop new.
+	myShops conn: WACurrentRequestContext value session dbConnection.
+	myShops resultset: ( myShops processSearchQuery: ( query queryString ) ).
+	
+	^ myShops.
+	

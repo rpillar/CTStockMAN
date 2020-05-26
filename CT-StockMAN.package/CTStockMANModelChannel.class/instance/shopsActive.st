@@ -1,3 +1,3 @@
 relation
 shopsActive
-	^ self relationShopsActive.
+	^ self rShopsActive.

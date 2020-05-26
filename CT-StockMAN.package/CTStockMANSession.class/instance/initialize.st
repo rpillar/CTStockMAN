@@ -1,9 +1,6 @@
-as yet unclassified
+initialize
 initialize
 
 	super initialize.
-	self dbResource: CTDatabaseResource new.
-	self database: ( UDBCSQLite3Connection on: '/Users/rpillar/temp/test.db' ).
-	database open.
-	
-	self dbResource database: self database.
+	self dbConnection: ( UDBCSQLite3Connection on: '/Users/richardpillar/temp/test.db' ).
+	dbConnection open.

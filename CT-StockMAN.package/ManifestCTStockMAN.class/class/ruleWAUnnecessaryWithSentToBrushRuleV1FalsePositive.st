@@ -1,0 +1,3 @@
+code-critics
+ruleWAUnnecessaryWithSentToBrushRuleV1FalsePositive
+	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewAnalyticsComponent #renderContentOn: #false)) #'2020-03-04T18:19:06.736359+00:00') #(#(#RGMethodDefinition #(#CTStockMANViewAddCategoriesComponent #renderAddCategoriesContentOn: #false)) #'2020-03-04T19:42:03.580529+00:00') #(#(#RGMethodDefinition #(#CTStockMANViewAddCategoriesComponent #renderAddCategoriesFormOn: #false)) #'2020-03-04T19:42:34.900592+00:00') #(#(#RGMethodDefinition #(#CTStockMANViewHomeComponent #renderDashboardSummaryOn: #false)) #'2020-03-29T23:41:08.200351+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewHomeComponent #renderSampleDashboardHeaderOn: #false)) #'2020-03-30T17:37:05.349905+01:00') )

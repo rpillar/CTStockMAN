@@ -1,3 +1,3 @@
 relation
 shops
-	^ self relationShops.
+	^ self rShops.

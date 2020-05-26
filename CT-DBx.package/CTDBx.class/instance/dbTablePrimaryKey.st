@@ -1,3 +1,0 @@
-accessing
-dbTablePrimaryKey
-	self subclassResponsibility.

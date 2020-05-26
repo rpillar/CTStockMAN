@@ -1,13 +1,14 @@
-as yet unclassified
+loading
 go
 
-	| myUser myArgs |
+	| myUser query |
 	
-	"set the test user for now ..."
-	myArgs := Array new: 1.
-	myArgs at: 1 put: 'testuser'.
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelUser'; dbSearch: { { #userName -> 'testuser' } }.
 	
-	myUser := self session dbResource query: 'select userName, password from user where userName = ?' with: myArgs on: 'CTStockMANModelUser'.
-	self session user: ( myUser at: 1 ).
+	myUser := CTStockMANModelUser new.
+	myUser conn: self session dbConnection.
+	myUser resultset: ( myUser processSearchQuery: ( query queryString ) ).
+	self session user: myUser.
 	
 	self call: CTStockMANViewRootComponent new.

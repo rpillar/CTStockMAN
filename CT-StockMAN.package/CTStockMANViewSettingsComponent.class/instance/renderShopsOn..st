@@ -22,7 +22,7 @@ renderShopsOn: html
 	html div 
 		class: 'row shop-data-block';
 		with: [
-			( self shops isEmpty )
+			( self shops resultset isEmpty )
 				ifTrue: [
 					html render: CTStockMANViewSettingsShopEmptyComponent new.
 					html div 
@@ -36,12 +36,14 @@ renderShopsOn: html
 					html unorderedList
 						class: 'collapsible shop-data'; 
 						with: [			
-							self shops do: [ :each |
+							self shops resultset do: [ :each |
 								myShop := CTStockMANViewSettingsShopComponent new.
 								myShop shop: each.
-								myShop shopName: each shopName.
-								myShop shopDescription: each shopDescription.
-								myShop shopStatus: each status.
+								myShop channel: ( each at: #channel ).
+								myShop shopName: ( each at: #shopName ).
+								myShop shopDescription: ( each at: #shopDescription ).
+								myShop shopStatus: ( each at: #status ).
+								myShop shopId: ( each at: #shopId ).
 								html render: myShop.
 							]
 						]	

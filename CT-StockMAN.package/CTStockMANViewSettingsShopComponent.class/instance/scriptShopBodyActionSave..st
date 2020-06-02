@@ -4,13 +4,13 @@ scriptShopBodyActionSave: script
 	| validateResult |
 
 	"remove any displayed messages"
-	script << ( ( script jQuery class: 'editmessage', self shop shopId asString ) remove ).
+	script << ( ( script jQuery class: 'editmessage', self shopId asString ) remove ).
 	"validate input data"
 	validateResult := self validateEditShop. 
 	( validateResult = '' )
 		ifFalse: [ 
 			self messageComponent errorMessage: validateResult.
-			script << ( ( script jQuery class: 'shop-message', self shop shopId asString ) append: [ :r | self renderShopBodyMessageOn: r ] )  
+			script << ( ( script jQuery class: 'shop-message', self shopId asString ) append: [ :r | self renderShopBodyMessageOn: r ] )  
 		]
 		ifTrue: [  self updateShop.
 			"reset stuff"
@@ -20,17 +20,17 @@ scriptShopBodyActionSave: script
 			script << ( ( script jQuery class: 'shop-edit-cancel' ) cssAt: 'display' put: 'none' ).
 			script << ( ( script jQuery class: 'shop-edit-field' ) attributeAt: 'disabled' put: 'disabled' ).
 			"update header info"
-			script << ( ( script jQuery id: 'header-shopname', self shop shopId asString ) text: self shopName ).
-			script << ( ( script jQuery id: 'header-shopstatus', self shop shopId asString ) text: 
-			( ( ( self shopStatus ) isNil ) ifTrue: [ self shop status ] ifFalse: [ self shopStatus ] ) ).
+			script << ( ( script jQuery id: 'header-shopname', self shopId asString ) text: self shopName ).
+			script << ( ( script jQuery id: 'header-shopstatus', self shopId asString ) text: 
+			( ( ( self shopStatus ) isNil ) ifTrue: [ self shopStatus ] ifFalse: [ self shopStatus ] ) ).
 			"reset status"
-			( self shop status = 'Active' )
+			( self shopStatus = 'Active' )
 				ifTrue: [  
-					script << ( ( script jQuery id: 'shop-status-inactive', self shop shopId asString ) removeAttribute: 'checked' ).
-					script << ( ( script jQuery id: 'shop-status-active', self shop shopId asString ) attributeAt: 'checked' put: 'checked' ).
+					script << ( ( script jQuery id: 'shop-status-inactive', self shopId asString ) removeAttribute: 'checked' ).
+					script << ( ( script jQuery id: 'shop-status-active', self shopId asString ) attributeAt: 'checked' put: 'checked' ).
 				]
 				ifFalse: [  
-					script << ( ( script jQuery id: 'shop-status-active', self shop shopId asString ) removeAttribute: 'checked' ).
-					script << ( ( script jQuery id: 'shop-status-inactive', self shop shopId asString ) attributeAt: 'checked' put: 'checked' ).
+					script << ( ( script jQuery id: 'shop-status-active', self shopId asString ) removeAttribute: 'checked' ).
+					script << ( ( script jQuery id: 'shop-status-inactive', self shopId asString ) attributeAt: 'checked' put: 'checked' ).
 				]
 		]

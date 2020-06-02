@@ -11,7 +11,8 @@
 		"shopName",
 		"shopDescription",
 		"status",
-		"update_date"
+		"update_date",
+		"userName"
 	],
 	"name" : "CTStockMANModelShop",
 	"type" : "normal"

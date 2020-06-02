@@ -15,7 +15,7 @@ renderTransactionDetailsOn: html
 					html tableBody 
 						id: 'transaction-management-table-body';
 						with: [ 
-							transactionData do: [ :each |
+							transactionData resultset do: [ :each |
 								self renderTransactionDataLineOn: html with: each. 
 							].
 						]

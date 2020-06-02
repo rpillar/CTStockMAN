@@ -25,23 +25,23 @@ renderShopHeaderOn: html
 					html div 
 						class: 'col s1 left-align';
 						style: 'display:inline;margin-left:10px;';
-						with: self shop channel.
+						with: ( self channel ).
 					html div 
 						class: 'col s1';
 						style: 'display:inline;margin-left:30px;font-weight:500;';
 						with: 'Name : '.
 					html div 
-						id: 'header-shopname', self shop shopId asString;
+						id: 'header-shopname', ( self shopId ) asString;
 						class: 'col s2 left-align';
 						style: 'display:inline;margin-left:10px;';
-						with: self shop shopName.	
+						with: ( self shopName ).	
 					html div 
 						class: 'col s1';
 						style: 'display:inline;margin-left:30px;font-weight:500;';
 						with: 'Status : '.
 					html div 
-						id: 'header-shopstatus', self shop shopId asString;
+						id: 'header-shopstatus', ( self shopId ) asString;
 						class: 'col s2 left-align';
 						style: 'display:inline;margin-left:10px;';
-						with: self shop status.									
+						with: ( self shopStatus ).									
 		].	

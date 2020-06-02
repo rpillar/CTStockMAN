@@ -10,12 +10,6 @@ getShops
 		myShops add: shop.
 		myChannels next.
 	].
-	"myChannels resultset do: [ :channel | 
-		shop := 
-		channel shops do: [ :shop |
-			myShops add: shop
-		]
-	]."
 
 	^ myShops.
 

@@ -1,3 +1,3 @@
 code-critics
 ruleRBUnaryAccessingMethodWithoutReturnRuleV1FalsePositive
-	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewSettingsTransactionComponent #initialize #false)) #'2018-06-01T20:27:39.441736+01:00') )
+	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewSettingsTransactionComponent #initialize #false)) #'2018-06-01T20:27:39.441736+01:00') #(#(#RGMethodDefinition #(#CTStockMANModelCategory #initialize #false)) #'2020-04-06T17:03:27.351312+01:00') #(#(#RGMethodDefinition #(#CTStockMANModelChannel #initialize #false)) #'2020-05-09T13:41:19.645136+01:00') )

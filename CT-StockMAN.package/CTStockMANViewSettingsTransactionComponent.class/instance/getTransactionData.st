@@ -1,8 +1,13 @@
 accessing
 getTransactionData
-
-	| myTransactions |
 	
-	myTransactions := self session dbResource query: 'select * from transaction_data order by start_date desc limit 5' on: 'CTStockMANModelTransactionData'. 
-
+	| myTransactions query |
+	
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelTransactionData'; dbSearchAllWithLimit: 5.
+	
+	myTransactions := CTStockMANModelTransaction new.
+	myTransactions conn: WACurrentRequestContext value session dbConnection.
+	myTransactions resultset: ( myTransactions processSearchQuery: ( query queryString ) ).
+	
 	^ myTransactions.

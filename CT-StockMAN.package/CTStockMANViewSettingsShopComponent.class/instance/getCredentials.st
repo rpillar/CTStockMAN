@@ -1,10 +1,10 @@
-relation
-relationShopCredentials
+deleting
+getCredentials
 
-	| myShopCredentials |
+	| myShopCredentials query |
 	
 	query := CTDBxQuery new.
-	query queryTable: 'CTStockMANModelCredentials'; dbSearch: { { #shopId -> self shopId } }.
+	query queryTable: 'CTStockMANModelCredentials'; dbSearch: { { #shopId -> ( self shopId ) } }.
 	
 	myShopCredentials := CTStockMANModelCredentials new.
 	myShopCredentials conn: WACurrentRequestContext value session dbConnection.

@@ -14,9 +14,9 @@ renderShopBodyShopNameOn: html
 				style: 'font-weight:400;font-size:20px;color:#000;vertical-align:top;margin-top:0px;';
 				with: [
 					html textInput
-					class: 'shop-edit-field shop-name', self shop shopId asString;
+					class: 'shop-edit-field shop-name', ( self shopId ) asString;
 					attributeAt: 'disabled' put: 'disabled';
 					on: #shopName of: self;
-					value: self shop shopName
+					value: ( self shopName )
 				].		
 		].

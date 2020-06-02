@@ -19,9 +19,9 @@ renderShopBodyActionSaveOn: html
 						html jQuery ajax
 							"callbacks to get field values ..."
 							callback: [ :myField | self shopName: myField. ]
-							value: ( ( html jQuery class: 'shop-name', self shop shopId asString ) value );
+							value: ( ( html jQuery class: 'shop-name', ( self shopId ) asString ) value );
 							callback: [ :myField | self shopDescription: myField. ]
-							value: ( ( html jQuery class: 'shop-description', self shop shopId asString ) value );
+							value: ( ( html jQuery class: 'shop-description', ( self shopId ) asString ) value );
 							script: [ :s |  self scriptShopBodyActionSave: s ]
 					) asFunction: #(event) )
 				);

@@ -14,9 +14,9 @@ renderShopBodyShopDescriptionOn: html
 				style: 'font-weight:400;font-size:20px;color:#000;vertical-align:top;margin-top:0px;';
 				with: [
 					html textInput
-					class: 'shop-edit-field shop-description', self shop shopId asString;
+					class: 'shop-edit-field shop-description', ( self shopId ) asString;
 					attributeAt: 'disabled' put: 'disabled';
 					on: #shopDescription of: self;
-					value: self shop shopDescription
+					value: ( self shopDescription )
 				].
 		].

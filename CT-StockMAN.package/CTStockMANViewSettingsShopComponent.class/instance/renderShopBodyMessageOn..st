@@ -2,7 +2,7 @@ rendering
 renderShopBodyMessageOn: html
 
 	html div 	
-		class: 'row editmessage', self shop shopId asString;
+		class: 'row editmessage', self shopId asString;
 		style: 'margin-bottom:0px;color:#ef9a9a;';
 		with: [ 
 			html div 

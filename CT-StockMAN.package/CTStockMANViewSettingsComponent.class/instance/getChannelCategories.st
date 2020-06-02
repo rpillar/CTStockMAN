@@ -1,8 +1,13 @@
 accessing
 getChannelCategories
 
-	| myCategories |
+	| myCategories query |
 	
-	myCategories := self session dbResource query: 'select * from channel_categories' on: 'CTStockMANModelCategory'. 
-
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCategory'; dbSearchAll.
+	
+	myCategories := CTStockMANModelCategory new.
+	myCategories conn: WACurrentRequestContext value session dbConnection.
+	myCategories resultset: ( myCategories processSearchQuery: ( query queryString ) ).
+	
 	^ myCategories.

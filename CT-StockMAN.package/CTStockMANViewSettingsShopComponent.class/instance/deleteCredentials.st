@@ -1,5 +1,10 @@
 deleting
 deleteCredentials
 
-	"delete from the db - pass in the shops object - keys are the same"
-	self session dbResource delete: 'credentials' with: self shop.
+	| query myCredentials |
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCredentials'; dbDelete: ( Dictionary newFrom: { #shopId->self shopId } ).
+
+	myCredentials := CTStockMANModelCredentials new.
+	myCredentials conn: WACurrentRequestContext value session dbConnection.
+	myCredentials conn execute: ( query queryString ).

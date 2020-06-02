@@ -1,4 +1,4 @@
-rendering
+as yet unclassified
 renderShopBodyActionCancelOn: html
 
 	html div
@@ -17,22 +17,22 @@ renderShopBodyActionCancelOn: html
  					do: ( (
 						html jQuery ajax
 							script: [ :s |
-								s << ( ( s jQuery class: 'shop-name', self shop shopId asString ) value: self shop shopName ).
-								s << ( ( s jQuery class: 'shop-description', self shop shopId asString ) value: self shop shopDescription ).
-								( self shop status = 'Active' ) 
+								s << ( ( s jQuery class: 'shop-name', ( self shopId ) asString ) value: self shopName ).
+								s << ( ( s jQuery class: 'shop-description', ( self shopId ) asString ) value: self shopDescription ).
+								( self shopStatus = 'Active' ) 
 									ifTrue: [ 
-										s << ( ( s jQuery id: 'shop-status-active', self shop shopId asString ) propertyAt: 'checked' put:'checked' ).
+										s << ( ( s jQuery id: 'shop-status-active', ( self shopId ) asString ) propertyAt: 'checked' put:'checked' ).
 									]
 									ifFalse: [  
-										s << ( ( s jQuery id: 'shop-status-inactive', self shop shopId asString ) propertyAt: 'checked' put:'checked' ).
+										s << ( ( s jQuery id: 'shop-status-inactive', ( self shopId ) asString ) propertyAt: 'checked' put:'checked' ).
 									].
 								s << ( ( s jQuery class: 'shop-edit' ) cssAt: 'display' put: 'inline' ).
 								s << ( ( s jQuery class: 'shop-delete' ) cssAt: 'display' put: 'inline' ).
 								s << ( ( s jQuery class: 'shop-edit-save' ) cssAt: 'display' put: 'none' ).
 								s << ( ( s jQuery class: 'shop-edit-cancel' ) cssAt: 'display' put: 'none' ).
 								s << ( ( s jQuery class: 'shop-edit-field' ) attributeAt: 'disabled' put: 'disabled' ).
-								s << ( ( s jQuery class: 'editmessage', self shop shopId asString ) remove ).
-								s << ( ( s jQuery id: 'shop-delete-component', self shop shopId asString ) cssAt: 'display' put: 'none' ).
+								s << ( ( s jQuery class: 'editmessage', self shopId asString ) remove ).
+								s << ( ( s jQuery id: 'shop-delete-component', self shopId asString ) cssAt: 'display' put: 'none' ).
 							]
  					) asFunction: #(event) )
  				);	

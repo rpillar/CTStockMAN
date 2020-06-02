@@ -4,7 +4,7 @@ renderShopBodyDeleteComponentOn: html
 	| myShopCount |
 	
 	html div 	
-		id: 'shop-delete-component', self shop shopId asString;
+		id: 'shop-delete-component', ( self shopId ) asString;
 		class: 'row';
 		style: 'position:absolute;top:35px;left:180px;z-index:1001;display:none;';
 		with: [  
@@ -25,8 +25,8 @@ renderShopBodyDeleteComponentOn: html
 									script: [ :s | 
 										self deleteCredentials.
 										self deleteShop.
-										s << ( ( s jQuery id: 'shop-list-item', self shop shopId asString ) remove ).
-										s << ( ( s jQuery id: 'credentials', self shop shopId asString ) remove ).
+										s << ( ( s jQuery id: 'shop-list-item', self shopId asString ) remove ).
+										s << ( ( s jQuery id: 'credentials', self shopId asString ) remove ).
 										myShopCount := self checkShopCount.
 										( myShopCount = 0 ) ifTrue: [  
 											s << ( ( s jQuery class: 'shop-data' ) cssAt: 'display' put: 'none' ).

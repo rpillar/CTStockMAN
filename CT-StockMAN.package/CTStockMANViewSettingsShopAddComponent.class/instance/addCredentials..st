@@ -1,7 +1,7 @@
 accessing
 addCredentials: aShop
 
-	| myCredentials myData mySTONDict mySTONString |
+	| myCredentials mySTONDict mySTONString query |
 
 	mySTONDict := Dictionary new.
 	( aShop channel = 'EBay' ) 
@@ -10,20 +10,11 @@ addCredentials: aShop
 			mySTONString := STON toString: mySTONDict.
 		].
 
-	"add a skeleton set of credentials for the 'inserted' shop"
-	myData := Array new: 5.
-	myData at: 1 put: self channel.
-	myData at: 2 put: aShop shopId.	
-	myData at: 3 put: aShop shopName.	
-	myData at: 4 put: mySTONString.
-	myData at: 5 put: 'N'.	
-	myData := self session dbResource insert: 'credentials' fields: #(channel shopId shopName credentials active ) with: myData.	
-
-	"return a credentials model"
+	"add a skeleton set of credentials for the 'inserted' shop"	
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCredentials'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopId->aShop shopId  . #shopName->aShop shopName  . #credentials->mySTONString asString . #active->'N' } ).
+	
 	myCredentials := CTStockMANModelCredentials new.
-	myCredentials channel: self channel.
-	myCredentials shopId: aShop shopId.
-	myCredentials shopName: aShop shopName.
-		
-	^ myCredentials.
+	myCredentials conn: WACurrentRequestContext value session dbConnection.
+	myCredentials conn execute: ( query queryString ).
 	

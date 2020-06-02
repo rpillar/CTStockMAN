@@ -1,20 +1,22 @@
 accessing
 addShop
 
-	| myArgsArray myData myShop |
+	| shop1 shop2 q1 q2 |
 	
 	"add shop details"
-	myData := Array new: 4.
-	myData at: 1 put: self shopName.
-	myData at: 2 put: self shopDescription.
-	myData at: 3 put: self channel.
-	myData at: 4 put: 'Not Active'.	
-	self session dbResource insert: 'shops' fields: #(shopName shopDescription channel status) with: myData. 
+	q1 := CTDBxQuery new.
+	q1 queryTable: 'CTStockMANModelShop'; dbCreate: ( Dictionary newFrom: { #shopName->self shopName . #shopDescription->self shopDescription  . #channel->self channel . #status->'Not Active' . #username->self session user userName } ).
 
-	"return a shop model"
-	myArgsArray := Array new: 1.
-	myArgsArray at: 1 put: self shopName.
-	myShop := self session dbResource query: 'select * from shops where shopName = ?' with: myArgsArray  on: 'CTStockMANModelShop'. 
+	shop1 := CTStockMANModelShop new.
+	shop1 conn: WACurrentRequestContext value session dbConnection.
+	shop1 conn execute: ( q1 queryString ).
+
+	q2 := CTDBxQuery new.
+	q2 queryTable: 'CTStockMANModelShop'; dbSearch: { { #shopName -> self shopName } }.
 	
-	^ myShop at: 1.
+	shop2 := CTStockMANModelShop new.
+	shop2 conn: WACurrentRequestContext value session dbConnection.
+	shop2 resultset: ( shop2 processSearchQuery: ( q2 queryString ) ).
+	
+	^ shop2.
 	

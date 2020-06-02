@@ -14,7 +14,7 @@ renderShopBodyOn: html
 				class: 'full-shop-data';
 				with: [
 					html div 
-						class: 'shop-message', self shop shopId asString.
+						class: 'shop-message', ( self shopId ) asString.
 					html form 
 						class: 'form';
 						with: [

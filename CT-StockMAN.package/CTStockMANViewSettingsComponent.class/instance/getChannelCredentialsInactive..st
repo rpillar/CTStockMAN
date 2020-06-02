@@ -1,11 +1,13 @@
 accessing
 getChannelCredentialsInactive: aChannel
 
-	| credentials myArgsArray |
+	| channelCredentials query |
 	
-	myArgsArray := Array new: 1.
-	myArgsArray at: 1 put: aChannel.
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCredentials'; dbSearch: { { #channel -> aChannel } . { #active -> 0 } }.
 	
-	credentials := self session dbResource query: 'select * from credentials where channel = ? and active = 0' with: myArgsArray  on: 'CTStockMANModelCredentials'. 
-
-	^ credentials size.
+	channelCredentials := CTStockMANModelCredentials new.
+	channelCredentials conn: WACurrentRequestContext value session dbConnection.
+	channelCredentials resultset: ( channelCredentials processSearchQuery: ( query queryString ) ).
+	
+	^ channelCredentials size. 

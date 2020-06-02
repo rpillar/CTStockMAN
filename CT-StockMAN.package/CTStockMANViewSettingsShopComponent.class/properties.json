@@ -11,7 +11,8 @@
 		"shopName",
 		"shopDescription",
 		"shopStatus",
-		"shop"
+		"shop",
+		"shopId"
 	],
 	"name" : "CTStockMANViewSettingsShopComponent",
 	"type" : "normal"

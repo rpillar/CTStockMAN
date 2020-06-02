@@ -14,7 +14,7 @@ renderShopBodyActionDeleteOn: html
  					( html jQuery this )
  					on: 'click'
  					do: ( (
-						( ( html jQuery id: 'shop-delete-component', self shop shopId asString ) cssAt: 'display' put: 'inline' ),
+						( ( html jQuery id: 'shop-delete-component', ( self shopId ) asString ) cssAt: 'display' put: 'inline' ),
 						( ( html jQuery class: 'shop-edit' ) cssAt: 'display' put: 'none' )				
  					) asFunction: #(event) )
  				);

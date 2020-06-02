@@ -1,10 +1,17 @@
 update
 updateShop
 
+	| query myShop |
+	
 	"update the 'object'"
-	self shop shopName: self shopName.
-	self shop shopDescription: self shopDescription.
-	self shop status: self shopStatus.
-
-	"update the db"
-	self session dbResource update: 'shops' on: 'CTStockMANModelShop' with: self shop.
+	self shop at: #shopName put: self shopName.
+	self shop at: #shopDescription put: self shopDescription.
+	self shop at: #status put: self shopStatus.
+	self shop at: #update_date put: Date today yyyymmdd.
+	
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelShop'; dbUpdate: self shop.
+	
+	myShop := CTStockMANModelShop new.
+	myShop conn: WACurrentRequestContext value session dbConnection.
+	myShop conn execute: ( query queryString ).

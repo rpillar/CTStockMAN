@@ -1,5 +1,11 @@
 deleting
 deleteShop
 
-	"delete from the db"
-	self session dbResource delete: 'shops' with: self shop.
+	| query myShop |
+	
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelShop'; dbDelete: ( Dictionary newFrom: { #shopId->self shopId } ).
+	
+	myShop := CTStockMANModelShop new.
+	myShop conn: WACurrentRequestContext value session dbConnection.
+	myShop conn execute: ( query queryString ).

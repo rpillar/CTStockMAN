@@ -13,7 +13,7 @@ scriptAddShopButtons: script
 			"create shop component and insert into the DOM"
 			shopComponent := CTStockMANViewSettingsShopComponent new.
 			shopComponent shop: myShop.
-			shopComponent shopName: myShop shopName; shopDescription: myShop shopDescription; shopStatus: myShop status.
+			shopComponent channel: myShop channel; shopId: myShop shopId; shopName: myShop shopName; shopDescription: myShop shopDescription; shopStatus: myShop status.
 			self shopName: ''. self shopDescription: ''. self channel: nil.
 			script << ( ( script jQuery class: 'no-shop-data' ) remove ).
 			script << ( ( script jQuery class: 'shop-data' ) append: [ :r | r render: shopComponent ] ).

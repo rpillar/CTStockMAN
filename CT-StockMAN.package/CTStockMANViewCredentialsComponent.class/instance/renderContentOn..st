@@ -4,7 +4,7 @@ renderContentOn: html
 	"Add / Edit Credentials page ..."	
 	self formCredentials: ( STON reader on: shopCredentials credentials readStream ) next.
 	
-	( self shop channel = 'EBay' ) 
+	( ( self shop at: #channel ) = 'EBay' ) 
 		ifTrue: [
 			self formCredentialsList: self credentialFieldsEbay.
 			self renderEbayCredentialsContentOn: html.

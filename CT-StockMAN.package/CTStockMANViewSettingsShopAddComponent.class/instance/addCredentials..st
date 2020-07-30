@@ -6,7 +6,7 @@ addCredentials: aShop
 	mySTONDict := Dictionary new.
 	( aShop channel = 'EBay' ) 
 		ifTrue: [  
-			( self credentialFieldsEbay ) do: [ :each | mySTONDict at: each asSymbol put: '' ].
+			( self credentialFieldsEbay ) do: [ :each | mySTONDict at: each asSymbol put: nil ].
 			mySTONString := STON toString: mySTONDict.
 		].
 

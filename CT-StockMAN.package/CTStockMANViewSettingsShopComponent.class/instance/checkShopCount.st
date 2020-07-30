@@ -14,6 +14,6 @@ checkShopCount
 	myShop := CTStockMANModelShop new.
 	myShop conn: WACurrentRequestContext value session dbConnection.
 	myCount := myShop conn execute: ( query queryString ).
-	self halt.
 	
-	^ myCount.
+	^ myCount rows first values first.
+	

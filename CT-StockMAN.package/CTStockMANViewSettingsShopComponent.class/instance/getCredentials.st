@@ -8,4 +8,6 @@ getCredentials
 	
 	myShopCredentials := CTStockMANModelCredentials new.
 	myShopCredentials conn: WACurrentRequestContext value session dbConnection.
-	myShopCredentials processSearchQuery: ( query queryString ).
+	myShopCredentials resultset: ( myShopCredentials processSearchQuery: ( query queryString ) ).
+	
+	^ myShopCredentials.

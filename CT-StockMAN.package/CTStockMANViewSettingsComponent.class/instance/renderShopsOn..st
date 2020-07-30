@@ -37,6 +37,7 @@ renderShopsOn: html
 						class: 'collapsible shop-data'; 
 						with: [			
 							self shops resultset do: [ :each |
+								self halt.
 								myShop := CTStockMANViewSettingsShopComponent new.
 								myShop shop: each.
 								myShop channel: ( each at: #channel ).

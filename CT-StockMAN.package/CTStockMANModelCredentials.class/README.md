@@ -1,1 +1,1 @@
-Shop credentials. Stored in Postgres - JSON format.
+Shop credentials.

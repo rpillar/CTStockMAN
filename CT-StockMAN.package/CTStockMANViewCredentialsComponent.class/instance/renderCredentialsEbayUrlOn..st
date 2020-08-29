@@ -22,7 +22,7 @@ renderCredentialsEbayUrlOn: html
 					html label 
 						class: 'active';
 						attributeAt: 'for' put: 'credentials-shop-url';
-						with: 'URL'.	
+						with: 'URL (Trading API - XML)'.	
 				].
 			"NOTE - current release of materialize - checkboxes cannot be inside a class of 'input-field' - will be fixed in the next release !!"
 			html div

@@ -4,10 +4,10 @@ renderShopCredentialsEditOn: html
 	| myCredentialsComponent |
 	myCredentialsComponent := CTStockMANViewCredentialsComponent new.
 	myCredentialsComponent shop: self shop.
-	self halt.
+
 	"myCredentialsComponent shopCredentials: ( self shop shopCredentials )."
 	myCredentialsComponent shopCredentials: ( self getCredentials ).
-	
+
 	html div 
 		style: 'position:absolute;top:252px;left:30px;';
 		with: [ 

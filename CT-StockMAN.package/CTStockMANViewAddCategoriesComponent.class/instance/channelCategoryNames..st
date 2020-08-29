@@ -1,13 +1,19 @@
 accessing
 channelCategoryNames: aChannel
 	
-	| counter myData categoryNames |
-	myData := self session dbResource query: 'select categoryName from channel_categories where channel = ? ' with: ( Array with: aChannel ) on: 'CTStockMANModelCategory'.
-	categoryNames := Array new: myData size.
+	| categoryNames counter myCategoryNames query |
+	
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCategory'; dbSearch: { { #channel -> ( self channel asString ) } }.
+	
+	myCategoryNames := CTStockMANModelCategory new.
+	myCategoryNames conn: WACurrentRequestContext value session dbConnection.
+	myCategoryNames resultset: ( myCategoryNames processSearchQuery: ( query queryString ) ).
+	
 	counter := 1.
-	myData do: [ :each |
-		categoryNames at: counter put: each categoryName.
-		counter := counter + 1.
-	].
-
+	categoryNames := Array new: myCategoryNames resultset size.
+	myCategoryNames resultset do: [ :each |
+			categoryNames at: counter put: each categoryName.
+			counter := counter + 1.
+		].
 	^ categoryNames.

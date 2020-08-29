@@ -1,8 +1,8 @@
-Initialization
+intialization
 initialize
 
 	super initialize.
 	self fields: #( channel categoryKey categoryName ).
 	self tableName: 'category'.
-	self primaryKey: #( 'channel' 'categoryName' ).
+	self primaryKey: 'channel'.
 	self rsPointer: 1.

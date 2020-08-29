@@ -6,10 +6,10 @@ getShopNames
 	myShops := OrderedCollection new.
 	
 	myChannels := self session user channels.
-	myChannels do: [ :ch | 
-			myChannelNames add: ch channelName.
-			ch shops do: [ :shop |
-				myShops add: ( shop shopName, ' (', ch channelName, ')' ) asString.
+	( myChannels resultset size ) timesRepeat: [ 
+			myChannelNames add: myChannels channelName.
+			( myChannels rShops resultset ) do: [ :shop |
+				myShops add: ( ( shop at: #shopName ), ' (', ( myChannels channelName ), ')' ) asString.
 			]
 		].
 	

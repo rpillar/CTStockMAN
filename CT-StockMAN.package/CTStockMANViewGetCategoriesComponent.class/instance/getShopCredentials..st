@@ -1,10 +1,14 @@
 accessing
 getShopCredentials: aShopName
 
-	| myArgs |
+	| myShopCredentials query |
 	
 	"check that the shop credentials are set / active"
-	myArgs := Array new: 1.
-	myArgs at: 1 put: aShopName.
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCredentials'; dbSearch: { { #shopName -> aShopName } }.
 	
-	^ ( self session dbResource query: 'select * from credentials where shopName = ?' with: myArgs  on: 'CTStockMANModelCredentials' ).
+	myShopCredentials := CTStockMANModelCredentials new.
+	myShopCredentials conn: WACurrentRequestContext value session dbConnection.
+	myShopCredentials resultset: ( myShopCredentials processSearchQuery: ( query queryString ) ).
+	
+	^ myShopCredentials.

@@ -1,12 +1,15 @@
 accessing
 updateCredentials
 
-	| myCredentials mySTONString |
+	| credentials mySTONString query |
 
 	mySTONString := STON toString: self formCredentials.
 	shopCredentials credentials: mySTONString.
 
-	"update the db"
-	myCredentials := self session dbResource update: 'credentials' on: 'CTStockMANModelCredentials' with: shopCredentials.
-	
-	^ myCredentials.
+	"add credentials details"
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCredentials'; dbUpdate: ( Dictionary newFrom: { #shopId->(self shop  at: #shopId) . #credentials->mySTONString . #active->shopCredentials active } ).
+
+	credentials := CTStockMANModelCredentials new.
+	credentials conn: WACurrentRequestContext value session dbConnection.
+	credentials conn execute: ( query queryString ).

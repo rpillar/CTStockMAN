@@ -26,7 +26,7 @@ getChannelCategories
 				"parse the getCategories response - XML."
 				data := self parseGetEBayCategoriesResponse: result.		
 				"remove existing categories for this channel"
-				self session dbResource query: 'delete from channel_categories where channel = ? ' with: (Array with: self channel).
+				self deleteChannelCategories.
 				message := 'The category data for channel - ', self channel, ' - has been retrieved and updated.'.
 			]
 			ifFalse: [ 
@@ -41,7 +41,7 @@ getChannelCategories
 		myData at: 1 put: self channel.
 		myData at: 2 put: ( e at: #CategoryName ).	
 		myData at: 3 put: ( e at: #CategoryId ).	
-		self session dbResource insert: 'channel_categories' fields: #(channel categoryName categoryKey ) with: myData. 
+		self insertChannelCategories: myData.
 	].
 
 	"return the <success> status / category / count / message."

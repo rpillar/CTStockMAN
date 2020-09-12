@@ -8,5 +8,3 @@ renderContentOn: html
 			self renderShopHeaderOn: html.
 			self renderShopBodyOn: html.		
 		].
-	 	
-	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ).

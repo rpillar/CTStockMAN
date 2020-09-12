@@ -1,11 +1,14 @@
 accessing
 addCategory
 
-	| myData |
+	| myCategory query |
 	
 	"add category details"
-	myData := Array new: 3.
-	myData at: 1 put: self channel.
-	myData at: 2 put: self channelCategory.
-	myData at: 3 put: self categoryName.
-	self session dbResource insert: 'channel_categories_data' fields: #(channel categoryName customCategoryName) with: myData. 
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelCategory'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #channelCategory->self channelCategory  . #categoryName->self categoryName } ).
+
+	myCategory := CTStockMANModelCategory new.
+	myCategory conn: WACurrentRequestContext value session dbConnection.
+	myCategory conn execute: ( query queryString ).
+	
+	^ myCategory.

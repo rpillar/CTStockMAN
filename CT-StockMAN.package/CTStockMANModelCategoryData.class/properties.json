@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "RichardPillar 12/27/2016 21:15",
-	"super" : "CTStockMANModel",
+	"super" : "CTDBxResult",
 	"category" : "CT-StockMAN",
 	"classinstvars" : [ ],
 	"pools" : [ ],

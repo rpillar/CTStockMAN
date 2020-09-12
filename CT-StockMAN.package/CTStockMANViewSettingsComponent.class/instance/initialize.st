@@ -1,8 +1,7 @@
 initialization
 initialize
 	
-	super initialize.
-	"self addShopComponent: CTStockMANViewSettingsShopAddComponent new."			
+	super initialize.			
 		
 	"get settings data - shops / credentials etc."	
 	self shops: self getShops.

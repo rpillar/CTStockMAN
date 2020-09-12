@@ -1,3 +1,3 @@
 code-critics
 ruleRBImplementedNotSentRuleV1FalsePositive
-	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewHomeComponent #getCategories #false)) #'2020-04-06T17:10:32.976421+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewGetCategoriesComponent #renderGetCategoriesMessageOn: #false)) #'2020-08-22T14:19:11.945531+01:00') )
+	^ #(#(#(#RGMethodDefinition #(#CTStockMANViewHomeComponent #getCategories #false)) #'2020-04-06T17:10:32.976421+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewGetCategoriesComponent #renderGetCategoriesMessageOn: #false)) #'2020-08-22T14:19:11.945531+01:00') #(#(#RGMethodDefinition #(#CTStockMANViewAddCategoriesComponent #addCategory #false)) #'2020-08-29T18:59:35.447997+01:00') )

@@ -40,7 +40,10 @@ renderContentOn: html
 	"add get-transactions modal"
 	self renderSetTransactionsScheduleModalOn: html.
 	
-	html document addLoadScript: ( ( JSStream on: '$(''.collapsible'').collapsible()' ) ).	
+	html document addLoadScript: ( ( JSStream on: '$( ''.collapsible'' ).collapsible()' ) ).
+	"html document addLoadScript: ( ( JSStream on: 'var instance = M.Collapsible.getInstances( ''.collapsible'' ); instance.close()' ) )."
+	"html document addLoadScript: ( ( JSStream on: '$( ''.collapsible-header'' ).removeClass( ''active'' )' )).
+	html document addLoadScript: ( ( JSStream on: '$( ''.collapsibe-body'' ).css( ''display'', ''none'')' ) )."
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).	
 	html document addLoadScript: ( ( JSStream on:	'$(''.modal'').modal({outDuration:300,opacity:.4})' ) ).
 	html document addLoadScript: ( ( JSStream on: '$(window).scrollTop(0)' ) ).		

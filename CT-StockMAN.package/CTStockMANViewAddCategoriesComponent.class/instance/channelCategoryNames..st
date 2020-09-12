@@ -13,7 +13,7 @@ channelCategoryNames: aChannel
 	counter := 1.
 	categoryNames := Array new: myCategoryNames resultset size.
 	myCategoryNames resultset do: [ :each |
-			categoryNames at: counter put: each categoryName.
+			categoryNames at: counter put: ( each at: #categoryName ).
 			counter := counter + 1.
 		].
 	^ categoryNames.

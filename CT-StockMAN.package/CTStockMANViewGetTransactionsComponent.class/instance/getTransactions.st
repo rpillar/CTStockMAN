@@ -1,7 +1,8 @@
 as yet unclassified
 getTransactions
 
-	| channelAPI data myData response responseDict |
+	"get transaction data and store it."
+	| channelAPI data myTransactionData query response responseDict |
 	
 	"note that for Ebay the dates must be in Zulu format - so update with defaults."
 	( self channel = 'EBay' ) ifTrue: [ 
@@ -23,18 +24,16 @@ getTransactions
 	].
 	
 	"store details of the request."
+	myTransactionData := CTStockMANModelTransactionData new.
+	myTransactionData conn: WACurrentRequestContext value session dbConnection.
+	
 	data do: [ :e |
-		myData := Array new: 6.
-		myData at: 1 put: self channel.
-		myData at: 2 put: self shopName.
-		myData at: 3 put: Timespan current asDateAndTime.
-		myData at: 4 put: self startDate, 'T', '00:00:00.000Z'.
-		myData at: 5 put: self endDate, 'T', '23:59:59.999Z'.
-		myData at: 6 put: ( e at: #TotalNumberOfEntries ).		
-		self session dbResource insert: 'transaction_data' fields: #(channel shopName retrieval_date start_date end_date transaction_count ) with: myData. 
+		query := CTDBxQuery new.
+		query queryTable: 'CTStockMANModelTransactionData'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopName->self shopName . #retrieval_date -> ( Timespan current asDateAndTime ) . #start_date -> self startDate, 'T00:00:00.000Z' . #end_date -> self endDate, 'T23:59:59.999Z' . #tranaaction_count -> e at: #TotalNumberOfEntries } ).
+		myTransactionData conn execute: ( query queryString ).
 	].
 
 	"return the number of transactions retrieved."
 	responseDict at: #message put: 'Success'.
-	responseDict at: #dataCount put: ( myData at: 6 ).
+	responseDict at: #dataCount put: ( data size ).
 	^ responseDict.

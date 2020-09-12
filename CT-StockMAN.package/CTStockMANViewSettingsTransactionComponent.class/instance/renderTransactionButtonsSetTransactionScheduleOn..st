@@ -6,10 +6,10 @@ renderTransactionButtonsSetTransactionScheduleOn: html
 	
 	html div
 		class: 'col s3';
+		style: 'width:240px;';
 		with: [
 			html anchor 
 				class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
-				style: 'margin-left:20px;';
 				url: '#set-transactions-schedule-modal';	
 				script: (
  					( html jQuery this )

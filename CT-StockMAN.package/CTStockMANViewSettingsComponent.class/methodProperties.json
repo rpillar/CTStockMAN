@@ -1,9 +1,9 @@
 {
 	"instance" : {
-		"renderCategoriesOn:" : "RichardPillar 1/15/2018 22:18",
+		"renderCategoriesOn:" : "RichardPillar 8/31/2020 09:26",
 		"shopifyCredentials:" : "RichardPillar 12/27/2016 22:05",
 		"getShops" : "RichardPillar 4/6/2020 16:58",
-		"initialize" : "RichardPillar 11/25/2017 18:03",
+		"initialize" : "RichardPillar 8/30/2020 00:15",
 		"addCategoryComponent" : "RichardPillar 10/22/2017 20:10",
 		"getChannelCategories" : "RichardPillar 4/6/2020 17:17",
 		"renderGetTransactionsModalOn:" : "RichardPillar 3/12/2018 08:32",
@@ -28,7 +28,7 @@
 		"renderSystemLogDataOn:" : "RichardPillar 3/5/2018 08:17",
 		"shopifyCredentials" : "RichardPillar 12/27/2016 22:05",
 		"channelCategories" : "RichardPillar 10/25/2017 08:03",
-		"renderContentOn:" : "RichardPillar 3/12/2018 08:28"
+		"renderContentOn:" : "RichardPillar 8/30/2020 00:10"
 	},
 	"class" : { }
 }

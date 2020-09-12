@@ -1,13 +1,26 @@
 as yet unclassified
 getTransactionDataFor: aShopName
 
-	| myArgs |
+	"check whether we have retrieved any transactionData for the periods that we are currently trying to process."	
+	| eDate myTransactionData q1 q2 sDate |
 	
-	myArgs := Array new: 5.
-	myArgs at: 1 put: aShopName.
-	myArgs at: 2 put: self startDate, 'T', '00:00:00.000Z'.
-	myArgs at: 3 put: self endDate, 'T', '00:00:00.000Z'.
-	myArgs at: 4 put: self startDate, 'T', '23:59:59.999Z'.
-	myArgs at: 5 put: self endDate, 'T', '23:59:59.999Z'.
+	eDate := ( self endDate, ' 23:59:59.999Z'  ) asString.
+	sDate := ( self startDate, ' 00:00:00.000Z' ) asString.
+	
+	q1 := CTDBxQuery new.
+	q1 queryTable: 'CTStockMANModelTransactionData'; dbSearch: { { #shopName -> aShopName . #start_date -> { #between . sDate . eDate } } }.
+	
+	myTransactionData := CTStockMANModelTransactionData new.
+	myTransactionData conn: WACurrentRequestContext value session dbConnection.
+	myTransactionData resultset: ( myTransactionData processSearchQuery: ( q1 queryString ) ).
+	
+	( myTransactionData resultset isEmpty ) ifTrue: [ 
+		q2 := CTDBxQuery new.
+		q2 queryTable: 'CTStockMANModelTransactionData'; dbSearch: { { #shopName -> aShopName . #end_date -> { #between . sDate . eDate } } }.
+	
+		myTransactionData := CTStockMANModelTransactionData new.
+		myTransactionData conn: WACurrentRequestContext value session dbConnection.
+		myTransactionData resultset: ( myTransactionData processSearchQuery: ( q2 queryString ) ).
+	].
 		
-	^ ( self session dbResource query: 'select * from transaction_data where shopName = ? AND ( ( start_date BETWEEN ? AND ?) OR ( end_date BETWEEN ? AND ? ) )' with: myArgs  on: 'CTStockMANModelTransactionData' ).
+	^ myTransactionData resultset.

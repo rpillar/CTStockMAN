@@ -9,7 +9,7 @@ getShopNames
 	myChannels resultset do: [ :ch | 
 			myChannelNames add: ( ch at: #channelName ).
 			myChannels shops resultset do: [ :shop |
-				myShops add: ( shop shopName, ' (', ( ch at: #channelName ), ')' ) asString.
+				myShops add: ( ( shop at: #shopName ), ' (', ( shop at: #channel ), ')' ) asString.
 			]
 		].
 	

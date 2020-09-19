@@ -1,0 +1,1 @@
+Record the times when the retrieval of transaction data is scheduled.

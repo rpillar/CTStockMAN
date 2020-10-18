@@ -22,6 +22,6 @@ Metacello new
 
 Create the SQLite database using `db.sql`.
 
-# Note
+## Note
 
 Currently only tested on MacOS - I've had issues trying to load Seaside / Highcharts into a Windows image (not sure why).

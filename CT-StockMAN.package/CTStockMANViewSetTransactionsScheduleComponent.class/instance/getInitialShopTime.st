@@ -1,14 +1,12 @@
 accessing
 getInitialShopTime
 
-	| myArgs myData myInitialShop  |
+	| myScheduleData query |
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelTransactionScheduleData'; dbSearch: { { #channel -> 'EBay' . #shopName -> 'aShopName' } . #limit -> 1 }.
 	
-	myInitialShop := self getShopNames at: 1.
+	myScheduleData := CTStockMANModelTransactionScheduleData new.
+	myScheduleData conn: WACurrentRequestContext value session dbConnection.
+	myScheduleData resultset: ( myScheduleData processSearchQuery: ( query queryString ) ).
 	
-	myArgs := Array new: 2.
-	myArgs at: 1 put: 'EBay'.
-	myArgs at: 2 put: myInitialShop.
-	
-	myData := self session dbResource query: 'select * from transaction_schedule_data where channel = ? and shopName = ?' with: myArgs  on: 'CTStockMANModelTransactionScheduleData'.
-
-	^ ( myData at: 1 ) schedule_time.
+	^ myScheduleData schedule_time.

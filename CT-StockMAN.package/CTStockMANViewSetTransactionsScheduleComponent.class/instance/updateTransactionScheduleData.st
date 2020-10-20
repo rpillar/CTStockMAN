@@ -1,10 +1,14 @@
 updating
 updateTransactionScheduleData
 
-	| myData |
+	| query myScheduleData |
 	
-	myData := Array new: 3.
-	myData at: 1 put: self channel.
-	myData at: 2 put: self shopName.
-	myData at: 3 put: self startTime.	
-	self session dbResource insert: 'transaction_schedule_data' fields: #(channel shopName schedule_time ) with: myData. 
+	"record the transaction retrieval schedule details - DO I NEED THIS method"
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelTransactionScheduleData'; dbCreate: { { #channel -> self channel . #shopName -> self shopName . #schedule_time -> self startTime } }.
+	
+	myScheduleData := CTStockMANModelTransactionScheduleData new.
+	myScheduleData conn: WACurrentRequestContext value session dbConnection.
+	myScheduleData resultset: ( myScheduleData processSearchQuery: ( query queryString ) ).
+	
+	^ ''.

@@ -1,9 +1,12 @@
 accessing
 getShopStatus: aShopName
 
-	| myArgs |
+	| myShop query |
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelShop'; dbSearch: { { #shopName -> aShopName } }.
 	
-	myArgs := Array new: 1.
-	myArgs at: 1 put: aShopName.
+	myShop := CTStockMANModelTransactionScheduleData new.
+	myShop conn: WACurrentRequestContext value session dbConnection.
+	myShop resultset: ( myShop processSearchQuery: ( query queryString ) ).
 	
-	^ ( self session dbResource query: 'select * from shops where shopName = ?' with: myArgs  on: 'CTStockMANModelShop' ).
+	^ myShop.

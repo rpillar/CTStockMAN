@@ -26,7 +26,9 @@ Having added the UDBC2 library you will need to update the Pharo settings -> Dat
 ```
 where `libsqlite3` is a soft link to the sqlite3 shared library.
 
-Also update the `CTStockMANSession>>initialize` method so that the `dbConnection` variable points to your database file
+Also update the `CTStockMANSession>>initialize` method so that the `dbConnection` variable points to your database file.
+
+Finally as the Materialize library makes use of the `italic` tag you will need to add the apporpriate brush - see this page for details :- http://developontheweb.co.uk/seaside.html
 						
 Create the SQLite database using `db.sql`.
 

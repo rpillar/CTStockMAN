@@ -22,9 +22,10 @@ Metacello new
 
 Having added the UDBC2 library you will need to update the Pharo settings -> Database / SQLite / <path to the sqlite shared lib>. Note that on MacOS the path will look something like :-
 ```
-/Applications/PharoLauncher.app/Contents/MacOS/Plugins/libsqlite3.dylib
+/Users/<username>/Documents/Pharo/images/<pharo image name/libsqlite3
 ```
-	
+where `libsqlite3` is a soft link to the sqlite3 shared library.
+						
 Create the SQLite database using `db.sql`.
 
 ## Note

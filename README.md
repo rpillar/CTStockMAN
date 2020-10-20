@@ -25,6 +25,8 @@ Having added the UDBC2 library you will need to update the Pharo settings -> Dat
 /Users/<username>/Documents/Pharo/images/<pharo image name/libsqlite3
 ```
 where `libsqlite3` is a soft link to the sqlite3 shared library.
+
+Also update the `CTStockMANSession>>initialize` method so that the `dbConnection` variable points to your database file
 						
 Create the SQLite database using `db.sql`.
 

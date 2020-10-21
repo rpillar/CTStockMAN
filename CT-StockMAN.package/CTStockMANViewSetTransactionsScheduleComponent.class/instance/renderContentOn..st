@@ -14,5 +14,5 @@ renderContentOn: html
 	self renderSetTransactionsScheduleContentOn: html.
 	
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).
-	html document addLoadScript: ( ( JSStream on: '$(''select'').material_select({ minimumResultsForSearch: Infinity })' ) ) .
-	html document addLoadScript: ( ( JSStream on: '$(''.timepicker'').pickatime({ default: ''now'', fromnow: 0, twelvehour: false, donetext: ''OK'', cleartext: ''Clear'', canceltext: ''Cancel'', autoclose: false, ampmclickable: true, aftershow: function(){} })' ) ) .
+	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
+	html document addLoadScript: ( ( JSStream on: '$(''.timepicker'').timepicker({ default: ''now'', fromnow: 0, twelvehour: false, donetext: ''OK'', cleartext: ''Clear'', canceltext: ''Cancel'', autoclose: false, ampmclickable: true, aftershow: function(){} })' ) ) .

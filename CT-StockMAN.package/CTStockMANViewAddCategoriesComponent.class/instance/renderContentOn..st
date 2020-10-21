@@ -6,6 +6,6 @@ renderContentOn: html
 	self renderAddCategoriesContentOn: html.
 	
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).
-	html document addLoadScript: ( ( JSStream on: '$(''select'').material_select({ minimumResultsForSearch: Infinity })' ) ) .
+	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
 	html document addLoadScript: ( ( JSStream on: '$(''#channel-category'').trigger(''contentChanged'')' ) ).
 	

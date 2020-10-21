@@ -5,7 +5,7 @@ getShopStatus: aShopName
 	query := CTDBxQuery new.
 	query queryTable: 'CTStockMANModelShop'; dbSearch: { { #shopName -> aShopName } }.
 	
-	myShop := CTStockMANModelTransactionScheduleData new.
+	myShop := CTStockMANModelShop new.
 	myShop conn: WACurrentRequestContext value session dbConnection.
 	myShop resultset: ( myShop processSearchQuery: ( query queryString ) ).
 	

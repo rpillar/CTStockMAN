@@ -1,19 +1,17 @@
 accessing
 getShopNames
 
-	| myChannelNames myChannels myShops  |
+	| myChannelNames myShops myShopNames |
 	myChannelNames := OrderedCollection new.
-	myShops := OrderedCollection new.
+	myShopNames := OrderedCollection new.
 	
-	myChannels := self session user channels.
-	myChannels resultset do: [ :ch | 
-			myChannelNames add: ( ch at: #channelName ).
-			ch shops do: [ :shop |
-				myShops add: ( shop shopName, ' (', ch channelName, ')' ) asString.
-			]
+	myShops := self session user rShops.
+	myShops resultset do: [ :shop | 
+			myChannelNames add: ( shop at: #channel ).
+			myShopNames add: ( ( shop at: #shopName ), ' (', (shop at: #channel ), ')' ) asString.
 		].
 	
 	"save channel names - used in parse method ..."
 	self channelNames: myChannelNames.
 
-	^ myShops asArray.
+	^ myShopNames asArray.

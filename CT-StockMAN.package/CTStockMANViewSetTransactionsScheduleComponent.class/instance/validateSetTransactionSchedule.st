@@ -10,7 +10,7 @@ validateSetTransactionSchedule
 		
 	"check that time are populated."
 	( self startTime = '' )
-		ifTrue: [ ^ 'A valid Start Date needs to be entered.' ].
+		ifTrue: [ ^ 'A valid Start Time needs to be entered.' ].
 			
 	"check that credentials are set"
 	credentialsStatus := ( self checkShopCredentials: self shopName ).

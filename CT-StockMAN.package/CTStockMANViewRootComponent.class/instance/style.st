@@ -131,4 +131,8 @@ body {
   font-size: 132px;
   opacity: 0.3;
 }
+
+.select-dropdown {
+  height: 300px;
+}
 '	

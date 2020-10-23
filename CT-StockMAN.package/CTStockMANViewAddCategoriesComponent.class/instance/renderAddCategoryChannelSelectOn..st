@@ -14,7 +14,7 @@ renderAddCategoryChannelSelectOn: html
 					html select
 						id: 'channel-category';
 						style: 'margin-left:20px;';
-						size: 4;	
+						size: 3;	
 						list: initialCategories;
 						selected: ( initialCategories at: 1);
 						callback: [ :value | self channelCategory: value asString ];

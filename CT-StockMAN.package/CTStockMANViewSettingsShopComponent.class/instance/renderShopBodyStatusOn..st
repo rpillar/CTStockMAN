@@ -15,36 +15,38 @@ renderShopBodyStatusOn: html
 				with: [  
 					html div 
 						with: [
-							html radioButton
-								id: 'shop-status-active', ( self shopId ) asString;
-								class: 'with-gap shop-edit-field';
-								attributeAt: 'name' put: 'shop-status',  ( self shopId ) asString;
-								attributeAt: 'checked' put: ( ( ( self shopStatus ) = 'Active' ) ifTrue: [ 'checked' ] );
-								onClick: ( html jQuery ajax 
-									script: [ :s | self shopStatus: 'Active'.
-										s << ( ( s jQuery id: 'shop-status-inactive', ( self shopId ) asString ) removeAttribute: 'checked' ).
-										s << ( ( s jQuery id: 'shop-status-active', ( self shopId ) asString ) attributeAt: 'checked' put: 'checked' ).
-									] 
-								).
 							html label 
-								attributeAt: 'for' put: 'shop-status-active', ( self shopId ) asString;
-								with: 'Active'.
-							html radioButton
-								id: 'shop-status-inactive', ( self shopId ) asString;
-								class: 'with-gap shop-edit-field';
-								attributeAt: 'name' put: 'shop-status',  ( self shopId ) asString;
-								attributeAt: 'checked' put: ( ( ( self shopStatus ) = 'Not Active' ) ifTrue: [ 'checked' ] );
-								onClick: ( html jQuery ajax 
-									script: [ :s | 
-										self shopStatus: 'Not Active'. 
-										s << ( ( s jQuery id: 'shop-status-active', ( self shopId ) asString ) removeAttribute: 'checked' ).
-										s << ( ( s jQuery id: 'shop-status-inactive', ( self shopId ) asString ) attributeAt: 'checked' put: 'checked' ).
-									] 
-								).
+								with: [  
+									html radioButton
+										id: 'shop-status-active', ( self shopId ) asString;
+										class: 'with-gap shop-edit-field';
+										attributeAt: 'name' put: 'shop-status',  ( self shopId ) asString;
+										attributeAt: 'checked' put: ( ( ( self shopStatus ) = 'Active' ) ifTrue: [ 'checked' ] );
+										onClick: ( html jQuery ajax 
+											script: [ :s | self shopStatus: 'Active'.
+												s << ( ( s jQuery id: 'shop-status-inactive', ( self shopId ) asString ) removeAttribute: 'checked' ).
+												s << ( ( s jQuery id: 'shop-status-active', ( self shopId ) asString ) attributeAt: 'checked' put: 'checked' ).
+											]
+										).
+										html span 
+											with: 'Active'.
+									].
 							html label 
-								style: 'margin-left:10px;';
-								attributeAt: 'for' put: 'shop-status-inactive', ( self shopId ) asString;
-								with: 'Not Active'.
+								with: [
+									html radioButton
+										id: 'shop-status-inactive', ( self shopId ) asString;
+										class: 'with-gap shop-edit-field';
+										attributeAt: 'name' put: 'shop-status',  ( self shopId ) asString;
+										attributeAt: 'checked' put: ( ( ( self shopStatus ) = 'Not Active' ) ifTrue: [ 'checked' ] );
+										onClick: ( html jQuery ajax 
+											script: [ :s | self shopStatus: 'Not Active'.
+												s << ( ( s jQuery id: 'shop-status-active', ( self shopId ) asString ) removeAttribute: 'checked' ).
+												s << ( ( s jQuery id: 'shop-status-inactive', ( self shopId ) asString ) attributeAt: 'checked' put: 'checked' ).
+											]
+										).
+										html span 
+											with: 'Not Active'.
+									].
+								]								
 						].
 				].
-		].

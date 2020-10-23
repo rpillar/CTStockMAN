@@ -3,7 +3,7 @@ renderShopBodyOn: html
 
 	html div
 		class: 'collapsible-body';
-		style: 'display:block;position:relative;padding-top:10px;padding-bottom:10px;';
+		style: 'display:block;position:relative;padding-top:10px;padding-bottom:10px;display:none;';
 		with: [ 
 			self renderShopBodyActionDeleteOn: html.
 			self renderShopBodyActionEditOn: html.

@@ -1,6 +1,6 @@
 {
 	"instance" : {
-		"renderShopBodyOn:" : "RichardPillar 5/24/2020 18:24",
+		"renderShopBodyOn:" : "RichardPillar 10/22/2020 23:36",
 		"scriptShopBodyActionSave:" : "RichardPillar 6/2/2020 17:34",
 		"renderShopCredentialsEditOn:" : "RichardPillar 8/20/2020 13:43",
 		"shopId" : "RichardPillar 5/24/2020 18:03",
@@ -35,9 +35,9 @@
 		"shopStatus:" : "RichardPillar 3/10/2017 09:33",
 		"shopDescription:" : "RichardPillar 3/2/2017 21:52",
 		"renderShopBodyActionDeleteOn:" : "RichardPillar 5/24/2020 18:24",
-		"renderContentOn:" : "RichardPillar 8/30/2020 00:07",
+		"renderContentOn:" : "RichardPillar 10/22/2020 23:35",
 		"channel:" : "RichardPillar 12/2/2016 21:09",
-		"renderShopBodyStatusOn:" : "RichardPillar 5/24/2020 18:22"
+		"renderShopBodyStatusOn:" : "RichardPillar 10/22/2020 22:57"
 	},
 	"class" : { }
 }

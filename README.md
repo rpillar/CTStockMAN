@@ -41,6 +41,6 @@ Create the SQLite database using `db.sql`.
 
 ## Windows install
 
-I have had issues when install Seaside into an image rnning on Windows 10. After searching for possible solutions this seemed to work - when you create your Pharo image from the Launcher make sure that the image name has no spaces - for example `pharo_test_1` rather than `pharo test 1`. 
+I have had issues when installing Seaside into an image running on Windows 10. After searching for possible solutions this seemed to work - when you create your Pharo image from the Launcher make sure that the image name has no spaces - for example `pharo_test_1` rather than `pharo test 1`. 
 Once this is done you should be able to load Highcharts using Metacello in the normal way.
 

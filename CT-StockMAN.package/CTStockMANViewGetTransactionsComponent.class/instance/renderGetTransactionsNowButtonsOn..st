@@ -41,7 +41,7 @@ renderGetTransactionsNowButtonsOn: html
 											response := self getTransactions.
 											( ( ( response at: #message ) ) = 'Success' ) & ( ( ( response at: #dataCount ) asInteger ) > 0 )
 												ifTrue: [ 
-													self messageComponent errorMessage: 'Transaction data has been retrieved - number of transactions - ', ( response at: #dataCount ).
+													self messageComponent errorMessage: 'Transaction data has been retrieved - number of transactions - ', ( response at: #dataCount ) asInteger.
 												]
 												ifFalse: [ 
 													( Delay forSeconds: 1) wait.

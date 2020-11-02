@@ -6,7 +6,7 @@ getTransactionData
 	query := CTDBxQuery new.
 	query queryTable: 'CTStockMANModelTransactionData'; dbSearchAllWithLimit: 5.
 	
-	myTransactions := CTStockMANModelTransaction new.
+	myTransactions := CTStockMANModelTransactionData new.
 	myTransactions conn: WACurrentRequestContext value session dbConnection.
 	myTransactions resultset: ( myTransactions processSearchQuery: ( query queryString ) ).
 	

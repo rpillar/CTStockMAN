@@ -2,18 +2,18 @@ accessing
 renderTransactionDataLineOn: html with: dataObject
 
 	| myShopName |
-	myShopName := self parseShopName: ( dataObject shopName ).
+	myShopName := self parseShopName: ( dataObject at: #shopName ).
 	
 	html tableRow 
 		with: [  
 			html tableData 
-				with: dataObject channel.
+				with: ( dataObject at: #channel ).
 			html tableData 
 				with: myShopName.
 			html tableData 
-				with: ( dataObject start_date ) asDate.
+				with: ( dataObject at: #start_date ) asDate.
 			html tableData 
-				with: ( dataObject end_date ) asDate.	
+				with: ( dataObject at: #end_date ) asDate.	
 			html tableData 
-				with: dataObject transaction_count.
+				with: ( dataObject at: #transaction_count ).
 		].

@@ -5,7 +5,7 @@ getShopCredentials: aShopName
 	query := CTDBxQuery new.
 	query queryTable: 'CTStockMANModelCredentials'; dbSearch: { { #shopName -> aShopName } }.
 	
-	myShopCredentials := CTStockMANModelTransactionScheduleData new.
+	myShopCredentials := CTStockMANModelCredentials new.
 	myShopCredentials conn: WACurrentRequestContext value session dbConnection.
 	myShopCredentials resultset: ( myShopCredentials processSearchQuery: ( query queryString ) ).
 	

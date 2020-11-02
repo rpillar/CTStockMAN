@@ -5,8 +5,8 @@ parseShopName: aShopName
 	myChannelNames := OrderedCollection new.
 	
 	myChannels := self session user channels.
-	myChannels do: [ :ch | 
-			myChannelNames add: ch channelName.
+	myChannels resultset do: [ :ch | 
+			myChannelNames add: ( ch at: #channelName ).
 	].
 
 	myChannelNames do: [ :ch |

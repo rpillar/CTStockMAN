@@ -14,6 +14,6 @@ renderContentOn: html
 	
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).
 	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
-	html document addLoadScript: ( ( JSStream on: '$(''.datepicker'').datepicker({ selectMonths: true, selectYears: 15, today: ''Today'', clear: ''Clear'', close: ''OK'', closeOnSelect: false, formatSubmit: ''yyyy-mm-dd'', hiddenName: true })' ) ).
+	html document addLoadScript: ( ( JSStream on: '$(''.datepicker'').datepicker({ selectMonths: true, selectYears: 15, today: ''Today'', clear: ''Clear'', close: ''OK'', closeOnSelect: false, format: ''yyyy-mm-dd'', hiddenName: true })' ) ).
 	html document addLoadScript: ( ( JSStream on: '$(''.timepicker'').on(''mousedown'', function(e){e.preventDefault();})' ) ).
 	html document addLoadScript: ( ( JSStream on: '$(''.timepicker'').timepicker({ default: ''now'', fromnow: 0, twelvehour: false, donetext: ''OK'', cleartext: ''Clear'', canceltext: ''Cancel'', autoclose: false, ampmclickable: true, aftershow: function(){} })' ) ) .

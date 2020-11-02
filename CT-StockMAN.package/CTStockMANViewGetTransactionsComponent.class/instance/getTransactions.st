@@ -29,7 +29,7 @@ getTransactions
 	
 	data do: [ :e |
 		query := CTDBxQuery new.
-		query queryTable: 'CTStockMANModelTransactionData'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopName->self shopName . #retrieval_date -> ( Timespan current asDateAndTime ) . #start_date -> self startDate, 'T00:00:00.000Z' . #end_date -> self endDate, 'T23:59:59.999Z' . #tranaaction_count -> e at: #TotalNumberOfEntries } ).
+		query queryTable: 'CTStockMANModelTransactionData'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopName->self shopName . #retrieval_date -> ( Timespan current asDateAndTime ) . #start_date -> ( self startDate, 'T00:00:00.000Z' ) . #end_date -> ( self endDate, 'T23:59:59.999Z' ) . #transaction_count -> ( e at: #TotalNumberOfEntries ) } ).
 		myTransactionData conn execute: ( query queryString ).
 	].
 

@@ -4,7 +4,7 @@ A multi-channel store-front management application.
 
 Currently only being developed for Ebay shops but the intention is that it will provide the means to integrate / aggregate data from different storefront providers (Ebay / Amazon / Shopify / Etsy ...). 
 
-Load the following packages (the Highcharts package include Seaside) :-
+Load the following packages (the Highcharts package includes Seaside) :-
 
 ```
 Metacello new
@@ -39,6 +39,8 @@ Finally as the Materialize library makes use of the `italic` tag you will need t
 						
 Create the SQLite database using `db.sql`.
 
-## Note
+## Windows install
 
-Currently only tested on MacOS - I've had issues trying to load Seaside / Highcharts into a Windows image (not sure why).
+I have had issues when installing Seaside into an image running on Windows 10. After searching for possible solutions this seemed to work - when you create your Pharo image from the Launcher make sure that the image name has no spaces - for example `pharo_test_1` rather than `pharo test 1`. 
+Once this is done you should be able to load Highcharts using Metacello in the normal way.
+

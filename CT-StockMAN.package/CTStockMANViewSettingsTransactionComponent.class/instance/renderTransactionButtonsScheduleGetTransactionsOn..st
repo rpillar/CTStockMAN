@@ -1,6 +1,7 @@
 accessing
 renderTransactionButtonsScheduleGetTransactionsOn: html
 
+	"not used yet - maybe in the future."
 	| myGetTransactionsComponent |
 	myGetTransactionsComponent := CTStockMANViewGetTransactionsComponent new.
 	

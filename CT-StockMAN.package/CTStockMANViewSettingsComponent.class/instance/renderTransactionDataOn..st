@@ -25,7 +25,7 @@ renderTransactionDataOn: html
 
 	html div 
 		class: 'row';
-		with: [ 
+		with: [
 			html render: CTStockMANViewSettingsTransactionComponent new.
 		].
 	

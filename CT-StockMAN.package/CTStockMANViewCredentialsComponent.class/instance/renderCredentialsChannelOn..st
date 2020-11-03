@@ -12,7 +12,6 @@ renderCredentialsChannelOn: html
 				class: 'validate edit-credentials-channel';
 				id: 'credentials-shop-channel';
 				attributeAt: 'disabled' put: 'disabled';
-				"on: #channel of: self shop;"
 				callback: [ :value | self shop at: 'channel' put: value ];
 				value: ( self shop at: #channel ).	
 			html label 

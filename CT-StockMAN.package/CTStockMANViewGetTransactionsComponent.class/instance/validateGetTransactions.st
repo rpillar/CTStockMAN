@@ -15,7 +15,6 @@ validateGetTransactions
 		ifTrue: [ ^ 'A valid End Date needs to be entered.' ].
 		
 	"check that dates are valid - not today or after - only for scheduled 'gets'."
-	self halt.
 	( self startDate >= ( Date today yyyymmdd ) )
 		ifTrue: [ ^ 'Start Date must be in the past.' ].
 	( self endDate >= ( Date today yyyymmdd ) )

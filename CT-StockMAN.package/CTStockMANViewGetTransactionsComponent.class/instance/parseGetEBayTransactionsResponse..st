@@ -1,4 +1,4 @@
-as yet unclassified
+parsing
 parseGetEBayTransactionsResponse: aResponse
 
 	| data dict doc oc result |

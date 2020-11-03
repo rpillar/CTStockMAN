@@ -1,4 +1,4 @@
-as yet unclassified
+accesing
 getTransactionDataFor: aShopName
 
 	"check whether we have retrieved any transactionData for the periods that we are currently trying to process."	

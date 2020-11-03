@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderShopBodyActionCancelOn: html
 
 	html div

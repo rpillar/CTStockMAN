@@ -13,7 +13,6 @@ renderCredentialsShopNameOn: html
 				class: 'validate add-shop-name';
 				id: 'credentials-shop-name';
 				attributeAt: 'disabled' put: 'disabled';
-				"on: #shopName of: self shop;"
 				callback: [ :value | self shop at: 'shopName' put: value ];
 				value: ( self shop at: #shopName ).	
 			html label 

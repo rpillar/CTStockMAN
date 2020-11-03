@@ -1,4 +1,4 @@
-as yet unclassified
+accesing
 getTransactions
 
 	"get transaction data and store it."

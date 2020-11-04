@@ -1,7 +1,7 @@
 rendering
 renderEbayCredentialsTestOn: html
 
-	| channel response |
+	| channel response validCredentialsInput |
 	
 	html div
 		class: 'col s2';
@@ -25,12 +25,19 @@ renderEbayCredentialsTestOn: html
 							on: 'click'
 							do: ( 	( ( html jQuery ajax )
 								script: [ :s |
-									channel := CTStockMANEBayManage new. 
-									channel myEbay credentials: formCredentials.
-									response := channel getEBayOfficialTime. 
-									s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
-									s << ( ( s jQuery class: 'progress' ) hide ).
-									s << ( ( s jQuery id: 'credentials-shop-test' ) append: response content asString )
+									validCredentialsInput := self validateCredentials: formCredentials.
+									( validCredentialsInput = '' )
+										ifTrue: [
+											channel := CTStockMANEBayManage new. 
+											channel myEbay credentials: formCredentials.
+											response := channel getEBayOfficialTime. 
+											s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
+											s << ( ( s jQuery class: 'progress' ) hide ).
+											s << ( ( s jQuery id: 'credentials-shop-test' ) append: response content asString )
+										]
+										ifFalse: [ 
+											s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
+										]
 								]
 							) asFunction: #(event) )
 						);

@@ -37,7 +37,9 @@ Also update the `CTStockMANSession>>initialize` method so that the `dbConnection
 
 Finally as the Materialize library makes use of the `italic` tag you will need to add the apporpriate brush - see this page for details :- http://developontheweb.co.uk/seaside.html
 						
-Create the SQLite database using `db.sql` and add a user -> `insert into users (userName, password) values('testuser', 'password');`.
+Create the SQLite database using `db.sql` and -> 
+- add a user -> `insert into users (userName, password) values('testuser', 'password');`
+- add a default channel -> `insert into channel (channelName,status,userName) values('EBay','Active','testuser');`
 
 ## Windows install
 

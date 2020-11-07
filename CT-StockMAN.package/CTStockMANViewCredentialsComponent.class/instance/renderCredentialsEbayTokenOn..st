@@ -5,7 +5,7 @@ renderCredentialsEbayTokenOn: html
 		class: 'row';
 		with: [ 
 			html div 
-				class: 'input-field col s8';
+				class: 'input-field col s10';
 				with: [
 					html italic
 						class: 'material-icons prefix';
@@ -14,9 +14,9 @@ renderCredentialsEbayTokenOn: html
 					html textArea 
 						class: 'validate edit-credentials-token materialize-textarea';
 						id: 'credentials-shop-token';
+						style: 'min-height:12rem;';
 						autofocus;
 						attributeAt: 'autocomplete' put: 'off';
-						attributeAt: 'rows' put: 4;
 						callback: [ :value | self formCredentials at: 'token' put: value ];
 						value: ( self formCredentials at: 'token' ).				
 					html label 

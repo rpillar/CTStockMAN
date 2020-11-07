@@ -31,27 +31,31 @@ renderCredentialsEbayUrlOn: html
 				html paragraph
 					style: 'padding-left:20px;padding-top:25px;';
 					with: [	
-						html checkbox
-							id: 'active-credentials';
-							class: 'filled-in';
-							attributeAt: 'checked' put: ( ( shopCredentials active = 'Y' ) ifTrue: [ 'checked' ] ifFalse: [ false ] );
-							onClick: ( html jQuery ajax 
-									script: [ :s | 
-										( shopCredentials active = 'N' ) 
-											ifTrue: [  
-												shopCredentials active: 'Y'.
-												s << ( ( s jQuery id: 'active-credentials' ) attributeAt: 'checked' put: 'checked' ).
-											] 
-											ifFalse: [  
-												shopCredentials active: 'N'.
-												s << ( ( s jQuery id: 'active-credentials' ) removeAttribute: 'checked' ).
-											]. 
-									]
-								).
-						html label
+						html label 
+							with: [ 
+								html checkbox
+									id: 'active-credentials';
+									class: 'filled-in';
+									attributeAt: 'checked' put: ( ( shopCredentials active = 'Y' ) ifTrue: [ 'checked' ] ifFalse: [ false ] );
+									onClick: ( html jQuery ajax 
+											script: [ :s | 
+												( shopCredentials active = 'N' ) 
+													ifTrue: [  
+														shopCredentials active: 'Y'.
+														s << ( ( s jQuery id: 'active-credentials' ) attributeAt: 'checked' put: 'checked' ).
+													] 
+													ifFalse: [  
+														shopCredentials active: 'N'.
+														s << ( ( s jQuery id: 'active-credentials' ) removeAttribute: 'checked' ).
+													]. 
+											]
+										).
+									html span with: 'Active'.
+								]
+							].
+						"html label
 							class: 'active';
 							attributeAt: 'for' put: 'active-credentials';
-							with: 'Active'.
+							with: 'Active'."
 					].
 				].
-		].

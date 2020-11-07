@@ -24,6 +24,7 @@ renderEbayCredentialsTestOn: html
 						script: ( html jQuery this 
 							on: 'click'
 							do: ( 	( ( html jQuery ajax )
+								serializeForm;
 								script: [ :s |
 									validCredentialsInput := self validateCredentials: formCredentials.
 									( validCredentialsInput = '' )
@@ -37,6 +38,7 @@ renderEbayCredentialsTestOn: html
 										]
 										ifFalse: [ 
 											s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
+											s << ( ( s jQuery class: 'progress' ) hide ).
 										]
 								]
 							) asFunction: #(event) )

@@ -1,7 +1,7 @@
 rendering
 renderCategoriesOn: html
 
-	| myAddCategoryComponent myGetCategoriesComponent |
+	| myAddCategoryComponent myGetCategoriesComponent myCategories |
 	
 	myAddCategoryComponent := CTStockMANViewAddCategoriesComponent new.
 	myGetCategoriesComponent := CTStockMANViewGetCategoriesComponent new.
@@ -49,23 +49,30 @@ renderCategoriesOn: html
   						);			
 						with: 'Get Categories'.			
 				].
-			html div
-				class: 'col s3';
-				style: 'width:240px;';
-				with: [ 
-					html anchor 
-						class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
-						url: '#add-category-modal';	
-						script: (
-    						( html jQuery this )
-      						on: 'click'
-      						do: ( (
-        						( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
-								( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
-								( ( html jQuery id: 'add-category-modal' ) load html: [ :r | r render: myAddCategoryComponent ] )			
-      						) asFunction: #(event) )
-  						);					
-						with: 'Add New Category'.			
+			
+			"only display the _add_ button if we have a base set of categories"
+			myCategories := self getChannelCategories.
+			( myCategories resultset isNotEmpty )
+				ifTrue: [  
+					html div
+						class: 'col s3';
+						style: 'width:240px;';
+						with: [ 
+							html anchor 
+								id: 'add-new-category';
+								class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
+								url: '#add-category-modal';	
+								script: (
+    								( html jQuery this )
+      								on: 'click'
+      								do: ( (
+        								( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
+										( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
+										( ( html jQuery id: 'add-category-modal' ) load html: [ :r | r render: myAddCategoryComponent ] )			
+      								) asFunction: #(event) )
+  								);					
+								with: 'Add New Category'.
+						]			
 				]
 		].	
 

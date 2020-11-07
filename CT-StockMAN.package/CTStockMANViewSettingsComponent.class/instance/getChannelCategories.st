@@ -9,5 +9,5 @@ getChannelCategories
 	myCategories := CTStockMANModelCategory new.
 	myCategories conn: WACurrentRequestContext value session dbConnection.
 	myCategories resultset: ( myCategories processSearchQuery: ( query queryString ) ).
-	
+
 	^ myCategories.

@@ -11,7 +11,7 @@
 		"ruleRBInconsistentMethodClassificationRuleV1FalsePositive" : "RichardPillar 8/30/2020 14:00",
 		"ruleRBSentNotImplementedRuleV1FalsePositive" : "RichardPillar 8/22/2020 13:50",
 		"ruleRBCollectionMessagesToExternalObjectRuleV1FalsePositive" : "RichardPillar 6/6/2018 07:43",
-		"ruleWAUnnecessaryWithSentToBrushRuleV1FalsePositive" : "RichardPillar 11/3/2020 21:11",
+		"ruleWAUnnecessaryWithSentToBrushRuleV1FalsePositive" : "RichardPillar 11/5/2020 22:56",
 		"ruleWAUnnecessaryBlockPassedToBrushRuleV1FalsePositive" : "RichardPillar 11/3/2020 21:07",
 		"ruleGRTemporaryNeitherReadNorWrittenRuleV1FalsePositive" : "RichardPillar 3/29/2020 18:35",
 		"ruleGRAnsiCollectionsRuleV1FalsePositive" : "RichardPillar 11/3/2020 20:51",

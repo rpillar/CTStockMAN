@@ -1,11 +1,11 @@
 {
 	"instance" : {
-		"renderCategoriesOn:" : "RichardPillar 8/31/2020 09:26",
+		"renderCategoriesOn:" : "RichardPillar 11/5/2020 22:44",
 		"shopifyCredentials:" : "RichardPillar 12/27/2016 22:05",
 		"getShops" : "RichardPillar 4/6/2020 16:58",
 		"initialize" : "RichardPillar 8/30/2020 00:15",
 		"addCategoryComponent" : "RichardPillar 10/22/2017 20:10",
-		"getChannelCategories" : "RichardPillar 4/6/2020 17:17",
+		"getChannelCategories" : "RichardPillar 11/5/2020 22:42",
 		"renderGetTransactionsModalOn:" : "RichardPillar 3/12/2018 08:32",
 		"getChannelCredentials:" : "RichardPillar 5/8/2020 19:24",
 		"addCategoryComponent:" : "RichardPillar 10/22/2017 20:10",

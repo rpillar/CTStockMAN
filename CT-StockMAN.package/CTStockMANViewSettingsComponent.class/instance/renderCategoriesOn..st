@@ -52,28 +52,27 @@ renderCategoriesOn: html
 			
 			"only display the _add_ button if we have a base set of categories"
 			myCategories := self getChannelCategories.
-			( myCategories resultset isNotEmpty )
-				ifTrue: [  
-					html div
-						class: 'col s3';
-						style: 'width:240px;';
-						with: [ 
-							html anchor 
-								id: 'add-new-category';
-								class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
-								url: '#add-category-modal';	
-								script: (
-    								( html jQuery this )
-      								on: 'click'
-      								do: ( (
-        								( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
-										( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
-										( ( html jQuery id: 'add-category-modal' ) load html: [ :r | r render: myAddCategoryComponent ] )			
-      								) asFunction: #(event) )
-  								);					
-								with: 'Add New Category'.
-						]			
-				]
+
+			html div
+				class: 'col s3';
+				style: 'width:240px;';
+				with: [ 
+					html anchor 
+						id: 'add-new-category';
+						class: 'btn-large waves-effect waves-light hoverable modal-trigger'; 
+						attributeAt: 'disabled' put: ( ( myCategories resultset isEmpty ) ifTrue: [ 'disabled' ] );
+						url: '#add-category-modal';	
+						script: (
+   							( html jQuery this )
+   								on: 'click'
+    							do: ( (
+        							( ( html jQuery class: 'collapsible-header' ) removeClass: 'active' ),		
+									( ( html jQuery class: 'collapsible-body' ) cssAt: 'display' put: 'none' ),
+									( ( html jQuery id: 'add-category-modal' ) load html: [ :r | r render: myAddCategoryComponent ] )			
+      							) asFunction: #(event) )
+  							);					
+						with: 'Add New Category'.
+				]			
 		].	
 
 	html div 

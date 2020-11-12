@@ -33,6 +33,7 @@ renderGetCategoryButtonGetCategoryOn: html
 						s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ). 
 						s << ( ( s jQuery id: 'get-categories-button' ) text: 'GET CATEGORIES' ).
 						s << ( ( s jQuery id: 'get-categories-button' ) removeClass: 'disabled' ).
+						s << ( ( s jQuery id: 'add-new-category' ) removeAttribute: 'disabled' ).
 				]
 			) asFunction: #(event) )
 		);

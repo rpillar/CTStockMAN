@@ -25,6 +25,12 @@ Metacello new
 	repository: 'github://pharo-contributions/XML-XMLParser/src';
 	load.
 ```
+```
+Metacello new 
+    repository: 'github://pharo-contributions/Scheduler/src';
+    baseline: 'Scheduler';
+    load
+```
 Add the `CTDBx` package from Git using the Monticello Browser.
 
 Having added the UDBC2 library you will need to update the Pharo settings -> Database / SQLite / <path to the sqlite shared lib>. Note that on MacOS the path will look something like :-

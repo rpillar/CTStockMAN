@@ -19,7 +19,7 @@ renderSetTransactionsScheduleButtonsOn: html
 								serializeForm;
 								script: [ :s | 
 									validSetTransactionScheduleStatus := self validateSetTransactionSchedule.
-									( validSetTransactionScheduleStatus = '')
+									( validSetTransactionScheduleStatus = '' )
 										ifTrue: [  
 											( scheduleStatus )
 												ifTrue: [

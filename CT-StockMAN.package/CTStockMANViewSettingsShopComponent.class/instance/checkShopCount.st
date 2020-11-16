@@ -1,19 +1,15 @@
 accessing
 checkShopCount
 
-	"| myData |
-	myData := self session dbResource query: 'select count(*) from shops'.
-	
-	^ myData at: 'count(*)' asSymbol."
-	
-	| query myCount myShop |
+	"do a searchAll rather than a count(*) as I couldn't get this to work consistently"	
+	| query myShop |
 	
 	query := CTDBxQuery new.
-	query queryTable: 'CTStockMANModelShop'; dbCount.
+	query queryTable: 'CTStockMANModelShop'; dbSearchAll.
 	
 	myShop := CTStockMANModelShop new.
 	myShop conn: WACurrentRequestContext value session dbConnection.
-	myCount := myShop conn execute: ( query queryString ).
+	myShop resultset: ( myShop processSearchQuery: ( query queryString ) ).
 	
-	^ myCount rows first values first.
+	^ myShop resultset size.
 	

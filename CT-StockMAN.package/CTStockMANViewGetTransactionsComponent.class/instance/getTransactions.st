@@ -35,5 +35,6 @@ getTransactions
 
 	"return the number of transactions retrieved."
 	responseDict at: #message put: 'Success'.
-	responseDict at: #dataCount put: ( data size ).
+	responseDict at: #dataCount put: ( ( data first ) at: #TotalNumberOfEntries ).
+
 	^ responseDict.

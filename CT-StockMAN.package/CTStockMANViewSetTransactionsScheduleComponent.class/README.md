@@ -1,0 +1,1 @@
+Set the 'schedule' for retrieving transaction data.

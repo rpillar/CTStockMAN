@@ -1,8 +1,9 @@
 rendering
 renderAddCategoryChannelSelectOn: html
 
-	| customCategory initialCategories |
+	| customCategory initialCategories initialCustomCategory |
 	initialCategories := self channelCategoryNames: ( self channelNames at: 1 ).
+	initialCustomCategory := self getCustomCategory: ( initialCategories at: 1 ).
 	
 	html div 
 		class: 'row';
@@ -43,7 +44,8 @@ renderAddCategoryChannelSelectOn: html
 						attributeAt: 'autocomplete' put: 'off';
 						attributeAt: 'length' put: 65;
 						attributeAt: 'placeholder' put: 'Category Name';
-						on: #categoryName of: self.				
+						on: #categoryName of: self;
+						value: initialCustomCategory.			
 					html label 
 						class: 'active';
 						attributeAt: 'for' put: 'icon-prefix';

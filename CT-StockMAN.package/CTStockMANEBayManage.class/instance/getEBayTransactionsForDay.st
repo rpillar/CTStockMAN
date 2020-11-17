@@ -4,7 +4,7 @@ getEBayTransactionsForDay
 	| response writer |
 
 	writer := XMLWriter new.
-	writer enablePrettyPrinting; xml; comment: 'ebay - get official ebay time'.
+	writer enablePrettyPrinting; xml; comment: 'ebay - get ebay transactions for one day'.
 	writer tag name: 'GetSellerTransactionsRequest'; xmlns: 'urn:ebay:apis:eBLBaseComponents'; 
 		with: [  
 			writer 

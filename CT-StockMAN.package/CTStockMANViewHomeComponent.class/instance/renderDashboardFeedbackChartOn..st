@@ -1,26 +1,26 @@
 rendering
 renderDashboardFeedbackChartOn: html
 
-	| chart myData1 stream |
-
-	myData1 := HighchartsSeriesColumn new 
-		data: #(4.8 5 5 4.9 4.7 5 5 3.5 5 4.9 4.9 5); name: 'Average Feedback Score'; type: 'column'; color: '#7cb5ec'.		
-
-	chart := html highcharts newChart.
-	chart addYAxis title text: 'Sales'.
-	chart lang thousandsSep: ','.
-	chart title text: ''.
-	chart xAxis categories: #('Jan' 'Feb' 'Mar' 'Apr' 'May' 'Jun' 'July' 'Aug' 'Sept' 'Oct' 'Nov' 'Dec').
-	chart tooltip split: true.
-	chart credits enabled: false.
-	chart exporting enabled: false.
+	| chart config layout t1 |
 	
-	chart plotOptions line marker lineColor: '#666666'; lineWidth: 1.
+	t1 := PlotlyTrace new.
 	
-	chart series add: myData1.
-	stream := WriteStream on: String new.
-	chart javascriptContentOn: stream.
+	t1 type: 'bar'.
+	t1 x: #('Jan' 'Feb' 'Mar' 'Apr' 'May' 'Jun' 'July' 'Aug' 'Sept' 'Oct' 'Nov' 'Dec').
+	t1 y: #(4.8 5 5 4.9 4.7 5 5 3.5 5 4.9 4.9 5).
+	t1 marker color: 'rgb(158,202,225)'.
+	
+	layout := PlotlyLayout new.
+	layout margin t: 25; b: 25.
+	
+	config := PlotlyConfig new.
+	config displayModeBar: false.
+	
+	chart := PlotlyPlot new.
+	chart newplot.
+	chart complete: 'myFeedbackChart' data: { t1 } layout: layout config: config.		
 		
 	html div
+		id: 'myFeedbackChart';
 		style: 'height:150px;';
 	 	script: chart.

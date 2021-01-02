@@ -14,8 +14,5 @@ renderContentOn: html
 	( self shopsActive )
 		ifTrue: [
 			self renderDashboardOn: html.
-		]
-		ifFalse: [
-			self renderSampleDashboardOn: html.
 		].
 	html document addLoadScript: ( ( JSStream on: '$(window).scrollTop(0)' ) ).

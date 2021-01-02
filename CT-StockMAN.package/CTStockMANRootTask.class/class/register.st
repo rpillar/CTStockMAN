@@ -6,4 +6,4 @@ register
 	app := WAAdmin register: self asApplicationAt: 'CTStockMAN'.
 	app
 		addLibrary: JQDevelopmentLibrary;
-		addLibrary: Highcharts7OnlineLibrary
+		addLibrary: PlotlyOnlineLibrary

@@ -1,4 +1,4 @@
-# CT_StockMAN
+# CTStockMAN
 
 A multi-channel store-front management application.
 

@@ -4,13 +4,13 @@ A multi-channel store-front management application.
 
 Currently only being developed for Ebay shops but the intention is that it will provide the means to integrate / aggregate data from different storefront providers (Ebay / Amazon / Shopify / Etsy ...). 
 
-Load the following packages (the Highcharts package includes Seaside) :-
+Load the following packages :-
 
 ```
 Metacello new
-	baseline: 'HighchartsSt';
-	repository: 'github://ba-st/HighchartsSt:v9/repository';
-	load.
+ baseline:'Seaside3';
+ repository: 'github://SeasideSt/Seaside:master/repository';
+ load
 ```
 ```
 Metacello new 
@@ -31,7 +31,7 @@ Metacello new
     baseline: 'Scheduler';
     load
 ```
-Add the `CTDBx` package from Git using the Monticello Browser.
+Add the `CTDBx` / `CTPlotly` packages from Git using the Monticello Browser.
 
 Having added the UDBC2 library you will need to update the Pharo settings -> Database / SQLite / <path to the sqlite shared lib>. Note that on MacOS the path will look something like :-
 ```
@@ -46,6 +46,14 @@ Finally as the Materialize library makes use of the `italic` tag you will need t
 Create the SQLite database using `db.sql` and -> 
 - add a user -> `insert into users (userName, password) values('testuser', 'password');`
 - add a default channel -> `insert into channel (channelName,status,userName) values('EBay','Active','testuser');`
+
+Initialize the CTStockMAN / CTPlotly applications :-
+```
+CTPlotlyDemo initialize.
+```
+```
+CTStockMANRootTask initialize.
+```
 
 ## Windows install
 

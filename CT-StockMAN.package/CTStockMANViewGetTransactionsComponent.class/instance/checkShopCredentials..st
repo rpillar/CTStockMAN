@@ -3,7 +3,7 @@ checkShopCredentials: aShopName
 
 	| myCredentials |
 
-	myCredentials := self getShopCredentials: ( self parseShopName: aShopName ).
+	myCredentials := self utils utilsGetShopCredentials: ( self utils utilsParseShopName: aShopName ).
 	self shopCredentials: ( STON reader on: myCredentials credentials readStream ) next.
 		
 	( myCredentials active = 'N' ) ifTrue: [ ^ 'ERROR : the shops credentials are not active - please update before retrieving channel categories.' ].

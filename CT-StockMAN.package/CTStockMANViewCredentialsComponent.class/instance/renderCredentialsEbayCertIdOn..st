@@ -22,6 +22,6 @@ renderCredentialsEbayCertIdOn: html
 					html label 
 						class: 'active';
 						attributeAt: 'for' put: 'credentials-shop-certid';
-						with: 'CertId'.	
+						with: 'CertId (Client Secret)'.	
 				]	
 		].

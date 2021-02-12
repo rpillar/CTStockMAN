@@ -13,7 +13,7 @@ renderContentOn: html
 				].	
 			self renderMenuLogoutOn: html.	
 			self renderMenuDashboardOn: html.	
-			self renderMenuInventoryOn: html.	
+			"self renderMenuInventoryOn: html.	"
 			self renderMenuAnalyticsOn: html.	
 			self renderMenuSettingsOn: html.		
 		].

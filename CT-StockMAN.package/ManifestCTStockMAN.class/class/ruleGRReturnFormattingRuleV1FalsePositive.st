@@ -1,3 +1,3 @@
 code-critics
 ruleGRReturnFormattingRuleV1FalsePositive
-	^ #(#(#(#RGMethodDefinition #(#CTStockMANEBay #url #false)) #'2020-11-17T22:56:26.216073+00:00') )
+	^ #(#(#(#RGMethodDefinition #(#CTeBay #url #false)) #'2020-11-17T22:56:26.216073+00:00') )

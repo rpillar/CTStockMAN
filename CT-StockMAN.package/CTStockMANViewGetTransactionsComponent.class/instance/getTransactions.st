@@ -6,7 +6,7 @@ getTransactions
 	
 	"note that for Ebay the dates must be in Zulu format - so update with defaults."
 	( self channel = 'EBay' ) ifTrue: [ 
-		channelAPI := CTStockMANEBayManage new. 
+		channelAPI := CTeBayManage new. 
 		channelAPI myEbay credentials: self shopCredentials.
 		response := channelAPI getEBayTransactionsForDaysStarting: ( self startDate, 'T', '00:00:00.000Z' ) ending: ( self endDate, 'T', '23:59:59.999Z' ).
 

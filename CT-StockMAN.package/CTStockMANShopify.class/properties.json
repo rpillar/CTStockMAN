@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "FirstnameLastname 10/5/2016 11:37",
-	"super" : "CTStockMANChannel",
+	"super" : "CTeBayChannel",
 	"category" : "CT-StockMAN",
 	"classinstvars" : [ ],
 	"pools" : [ ],

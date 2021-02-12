@@ -3,8 +3,7 @@ renderTransactionDetailsOn: html
 
 	| transactionData |
 	transactionData := self getTransactionData.
-	"transactionDataObject := 'test'."
-	
+
 	html div 
 		with: [ 
 			html table 
@@ -15,7 +14,7 @@ renderTransactionDetailsOn: html
 					html tableBody 
 						id: 'transaction-management-table-body';
 						with: [ 
-							transactionData resultset do: [ :each |
+							( transactionData resultset reverse ) do: [ :each |
 								self renderTransactionDataLineOn: html with: each. 
 							].
 						]

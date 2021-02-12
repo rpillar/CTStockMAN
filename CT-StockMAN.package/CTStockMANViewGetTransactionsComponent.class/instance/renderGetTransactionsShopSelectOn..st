@@ -12,8 +12,8 @@ renderGetTransactionsShopSelectOn: html
 						id: 'shopname';
 						style: 'margin-left:20px;';
 						size: 2;	
-						list: self getShopNames;
-						selected: ( self getShopNames at: 1);
+						list: self utils utilsGetShopNames;
+						selected: ( self utils utilsGetShopNames at: 1);
 						callback: [ :value | self shopName: value asString ].		
 					html label 
 						attributeAt: 'for' put: 'shopname';

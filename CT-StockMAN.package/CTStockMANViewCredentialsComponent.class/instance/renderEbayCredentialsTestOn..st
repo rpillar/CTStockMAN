@@ -29,9 +29,9 @@ renderEbayCredentialsTestOn: html
 									validCredentialsInput := self validateCredentials: formCredentials.
 									( validCredentialsInput = '' )
 										ifTrue: [
-											channel := CTStockMANEBayManage new. 
+											channel := CTeBayManage new. 
 											channel myEbay credentials: formCredentials.
-											response := channel getEBayOfficialTime. 
+											response := channel getEBayXOfficialTime. 
 											s << ( ( s jQuery id: 'test-credentials' ) removeAttribute: 'disabled' ).
 											s << ( ( s jQuery class: 'progress' ) hide ).
 											s << ( ( s jQuery id: 'credentials-shop-test' ) append: response content asString )

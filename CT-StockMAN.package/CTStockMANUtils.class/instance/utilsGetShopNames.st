@@ -1,5 +1,5 @@
 accessing
-getShopNames
+utilsGetShopNames
 
 	| myChannelNames myChannels myShops  |
 	myChannelNames := OrderedCollection new.

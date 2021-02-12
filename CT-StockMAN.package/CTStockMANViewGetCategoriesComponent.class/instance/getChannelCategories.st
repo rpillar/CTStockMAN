@@ -4,9 +4,9 @@ getChannelCategories
 	| channelAPI data dict doc message myData response result status |
 	
 	( self channel = 'EBay' ) ifTrue: [ 
-		channelAPI := CTStockMANEBayManage new. 
+		channelAPI := CTeBayManage new. 
 		channelAPI myEbay credentials: self shopCredentials.
-		response := channelAPI getEBayCategories.
+		response := channelAPI getEBayXCategories.
 
 		"check the response code"
 		( ( response code ) = '200' )

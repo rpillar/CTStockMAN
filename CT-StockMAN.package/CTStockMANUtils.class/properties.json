@@ -1,13 +1,13 @@
 {
-	"commentStamp" : "RichardPillar 10/19/2016 19:15",
+	"commentStamp" : "RichardPillar 2/7/2021 20:22",
 	"super" : "WAComponent",
 	"category" : "CT-StockMAN",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"utils"
+		"channelNames"
 	],
-	"name" : "CTStockMANView",
+	"name" : "CTStockMANUtils",
 	"type" : "normal"
 }

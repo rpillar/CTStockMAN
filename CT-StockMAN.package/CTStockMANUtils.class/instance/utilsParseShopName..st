@@ -1,5 +1,5 @@
-accessing
-parseShopName: aShopName
+as yet unclassified
+utilsParseShopName: aShopName
 
 	| channelSuffix |
 	( self channelNames ) do: [ :ch |

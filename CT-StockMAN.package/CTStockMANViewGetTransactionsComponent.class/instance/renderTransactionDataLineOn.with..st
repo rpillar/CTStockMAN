@@ -6,7 +6,7 @@ renderTransactionDataLineOn: html with: transactionCount
 			html tableData 
 				with: self channel.
 			html tableData 
-				with: ( self parseShopName: self shopName ).
+				with: ( self utils utilsParseShopName: self shopName ).
 			html tableData 
 				with: self startDate asDate.
 			html tableData 

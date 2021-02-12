@@ -22,6 +22,6 @@ renderCredentialsEbayAppIdOn: html
 					html label 
 						class: 'active';
 						attributeAt: 'for' put: 'credentials-shop-appid';
-						with: 'AppId'.	
+						with: 'AppId (Client Id)'.	
 				]	
 		].

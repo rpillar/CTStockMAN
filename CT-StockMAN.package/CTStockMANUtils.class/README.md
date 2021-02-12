@@ -1,0 +1,1 @@
+A collection of utility methods (mainly data retruieval stuff) - may move elsewhere in time.

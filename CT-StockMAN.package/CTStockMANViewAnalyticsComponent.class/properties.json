@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"dataframe",
+		"dfTransactions"
+	],
 	"name" : "CTStockMANViewAnalyticsComponent",
 	"type" : "normal"
 }

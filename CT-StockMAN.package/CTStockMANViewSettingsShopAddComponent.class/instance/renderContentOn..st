@@ -5,5 +5,5 @@ renderContentOn: html
 	self messageComponent messageString: 'Please enter shop details - then Save (or Cancel).'; messageType: 'info'.
 	self renderAddShopContentOn: html.
 	
-	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
+	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ).
 	

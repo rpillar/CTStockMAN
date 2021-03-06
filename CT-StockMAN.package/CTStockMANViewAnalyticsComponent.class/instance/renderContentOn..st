@@ -9,15 +9,8 @@ renderContentOn: html
 				with: 'Analytics'.
 		].
 	
-	html div 
-		style: 'margin-top:50px;';
-		with: [  
-			html button
-				bePush;
-				class: 'btn-large waves-effect waves-light hoverable';
-				id: 'testanalytics';
-				with: 'Check'.
-		].
+	"display shop details ..."		
+	self renderAnalyticsHeaderOn: html.
 	
 	html document addLoadScript: ( ( JSStream on: 
 		'$(''#testanalytics'').on( ''click'', function() { 

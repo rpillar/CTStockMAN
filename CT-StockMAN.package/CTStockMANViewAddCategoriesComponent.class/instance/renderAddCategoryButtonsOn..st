@@ -20,8 +20,8 @@ renderAddCategoryButtonsOn: html
 										"add category data"
 										self addOrUpdateCategory.
 										self categoryName: ''.
-										s << ( JSStream on: '$(''#add-category-modal'').modal(''close'')' ).
-										s << ( ( s jQuery class: 'add-category-modal-content' ) remove ).
+										self messageComponent errorMessage: 'Category Updated. Continue to Add / Edit or Close.'.
+										s << ( ( s jQuery class: 'messageComponent' ) load html: [ :r | r render: self messageComponent ] ).
 										s << ( JSStream on: '$(''.tooltipped'').tooltip()' ).
 									]
 									ifFalse: [  

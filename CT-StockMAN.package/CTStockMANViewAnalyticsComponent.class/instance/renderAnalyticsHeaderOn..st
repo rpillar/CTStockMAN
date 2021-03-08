@@ -51,56 +51,32 @@ renderAnalyticsHeaderOn: html
 						
 					html div 
 						id: 'df-fields';
-						class: 'col s5';
+						class: 'input-field col s5';
 						style: 'display: none';
 						with: [ 
-							html unorderedList
-								class: 'collection with-header';
-								with: [ 
-									html listItem
-										class: 'collection-header';
-										style: 'background-color:#b2dfdb';
-										with: [
-											html heading level: 5;
-												with: 'Transactions'.
-										].
-									html listItem
-										class: 'collection-item';
-										with: [
-											html label 
-												with: [
-													html checkbox
-														with: [
-															html span
-																with: 'Channel'
-														]
-													]
-											].
-									html listItem
-										class: 'collection-item';
-										with: [
-											html label 
-												with: [
-													html checkbox
-														with: [
-															html span
-																with: 'Shopname'
-														]
-													]
-											].
-									html listItem
-										class: 'collection-item';
-										with: [
-											html label 
-												with: [
-													html checkbox
-														with: [
-															html span
-																with: 'Product'
-														]
-													]
-											].
-								]
+							html select
+								id: 'df-fields-select';
+								attributeAt: 'multiple' put: true;
+								style: 'margin-left:20px;';
+								size: 5;	
+								with: [  
+									html option 
+										disabled;
+										attributeAt: 'selected' put: true;
+										with: 'Choose the fields.'.
+									html option 
+										attributeAt: 'value' put: 'field1';
+										with: 'field1'.
+									html option 
+										attributeAt: 'value' put: 'field2';
+										with: 'field2'.
+									html option 
+										attributeAt: 'value' put: 'field3';
+										with: 'field3'.	
+								].
+							html label 
+								attributeAt: 'for' put: 'df-fields-select';
+								with: 'Dataframe fields'.	
 						].
 				].	
 		].

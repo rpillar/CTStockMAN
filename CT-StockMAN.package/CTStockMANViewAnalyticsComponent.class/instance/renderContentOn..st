@@ -12,6 +12,7 @@ renderContentOn: html
 	"display shop details ..."		
 	self renderAnalyticsHeaderOn: html.
 	
+	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
 	html document addLoadScript: ( ( JSStream on: 
 		'$(''#testanalytics'').on( ''click'', function() { 
 			console.log( ''You pressed me ...'');

@@ -63,16 +63,13 @@ renderAnalyticsHeaderOn: html
 									html option 
 										disabled;
 										attributeAt: 'selected' put: true;
-										with: 'Choose the fields.'.
-									html option 
-										attributeAt: 'value' put: 'field1';
-										with: 'field1'.
-									html option 
-										attributeAt: 'value' put: 'field2';
-										with: 'field2'.
-									html option 
-										attributeAt: 'value' put: 'field3';
-										with: 'field3'.	
+										with: ''.
+									self dfFields do: [ :f |
+										html option 
+										attributeAt: f put: f;
+										attributeAt: 'selected' put: true;
+										with: f.
+									].
 								].
 							html label 
 								attributeAt: 'for' put: 'df-fields-select';
@@ -91,7 +88,7 @@ renderAnalyticsHeaderOn: html
 					html button 
 						bePush;
 						class: 'btn-large waves-effect waves-light hoverable'; 
-						attributeAt: 'disabled' put: 'disabled';
+						"attributeAt: 'disabled' put: 'disabled';"
 						onClick: ( ( html jQuery ajax )
 							serializeForm;
 							script: [ :s | self scriptAddShopButtons: s ] 

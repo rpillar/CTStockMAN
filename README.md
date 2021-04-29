@@ -61,7 +61,7 @@ I have had issues when installing Seaside into an image running on Windows 10. A
 
 ### Update
 
-Following some testing I found that a simple solution was to load the Boardwalk package (extensions on top of Seaside) - this pulled in a compatible version of Seaside.
+Following some testing (in addition to the above) I found that a simple solution was to load the Boardwalk package (extensions on top of Seaside) - this pulled in a compatible version of Seaside.
 ```
 Metacello new
 	baseline: 'Boardwalk';

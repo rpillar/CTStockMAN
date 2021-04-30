@@ -54,6 +54,7 @@ CTPlotlyDemo initialize.
 ```
 CTStockMANRootTask initialize.
 ```
+Then update the app Session class to `CTSockMANSession` - in config.
 
 ## Windows install
 

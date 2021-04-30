@@ -58,5 +58,14 @@ CTStockMANRootTask initialize.
 ## Windows install
 
 I have had issues when installing Seaside into an image running on Windows 10. After searching for possible solutions this seemed to work - when you create your Pharo image from the Launcher make sure that the image name has no spaces - for example `pharo_test_1` rather than `pharo test 1`. 
-Once this is done you should be able to load Highcharts using Metacello in the normal way.
+
+### Update
+
+Following some testing (in addition to the above) I found that a simple solution was to load the Boardwalk package (extensions on top of Seaside) - this pulled in a compatible version of Seaside.
+```
+Metacello new
+	baseline: 'Boardwalk';
+	repository: 'github://ba-st/Boardwalk:v6/source';
+	load.
+```
 

@@ -2,7 +2,7 @@ accesing
 getTransactions
 
 	"get transaction data and store it."
-	| channelAPI data myTransactionData query response responseDict |
+	| channelAPI data myTransaction myTransactionData query response responseDict |
 	
 	"note that for Ebay the dates must be in Zulu format - so update with defaults."
 	( self channel = 'EBay' ) ifTrue: [ 
@@ -26,11 +26,17 @@ getTransactions
 	"store details of the request."
 	myTransactionData := CTStockMANModelTransactionData new.
 	myTransactionData conn: WACurrentRequestContext value session dbConnection.
+	query := CTDBxQuery new.
+	query queryTable: 'CTStockMANModelTransactionData'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopName->self shopName . #retrieval_date -> ( Timespan current asDateAndTime ) . #start_date -> ( self startDate, 'T00:00:00.000Z' ) . #end_date -> ( self endDate, 'T23:59:59.999Z' ) . #transaction_count -> ( ( data first ) at: #TotalNumberOfEntries ) } ).
+	myTransactionData conn execute: ( query queryString ).
 	
+	"store details of the actual transactions"
+	myTransaction := CTStockMANModelTransaction new.
+	myTransaction conn: WACurrentRequestContext value session dbConnection.
 	data do: [ :e |
 		query := CTDBxQuery new.
-		query queryTable: 'CTStockMANModelTransactionData'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopName->self shopName . #retrieval_date -> ( Timespan current asDateAndTime ) . #start_date -> ( self startDate, 'T00:00:00.000Z' ) . #end_date -> ( self endDate, 'T23:59:59.999Z' ) . #transaction_count -> ( e at: #TotalNumberOfEntries ) } ).
-		myTransactionData conn execute: ( query queryString ).
+		query queryTable: 'CTStockMANModelTransaction'; dbCreate: ( Dictionary newFrom: { #channel->self channel . #shopName->self shopName . #retrieval_date -> ( Timespan current asDateAndTime ) . #start_date -> ( self startDate, 'T00:00:00.000Z' ) . #end_date -> ( self endDate, 'T23:59:59.999Z' ) . #transaction_count -> ( e at: #TotalNumberOfEntries ) } ).
+		myTransaction conn execute: ( query queryString ).
 	].
 
 	"return the number of transactions retrieved."

@@ -11,6 +11,8 @@ renderContentOn: html
 	
 	"display shop details ..."		
 	self renderAnalyticsHeaderOn: html.
+	self renderAnalyticsDataframeSelectOn: html.
+	self renderAnalyticsDataframeSummarizeButtonOn: html.
 	
 	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
 	html document addLoadScript: ( ( JSStream on: 

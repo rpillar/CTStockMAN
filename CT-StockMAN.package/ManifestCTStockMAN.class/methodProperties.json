@@ -2,7 +2,7 @@
 	"instance" : { },
 	"class" : {
 		"ruleGRReturnFormattingRuleV1FalsePositive" : "RichardPillar 1/9/2021 13:38",
-		"ruleRBLongMethodsRuleV1FalsePositive" : "RichardPillar 2/27/2021 20:58",
+		"ruleRBLongMethodsRuleV1FalsePositive" : "RichardPillar 3/9/2021 20:49",
 		"ruleGRParensFormattingRuleV1FalsePositive" : "RichardPillar 3/4/2020 19:38",
 		"ruleGRUsesCurlyBraceArraysRuleV1FalsePositive" : "RichardPillar 3/8/2020 14:15",
 		"ruleRBSelfSentNotImplementedRuleV1FalsePositive" : "RichardPillar 3/8/2020 14:15",
@@ -12,7 +12,7 @@
 		"ruleRBInconsistentMethodClassificationRuleV1FalsePositive" : "RichardPillar 11/15/2020 21:38",
 		"ruleRBCollectionMessagesToExternalObjectRuleV1FalsePositive" : "RichardPillar 6/6/2018 07:43",
 		"ruleGRIvarNeitherReadNorWrittenRuleV1FalsePositive" : "RichardPillar 2/27/2021 21:14",
-		"ruleRBSentNotImplementedRuleV1FalsePositive" : "RichardPillar 8/22/2020 13:50",
+		"ruleRBSentNotImplementedRuleV1FalsePositive" : "RichardPillar 4/16/2021 19:59",
 		"ruleWAUnnecessaryBlockPassedToBrushRuleV1FalsePositive" : "RichardPillar 11/3/2020 21:07",
 		"ruleGRTemporaryNeitherReadNorWrittenRuleV1FalsePositive" : "RichardPillar 3/29/2020 18:35",
 		"ruleGRAnsiCollectionsRuleV1FalsePositive" : "RichardPillar 11/3/2020 20:51",

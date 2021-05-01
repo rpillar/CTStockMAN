@@ -31,6 +31,12 @@ Metacello new
     baseline: 'Scheduler';
     load
 ```
+```
+Gofer it
+   smalltalkhubUser: 'SvenVanCaekenberghe' project: 'Neo';
+   configurationOf: 'NeoJSON';
+   loadStable.
+```
 Add the `CTDBx` / `CTPlotly` / `CTeBayAPI` packages from Git using the Monticello Browser.
 
 Having added the UDBC2 library you will need to update the Pharo settings -> Database / SQLite / <path to the sqlite shared lib>. Note that on MacOS the path will look something like :-

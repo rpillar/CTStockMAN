@@ -8,12 +8,24 @@ renderContentOn: html
 				class: 'page-title';
 				with: 'Analytics'.
 		].
-	
-	"display shop details ..."		
+		
 	self renderAnalyticsHeaderOn: html.
-	self renderAnalyticsDataframeSelectOn: html.
-	self renderAnalyticsDataframeSummarizeButtonOn: html.
-	
+	self dfFields ifNil: [ 
+		html div 
+			with: [ 
+				html paragraph
+					with: [  
+						html span 
+							style: 'font-size: 24px; border-bottom: 3px solid teal';
+							with: 'No transaction data has been found'.
+					]
+			]
+	]
+	ifNotNil: [ 
+		self renderAnalyticsDataframeSelectOn: html.
+		self renderAnalyticsDataframeSummarizeButtonOn: html.
+	].
+
 	html document addLoadScript: ( ( JSStream on: '$(''select'').formSelect({ minimumResultsForSearch: Infinity })' ) ) .
 	html document addLoadScript: ( ( JSStream on: 
 		'$(''#testanalytics'').on( ''click'', function() { 

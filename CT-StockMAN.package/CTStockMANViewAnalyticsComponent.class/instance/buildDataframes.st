@@ -13,8 +13,10 @@ buildDataframes
 	self dfTransactions dataset: myTransactions resultset.
 	self dfTransactions selectAll.
 	
-	self dfFields: ( dfTransactions dataset first keys ).
-	
-	self dataframe: dfTransactions.
+	( self dfTransactions dataset isNotEmpty ) 
+		ifTrue: [ 
+			self dfFields: ( self dfTransactions dataset first keys ).
+			self dataframe: dfTransactions.
+		].
 
 	^ ''.

@@ -7,7 +7,7 @@ updateShop
 	self shop at: #shopName put: self shopName.
 	self shop at: #shopDescription put: self shopDescription.
 	self shop at: #status put: self shopStatus.
-	self shop at: #update_date put: Date today yyyymmdd.
+	self shop at: #updateDate put: Date today yyyymmdd.
 	
 	query := CTDBxQuery new.
 	query queryTable: 'CTStockMANModelShop'; dbUpdate: self shop.

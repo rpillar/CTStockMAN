@@ -5,7 +5,7 @@ insertTransactionScheduleData
 	
 	"record the transaction retrieval schedule details"
 	query := CTDBxQuery new.
-	query queryTable: 'CTStockMANModelTransactionScheduleData'; dbCreate: { { #channel -> self channel . #shopName -> self shopName . #schedule_time -> self startTime } }.
+	query queryTable: 'CTStockMANModelTransactionScheduleData'; dbCreate: { { #channel -> self channel . #shopName -> self shopName . #scheduleTime -> self startTime } }.
 	
 	myScheduleData := CTStockMANModelTransactionScheduleData new.
 	myScheduleData conn: WACurrentRequestContext value session dbConnection.

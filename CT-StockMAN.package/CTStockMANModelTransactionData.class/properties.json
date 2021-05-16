@@ -8,11 +8,11 @@
 	"instvars" : [
 		"channel",
 		"shopName",
-		"retrieval_date",
-		"start_date",
-		"end_date",
-		"schedule_date",
-		"schedule_time",
+		"retrievalDate",
+		"startDate",
+		"endDate",
+		"scheduleDate",
+		"scheduleTime",
 		"processed",
 		"transaction_count"
 	],

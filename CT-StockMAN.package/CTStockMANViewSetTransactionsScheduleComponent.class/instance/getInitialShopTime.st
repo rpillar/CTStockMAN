@@ -9,4 +9,4 @@ getInitialShopTime
 	myScheduleData conn: WACurrentRequestContext value session dbConnection.
 	myScheduleData resultset: ( myScheduleData processSearchQuery: ( query queryString ) ).
 	
-	^ myScheduleData schedule_time.
+	^ myScheduleData scheduleTime.

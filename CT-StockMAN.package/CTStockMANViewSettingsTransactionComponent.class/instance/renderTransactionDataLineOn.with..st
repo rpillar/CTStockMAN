@@ -11,9 +11,9 @@ renderTransactionDataLineOn: html with: dataObject
 			html tableData 
 				with: myShopName.
 			html tableData 
-				with: ( dataObject at: #start_date ) asDate.
+				with: ( dataObject at: #startDate ) asDate.
 			html tableData 
-				with: ( dataObject at: #end_date ) asDate.	
+				with: ( dataObject at: #endDate ) asDate.	
 			html tableData 
 				with: ( dataObject at: #transaction_count ).
 		].

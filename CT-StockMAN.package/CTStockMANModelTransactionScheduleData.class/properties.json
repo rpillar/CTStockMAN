@@ -8,7 +8,7 @@
 	"instvars" : [
 		"channel",
 		"shopName",
-		"schedule_time"
+		"scheduleTime"
 	],
 	"name" : "CTStockMANModelTransactionScheduleData",
 	"type" : "normal"

@@ -8,7 +8,7 @@ getTransactionDataFor: aShopName
 	sDate := ( self startDate, ' 00:00:00.000Z' ) asString.
 	
 	q1 := CTDBxQuery new.
-	q1 queryTable: 'CTStockMANModelTransactionData'; dbSearch: { { #shopName -> aShopName . #start_date -> { #between . sDate . eDate } } }.
+	q1 queryTable: 'CTStockMANModelTransactionData'; dbSearch: { { #shopName -> aShopName . #startDate -> { #between . sDate . eDate } } }.
 	
 	myTransactionData := CTStockMANModelTransactionData new.
 	myTransactionData conn: WACurrentRequestContext value session dbConnection.
@@ -16,7 +16,7 @@ getTransactionDataFor: aShopName
 	
 	( myTransactionData resultset isEmpty ) ifTrue: [ 
 		q2 := CTDBxQuery new.
-		q2 queryTable: 'CTStockMANModelTransactionData'; dbSearch: { { #shopName -> aShopName . #end_date -> { #between . sDate . eDate } } }.
+		q2 queryTable: 'CTStockMANModelTransactionData'; dbSearch: { { #shopName -> aShopName . #endDate -> { #between . sDate . eDate } } }.
 	
 		myTransactionData := CTStockMANModelTransactionData new.
 		myTransactionData conn: WACurrentRequestContext value session dbConnection.

@@ -41,6 +41,6 @@ renderContentOn: html
 	self renderSetTransactionsScheduleModalOn: html.
 	
 	html document addLoadScript: ( ( JSStream on: '$( ''.collapsible'' ).collapsible()' ) ).
-	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).	
+	"html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).	"
 	html document addLoadScript: ( ( JSStream on:	'$(''.modal'').modal({outDuration:300,opacity:.4})' ) ).
 	html document addLoadScript: ( ( JSStream on: '$(window).scrollTop(0)' ) ).		

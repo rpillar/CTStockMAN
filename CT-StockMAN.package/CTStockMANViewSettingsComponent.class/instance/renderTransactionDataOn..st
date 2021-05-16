@@ -10,7 +10,7 @@ renderTransactionDataOn: html
 			with: [ 
 				html span 
 				style: 'border-bottom: 3px solid lightblue;'; 
-				with: 'Transaction Data'.
+				with: 'Transaction / Orders Data'.
 			]
 		].
 	

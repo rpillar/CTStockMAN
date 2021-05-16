@@ -1,17 +1,17 @@
 {
 	"instance" : {
-		"update_date" : "RichardPillar 2/27/2017 16:37",
 		"userName" : "RichardPillar 1/3/2017 14:06",
 		"status:" : "RichardPillar 12/30/2016 17:59",
+		"updateDate:" : "RichardPillar 5/14/2021 17:23",
 		"channelName:" : "RichardPillar 12/30/2016 17:59",
 		"shops" : "RichardPillar 4/6/2020 16:47",
-		"update_date:" : "RichardPillar 2/27/2017 16:37",
 		"channelName" : "RichardPillar 12/30/2016 17:59",
-		"initialize" : "RichardPillar 3/8/2020 14:21",
+		"initialize" : "RichardPillar 5/14/2021 17:22",
 		"rShopsActive" : "RichardPillar 3/25/2020 22:37",
 		"rShops" : "RichardPillar 3/28/2020 19:04",
 		"status" : "RichardPillar 12/30/2016 17:59",
 		"userName:" : "RichardPillar 1/3/2017 14:06",
+		"updateDate" : "RichardPillar 5/14/2021 17:22",
 		"shopsActive" : "RichardPillar 3/8/2020 14:24"
 	},
 	"class" : { }

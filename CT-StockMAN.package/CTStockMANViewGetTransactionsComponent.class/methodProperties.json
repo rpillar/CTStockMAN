@@ -7,7 +7,7 @@
 		"checkShopCredentials:" : "RichardPillar 2/7/2021 22:39",
 		"renderGetTransactionsButtonsOn:" : "RichardPillar 1/18/2018 08:04",
 		"renderGetTransactionsEndDateOn:" : "RichardPillar 2/1/2018 08:05",
-		"getTransactions" : "RichardPillar 3/9/2021 20:48",
+		"getTransactions" : "RichardPillar 5/14/2021 21:49",
 		"getShopNames" : "RichardPillar 9/12/2020 15:26",
 		"startTime" : "RichardPillar 1/15/2018 16:57",
 		"scriptAddTransactionDataLine:with:" : "RichardPillar 9/12/2020 15:08",
@@ -48,7 +48,7 @@
 		"renderContentOn:" : "RichardPillar 11/2/2020 20:20",
 		"startDate" : "RichardPillar 1/11/2018 08:23",
 		"channel:" : "RichardPillar 1/10/2018 23:00",
-		"getTransactionDataFor:" : "RichardPillar 9/12/2020 13:54"
+		"getTransactionDataFor:" : "RichardPillar 5/5/2021 21:06"
 	},
 	"class" : { }
 }

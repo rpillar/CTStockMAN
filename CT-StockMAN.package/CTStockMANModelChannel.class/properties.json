@@ -9,7 +9,7 @@
 		"channelName",
 		"status",
 		"userName",
-		"update_date"
+		"updateDate"
 	],
 	"name" : "CTStockMANModelChannel",
 	"type" : "normal"

@@ -55,7 +55,7 @@ Create the SQLite database using `db.sql` and ->
 
 Initialize the CTStockMAN / CTPlotly applications :-
 ```
-CTPlotlyDemo initialize.
+CTPlotly initialize.
 ```
 ```
 CTStockMANRootTask initialize.

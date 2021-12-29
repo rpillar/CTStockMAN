@@ -1,4 +1,4 @@
-styles
+style
 style 
 	^ '
 body {

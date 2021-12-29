@@ -5,7 +5,7 @@ renderContentOn: html
 		class: 'page-side-nav';
 		style: 'z-index:10;';
 		with: self menuComponent.	
-		
+
 	"home - initial dashboard page"	
 	html div 
 		id: 'main';
@@ -17,6 +17,6 @@ renderContentOn: html
 					html render: self bodyComponent.  
 				].
 		].
-
+	
 	html document addLoadScript: (html jQuery document onAjaxError: (self ajaxErrorHandler asFunction: #('event' 'jqxhr' 'settings' 'exception'))).
 	html document addLoadScript: ( ( JSStream on: '$(''.tooltipped'').tooltip()' ) ).

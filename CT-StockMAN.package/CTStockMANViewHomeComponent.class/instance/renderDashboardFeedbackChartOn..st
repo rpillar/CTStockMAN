@@ -8,7 +8,6 @@ renderDashboardFeedbackChartOn: html
 	t1 type: 'bar'.
 	t1 x: #('Jan' 'Feb' 'Mar' 'Apr' 'May' 'Jun' 'July' 'Aug' 'Sept' 'Oct' 'Nov' 'Dec').
 	t1 y: #(4.8 5 5 4.9 4.7 5 5 3.5 5 4.9 4.9 5).
-	"t1 marker color: 'rgb(245,160,105)'."
 	t1 marker color: 'rgb(51,153, 255)'.
 	
 	layout := PlotlyLayout new.

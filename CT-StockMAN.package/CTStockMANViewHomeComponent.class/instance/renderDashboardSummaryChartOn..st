@@ -33,7 +33,7 @@ renderDashboardSummaryChartOn: html
 	chart := PlotlyPlot new.
 	chart newplot.
 	chart complete: 'mySalesChart' data: { t1 . t2 } layout: layout config: config.
-		
+
 	html div
 		id: 'mySalesChart';
 		style: 'height:400px;';
